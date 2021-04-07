@@ -2,19 +2,21 @@ package acme.framework.entities;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.URL;
-
 import lombok.Getter;
 import lombok.Setter;
+@Entity
 @Getter
 @Setter
-public class Task {
+public class Task extends DomainEntity{
+
+	private static final long serialVersionUID = 1L;
 
 	@NotBlank
 	@Max(80)

@@ -2,6 +2,7 @@ package acme.framework.entities;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Max;
@@ -15,73 +16,76 @@ import org.hibernate.validator.constraints.URL;
 
 import lombok.Getter;
 import lombok.Setter;
+@Entity
 @Getter
 @Setter
-public class Shout {
+public class Shout extends DomainEntity {
 	
+	protected static final long serialVersionUID = 1L;
+
 	@NotNull
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date moment;
+	protected Date moment;
 	
 	@NotBlank
 	@Min(5)
 	@Max(25)
-	private String author;
+	protected String author;
 	
 	@NotEmpty
 	@Max(100)
-	private String text;
+	protected String text;
 	
 	@URL
-	private String link;
+	protected String link;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
-		result = prime * result + ((link == null) ? 0 : link.hashCode());
-		result = prime * result + ((moment == null) ? 0 : moment.hashCode());
-		result = prime * result + ((text == null) ? 0 : text.hashCode());
+		result = prime * result + ((this.author == null) ? 0 : this.author.hashCode());
+		result = prime * result + ((this.link == null) ? 0 : this.link.hashCode());
+		result = prime * result + ((this.moment == null) ? 0 : this.moment.hashCode());
+		result = prime * result + ((this.text == null) ? 0 : this.text.hashCode());
 		return result;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(final Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (this.getClass() != obj.getClass())
 			return false;
-		Shout other = (Shout) obj;
-		if (author == null) {
+		final Shout other = (Shout) obj;
+		if (this.author == null) {
 			if (other.author != null)
 				return false;
-		} else if (!author.equals(other.author))
+		} else if (!this.author.equals(other.author))
 			return false;
-		if (link == null) {
+		if (this.link == null) {
 			if (other.link != null)
 				return false;
-		} else if (!link.equals(other.link))
+		} else if (!this.link.equals(other.link))
 			return false;
-		if (moment == null) {
+		if (this.moment == null) {
 			if (other.moment != null)
 				return false;
-		} else if (!moment.equals(other.moment))
+		} else if (!this.moment.equals(other.moment))
 			return false;
-		if (text == null) {
+		if (this.text == null) {
 			if (other.text != null)
 				return false;
-		} else if (!text.equals(other.text))
+		} else if (!this.text.equals(other.text))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Shout [moment=" + moment + ", author=" + author + ", text=" + text + ", link=" + link + "]";
+		return "Shout [moment=" + this.moment + ", author=" + this.author + ", text=" + this.text + ", link=" + this.link + "]";
 	}
 	
 	
