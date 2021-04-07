@@ -6,7 +6,14 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.URL;
+
+import lombok.Getter;
+import lombok.Setter;
+@Getter
+@Setter
 public class Task {
 
 	@NotBlank
@@ -22,59 +29,25 @@ public class Task {
 	@NotBlank
 	@Max(500)
 	private String description;
-
 	
-	public String getTitle() {
-		return this.title;
-	}
-
+	@URL
+	private String link;
 	
-	public void setTitle(final String title) {
-		this.title = title;
-	}
-
-	
-	public LocalDateTime getExecutionPeriod() {
-		return this.executionPeriod;
-	}
-
-	
-	public void setExecutionPeriod(final LocalDateTime executionPeriod) {
-		this.executionPeriod = executionPeriod;
-	}
-
-	
-	public Integer getWorkload() {
-		return this.workload;
-	}
-
-	
-	public void setWorkload(final Integer workload) {
-		this.workload = workload;
-	}
-
-	
-	public String getDescription() {
-		return this.description;
-	}
-
-	
-	public void setDescription(final String description) {
-		this.description = description;
-	}
-
+	@NotNull
+	public Boolean esPublico;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((this.description == null) ? 0 : this.description.hashCode());
+		result = prime * result + ((this.esPublico == null) ? 0 : this.esPublico.hashCode());
 		result = prime * result + ((this.executionPeriod == null) ? 0 : this.executionPeriod.hashCode());
+		result = prime * result + ((this.link == null) ? 0 : this.link.hashCode());
 		result = prime * result + ((this.title == null) ? 0 : this.title.hashCode());
 		result = prime * result + ((this.workload == null) ? 0 : this.workload.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(final Object obj) {
@@ -90,10 +63,20 @@ public class Task {
 				return false;
 		} else if (!this.description.equals(other.description))
 			return false;
+		if (this.esPublico == null) {
+			if (other.esPublico != null)
+				return false;
+		} else if (!this.esPublico.equals(other.esPublico))
+			return false;
 		if (this.executionPeriod == null) {
 			if (other.executionPeriod != null)
 				return false;
 		} else if (!this.executionPeriod.equals(other.executionPeriod))
+			return false;
+		if (this.link == null) {
+			if (other.link != null)
+				return false;
+		} else if (!this.link.equals(other.link))
 			return false;
 		if (this.title == null) {
 			if (other.title != null)
@@ -108,11 +91,16 @@ public class Task {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Task [title=" + this.title + ", executionPeriod=" + this.executionPeriod + ", workload=" + this.workload + ", description=" + this.description + "]";
+		return "Task [title=" + this.title + ", executionPeriod=" + this.executionPeriod + ", workload=" + this.workload + ", description=" + this.description + ", link=" + this.link + ", esPublico=" + this.esPublico + "]";
 	}
+	
+	
+
+
+	
+	
 	
 	
 }
