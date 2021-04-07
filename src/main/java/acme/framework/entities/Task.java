@@ -2,12 +2,20 @@ package acme.framework.entities;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 
-public class Task {
+import lombok.Getter;
+import lombok.Setter;
+@Entity
+@Getter
+@Setter
+public class Task extends DomainEntity{
+
+	private static final long serialVersionUID = 1L;
 
 	@NotBlank
 	@Max(80)
@@ -22,46 +30,6 @@ public class Task {
 	@NotBlank
 	@Max(500)
 	private String description;
-
-	
-	public String getTitle() {
-		return this.title;
-	}
-
-	
-	public void setTitle(final String title) {
-		this.title = title;
-	}
-
-	
-	public LocalDateTime getExecutionPeriod() {
-		return this.executionPeriod;
-	}
-
-	
-	public void setExecutionPeriod(final LocalDateTime executionPeriod) {
-		this.executionPeriod = executionPeriod;
-	}
-
-	
-	public Integer getWorkload() {
-		return this.workload;
-	}
-
-	
-	public void setWorkload(final Integer workload) {
-		this.workload = workload;
-	}
-
-	
-	public String getDescription() {
-		return this.description;
-	}
-
-	
-	public void setDescription(final String description) {
-		this.description = description;
-	}
 
 
 	@Override
