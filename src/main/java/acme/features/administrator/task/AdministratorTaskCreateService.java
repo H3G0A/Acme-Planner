@@ -82,7 +82,6 @@ public class AdministratorTaskCreateService implements AbstractCreateService<Adm
 		assert request != null;
 		assert entity != null;
 		
-		
 		this.repository.save(entity);
 		
 	}
