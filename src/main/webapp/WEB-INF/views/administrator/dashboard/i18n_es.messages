@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.show = Panel de indicadores
+
+administrator.dashboard.form.title.general-indicators = General indicators
+administrator.dashboard.form.label.numberOfPublicTask =  Numero total de tareas publicas
+administrator.dashboard.form.label.numberOfPrivateTask =  Numero total de tareas privadas
+administrator.dashboard.form.label.numberOfFinishedTask = Numero total de tareas finalizadas
+administrator.dashboard.form.label.numberOfNotFinishedTask = Numero total de tareas no finalizadas
+administrator.dashboard.form.label.averageNumberOfWorkload  = Numero medio de carga de trabajo en tareas
+administrator.dashboard.form.label.averageNumberOfExecutionPeriods = Numero medio de tiempo de ejecucion en tareas
+administrator.dashboard.form.label.minWorkload = Minimo de carga de trabajo en tareas
+administrator.dashboard.form.label.maxWorkload = Maximo de carga de trabajo en tareas
+administrator.dashboard.form.label.minExecutionPeriod = Minimo de tiempo de ejecucion en tareas
+administrator.dashboard.form.label.maxExecutionPeriod = Maximo de tiempo de ejecucion en tareas
+administrator.dashboard.form.label.deviationWorkload = Desviacion de carga de trabajo en tareas
+administrator.dashboard.form.label.deviationExecutionPeriod = Desviacion de tiempo de ejecucion en tareas
+
+administrator.dashboard.form.title.application-statuses = Estado de las solicitudes
