@@ -10,22 +10,21 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.anonymous.shout;
+package acme.features.anonymous.task;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.shouts.Shout;
+import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnonymousShoutRepository extends AbstractRepository {
+public interface AnonymousTaskRepository extends AbstractRepository {
 
-	@Query("select s from Shout s where s.moment >=:fecha")
-	Collection<Shout> findMany(@Param("fecha") Date fecha);
+	@Query("select t from Task t where t.esPublico =:cond")
+	Collection<Task> findMany(@Param("cond") Boolean cond);
 
 }

@@ -12,7 +12,9 @@
 
 package acme.features.anonymous.shout;
 
+import java.time.Instant;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -56,7 +58,8 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 
 		Collection<Shout> result;
 
-		result = this.repository.findMany();
+		final Date fecha = Date.from(Instant.now().minusSeconds(2592000L));
+		result = this.repository.findMany(fecha);
 
 		return result;
 	}
