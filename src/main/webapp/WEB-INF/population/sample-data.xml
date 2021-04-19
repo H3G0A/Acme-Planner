@@ -19,7 +19,7 @@
 
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
 
-	<bean id="task01" class="acme.entities.task.Task">
+<!-- 	<bean id="task01" class="acme.entities.task.Task">
 		<property name="title" value= "Tarea numero uno" />
 		<property name="start" value="2021/04/19 16:05" />
 		<property name="end" value= "2021/05/19 19:05"/>
@@ -47,6 +47,6 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-	</bean>
+	</bean> -->
 </beans>
 
