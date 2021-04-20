@@ -1,7 +1,5 @@
 package acme.features.administrator.dashboard;
 
-import java.time.LocalDateTime;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,8 +55,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Double						averageNumberOfExecutionPeriods;
 		final Integer						minWorkload;
 		final Integer						maxWorkload;
-		final LocalDateTime						minExecutionPeriod;
-		final LocalDateTime						maxExecutionPeriod;
+		final Double						minExecutionPeriod;
+		final Double						maxExecutionPeriod;
 		final Double						deviationWorkload;
 		final Double						deviationExecutionPeriod;
 		
