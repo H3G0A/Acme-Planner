@@ -35,6 +35,8 @@ master.menu.anonymous.favourite-link = Favourite link
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.spamWord.list = Spam Word List
+master.menu.administrator.spamWord.create = Create a Spam Word
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
