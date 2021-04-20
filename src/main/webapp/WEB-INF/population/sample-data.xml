@@ -119,7 +119,7 @@
 		<property name="end" value= "2021/01/29 08:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
-		<property name="isPublic" value="True" />
+		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 </beans>
