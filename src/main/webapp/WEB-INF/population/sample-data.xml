@@ -82,4 +82,45 @@
 	<bean id="spamWord16" class="acme.framework.entities.SpamWord">
 		<property name="word" value="millon de dolares"/>
 	</bean>
+
+	<bean id="task01" class="acme.entities.task.Task">
+		<property name="title" value= "Tarea numero uno" />
+		<property name="start" value="2021/04/19 16:05" />
+		<property name="end" value= "2021/05/19 19:05"/>
+		<property name="workload" value= "25.3" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+	</bean>
+	
+	<bean id="task02" class="acme.entities.task.Task">
+		<property name="title" value= "Tarea numero dos" />
+		<property name="start" value="2021/02/26 11:55" />
+		<property name="end" value= "2022/04/17 09:05"/>
+		<property name="workload" value= "30.1" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+	</bean>
+	
+	<bean id="task03" class="acme.entities.task.Task">
+		<property name="title" value= "Tarea numero tres" />
+		<property name="start" value="2021/04/20 13:12" />
+		<property name="end" value= "2021/05/29 08:11"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+	</bean> 
+	
+	<bean id="task04" class="acme.entities.task.Task">
+		<property name="title" value= "Tarea numero cuatro" />
+		<property name="start" value="2021/04/20 13:12" />
+		<property name="end" value= "2021/01/29 08:11"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+	</bean> 
 </beans>
+

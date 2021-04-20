@@ -23,6 +23,10 @@
 			<acme:menu-suboption code="master.menu.anonymous.spam-word.list" action="/anonymous/spam-word/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.spam-word.create" action="/anonymous/spam-word/create"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.tasks" action="/authenticated/task/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			
