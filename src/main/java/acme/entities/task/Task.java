@@ -1,13 +1,12 @@
 package acme.entities.task;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Future;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -22,21 +21,21 @@ public class Task extends DomainEntity{
 	private static final long serialVersionUID = 1L;
 
 	@NotBlank
-	@Max(80)
+	@Size(max=80)
 	private String title;
 	
 	@NotNull
-	private LocalDateTime start;
+	private Date start;
 	
-	@Future
-	private LocalDateTime end;
+	@NotNull
+	private Date end;
 	
 	
 	@Digits(integer = 10,fraction = 2)
-	private Integer workload;
+	private Double workload;
 	
 	@NotBlank
-	@Max(500)
+	@Size(max=500)
 	private String description;
 
 	@NotNull

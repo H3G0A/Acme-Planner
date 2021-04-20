@@ -23,7 +23,7 @@
 	</definition>
 	
 	<definition name="authenticated/task/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/task/form.jsp" />
+		<put-attribute name="body" type="template" value="../authenticated/task/details.jsp" />
 	</definition>
 
 </tiles-definitions>

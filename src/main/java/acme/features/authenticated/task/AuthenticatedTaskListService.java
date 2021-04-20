@@ -1,6 +1,10 @@
 package acme.features.authenticated.task;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collection;
+import java.util.Date;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,17 +35,16 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "title","start","end","workload","description","isPublic","link");
+		request.unbind(entity, model, "title","start","end");
 		
 	}
 
 
 	@Override
 	public Collection<Task> findMany(final Request<Task> request) {
-		
 		assert request != null;	
 	    Collection<Task> result;
-	    result = this.repository.findMany();
+	    result = this.repository.findMany().stream().filter(x->x.getEnd().before(Date.from(LocalDateTime.now().toInstant(ZoneOffset.UTC)))).collect(Collectors.toList());
 		
 		return result;
 	}

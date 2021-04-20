@@ -9,10 +9,20 @@
 # they accept any liabilities with respect to them.
 
 
+# authenticated.task.list #################################################################
+
 authenticated.task.list.label.title = Titulo
 authenticated.task.list.label.start = Inicio
 authenticated.task.list.label.end = Fin
-authenticated.task.list.label.workload = Carga de trabajo
-authenticated.task.list.label.description = Descripcion
-authenticated.task.list.label.isPublic = Publico
-authenticated.task.list.label.link = Link
+
+# authenticated.task.details #################################################################
+
+authenticated.task.details.label.title = Titulo
+authenticated.task.details.label.start = Inicio
+authenticated.task.details.label.end = Fin
+authenticated.task.details.label.workload = Carga de trabajo
+authenticated.task.details.label.description = Descripcion
+authenticated.task.details.label.isPublic = Publico
+authenticated.task.details.label.link = Link
+
+authenticated.task.details.label.title.general-indicators = Descripcion detallada de la tarea
