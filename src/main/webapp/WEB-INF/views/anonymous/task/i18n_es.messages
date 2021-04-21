@@ -17,11 +17,12 @@ anonymous.task.list.label.end = Fecha de Fin
 
 # authenticated.task.details #################################################################
 
-authenticated.task.details.label.title = Titulo
-authenticated.task.details.label.start = Fecha de Inicio
-authenticated.task.details.label.end = Fecha de Fin
-authenticated.task.details.label.workload = Carga de trabajo
-authenticated.task.details.label.description = Descripcion
-authenticated.task.details.label.isPublic = Publico
-authenticated.task.details.label.link = Link
-authenticated.task.details.label.title.general-indicators = Descripcion de la tarea
+anonymous.task.form.label.title = Titulo
+anonymous.task.form.label.start = Fecha de Inicio
+anonymous.task.form.label.end = Fecha de Fin
+anonymous.task.form.label.workload = Carga de trabajo
+anonymous.task.form.label.description = Descripcion
+anonymous.task.form.label.isPublic = Publico
+anonymous.task.form.label.link = Link
+
+anonymous.task.form.button.return = Regresar
