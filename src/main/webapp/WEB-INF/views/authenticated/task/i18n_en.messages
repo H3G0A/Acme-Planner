@@ -9,19 +9,20 @@
 # they accept any liabilities with respect to them.
 
 
-# authenticated.task.list ################################################################# 
+# authenticated.task.list #################################################################
 
-anonymous.task.list.label.title = Title
-anonymous.task.list.label.start = Start Date
-anonymous.task.list.label.end = Finish Date
+authenticated.task.list.label.title = Title
+authenticated.task.list.label.start = Start
+authenticated.task.list.label.end = End
 
 # authenticated.task.details #################################################################
 
 authenticated.task.details.label.title = Title
-authenticated.task.details.label.start = Start Date
-authenticated.task.details.label.end = End Date
+authenticated.task.details.label.start = Start
+authenticated.task.details.label.end = End
 authenticated.task.details.label.workload = Workload
 authenticated.task.details.label.description = Description
 authenticated.task.details.label.isPublic = Public
 authenticated.task.details.label.link = Link
-authenticated.task.details.label.title.general-indicators = task's description
+
+authenticated.task.details.label.title.general-indicators = task's detailed description

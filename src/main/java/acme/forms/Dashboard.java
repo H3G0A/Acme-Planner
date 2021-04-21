@@ -1,7 +1,6 @@
 package acme.forms;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,8 +23,8 @@ public class Dashboard implements Serializable {
 	Double						averageNumberOfExecutionPeriods;
 	Integer						minWorkload;
 	Integer						maxWorkload;
-	LocalDateTime				minExecutionPeriod;
-	LocalDateTime				maxExecutionPeriod;
+	Double						minExecutionPeriod;
+	Double						maxExecutionPeriod;
 	Double						deviationWorkload;
 	Double						deviationExecutionPeriod;
 

@@ -1,10 +1,9 @@
 package acme.entities.tasks;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Future;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -22,33 +21,38 @@ public class Task extends DomainEntity{
 	private static final long serialVersionUID = 1L;
 
 	@NotBlank
-	@Size(max = 80)
+	@Size(max=80)
 	private String title;
 	
-	@Future
-	private LocalDateTime executionPeriod;
+	@NotNull
+	private Date start;
+	
+	@NotNull
+	private Date end;
+	
 	
 	@Digits(integer = 10,fraction = 2)
-	private Integer workload;
+	private Double workload;
 	
 	@NotBlank
-	@Size(max = 500)
+	@Size(max=500)
 	private String description;
+
+	@NotNull
+	private Boolean isPublic;
 	
 	@URL
 	private String link;
-	
-	@NotNull
-	public Boolean esPublico;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1;
+		int result = super.hashCode();
 		result = prime * result + ((this.description == null) ? 0 : this.description.hashCode());
-		result = prime * result + ((this.esPublico == null) ? 0 : this.esPublico.hashCode());
-		result = prime * result + ((this.executionPeriod == null) ? 0 : this.executionPeriod.hashCode());
+		result = prime * result + ((this.end == null) ? 0 : this.end.hashCode());
+		result = prime * result + ((this.isPublic == null) ? 0 : this.isPublic.hashCode());
 		result = prime * result + ((this.link == null) ? 0 : this.link.hashCode());
+		result = prime * result + ((this.start == null) ? 0 : this.start.hashCode());
 		result = prime * result + ((this.title == null) ? 0 : this.title.hashCode());
 		result = prime * result + ((this.workload == null) ? 0 : this.workload.hashCode());
 		return result;
@@ -58,7 +62,7 @@ public class Task extends DomainEntity{
 	public boolean equals(final Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
 		if (this.getClass() != obj.getClass())
 			return false;
@@ -68,20 +72,25 @@ public class Task extends DomainEntity{
 				return false;
 		} else if (!this.description.equals(other.description))
 			return false;
-		if (this.esPublico == null) {
-			if (other.esPublico != null)
+		if (this.end == null) {
+			if (other.end != null)
 				return false;
-		} else if (!this.esPublico.equals(other.esPublico))
+		} else if (!this.end.equals(other.end))
 			return false;
-		if (this.executionPeriod == null) {
-			if (other.executionPeriod != null)
+		if (this.isPublic == null) {
+			if (other.isPublic != null)
 				return false;
-		} else if (!this.executionPeriod.equals(other.executionPeriod))
+		} else if (!this.isPublic.equals(other.isPublic))
 			return false;
 		if (this.link == null) {
 			if (other.link != null)
 				return false;
 		} else if (!this.link.equals(other.link))
+			return false;
+		if (this.start == null) {
+			if (other.start != null)
+				return false;
+		} else if (!this.start.equals(other.start))
 			return false;
 		if (this.title == null) {
 			if (other.title != null)
@@ -98,14 +107,7 @@ public class Task extends DomainEntity{
 
 	@Override
 	public String toString() {
-		return "Task [title=" + this.title + ", executionPeriod=" + this.executionPeriod + ", workload=" + this.workload + ", description=" + this.description + ", link=" + this.link + ", esPublico=" + this.esPublico + "]";
+		return "Task [title=" + this.title + ", start=" + this.start + ", end=" + this.end + ", workload=" + this.workload + ", description=" + this.description + ", isPublic=" + this.isPublic + ", link=" + this.link + "]";
 	}
-	
-	
 
-
-	
-	
-	
-	
 }

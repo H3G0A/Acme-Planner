@@ -7,21 +7,22 @@
 # this software. It has been tested carefully, but it is not guaranteed for any particular
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
- 
- 
-# authenticated.task.list ################################################################# 
- 
-anonymous.task.list.label.title = Titulo
-anonymous.task.list.label.start = Fecha de Inicio
-anonymous.task.list.label.end = Fecha de Fin
+
+
+# authenticated.task.list #################################################################
+
+authenticated.task.list.label.title = Titulo
+authenticated.task.list.label.start = Inicio
+authenticated.task.list.label.end = Fin
 
 # authenticated.task.details #################################################################
 
 authenticated.task.details.label.title = Titulo
-authenticated.task.details.label.start = Fecha de Inicio
-authenticated.task.details.label.end = Fecha de Fin
+authenticated.task.details.label.start = Inicio
+authenticated.task.details.label.end = Fin
 authenticated.task.details.label.workload = Carga de trabajo
 authenticated.task.details.label.description = Descripcion
 authenticated.task.details.label.isPublic = Publico
 authenticated.task.details.label.link = Link
-authenticated.task.details.label.title.general-indicators = Descripcion de la tarea
+
+authenticated.task.details.label.title.general-indicators = Descripcion detallada de la tarea

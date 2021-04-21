@@ -30,6 +30,8 @@ master.menu.sign-out = Salir
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.tasks = Tareas
+master.menu.anonymous.shouts = Gritos
 
 # master.menu.administrator ###################################################
 
@@ -108,3 +110,7 @@ master.panic.label.status = Estado:
 master.panic.label.exceptions = Excepciones:
 master.panic.text.consult-log = Por favor, consulte el log para ver más detalles.
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autentificado
+master.menu.authenticated.tasks = Tareas

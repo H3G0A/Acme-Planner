@@ -1,6 +1,10 @@
 package acme.features.anonymous.task;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collection;
+import java.util.Date;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +39,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "executionPeriod", "workload");
+		request.unbind(entity, model, "title", "start", "end");
 	}
 
 	@Override
@@ -44,8 +48,8 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 
 		Collection<Task> result;
 
-		final Boolean cond = true;
-		result = this.repository.findMany(cond);
+		result = this.repository.findMany().stream().filter(x->x.getEnd().after(Date.from(LocalDateTime.now().toInstant(ZoneOffset.UTC)))).collect(Collectors.toList());
+
 
 		return result;
 	}
