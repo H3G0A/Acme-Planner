@@ -6,22 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.entities.spamWord.SpamWord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Anonymous;
-import acme.framework.entities.SpamWord;
+import acme.framework.entities.Administrator;
 
 @Controller
 @RequestMapping("/administrator/spam-word/")
-public class AnonymousSpamWordController extends AbstractController<Anonymous, SpamWord> {
+public class AdministratorSpamWordController extends AbstractController<Administrator, SpamWord> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnonymousSpamWordListService listService;
+	private AdministratorSpamWordListService listService;
 	
 	@Autowired
-	private AnonymousSpamWordCreateService createService;
+	private AdministratorSpamWordCreateService createService;
+	
+	@Autowired
+	private AdministratorSpamWordUpdateService updateService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -30,6 +33,7 @@ public class AnonymousSpamWordController extends AbstractController<Anonymous, S
 	protected void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }

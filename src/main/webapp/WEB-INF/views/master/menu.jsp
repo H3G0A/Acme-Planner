@@ -19,9 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.spam-word.list" action="/anonymous/spam-word/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.spam-word.create" action="/anonymous/spam-word/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>		
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -29,7 +27,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			
+			<acme:menu-suboption code="master.menu.administrator.spam-word.list" action="/administrator/spam-word/list"/>
+			<acme:menu-suboption code="master.menu.administrator.spam-word.create" action="/administrator/spam-word/create"/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>

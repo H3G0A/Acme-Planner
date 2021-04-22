@@ -1,8 +1,9 @@
-package acme.framework.entities;
+package acme.entities.spamWord;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,10 +12,15 @@ import lombok.Setter;
 @Setter
 public class SpamWord extends DomainEntity {
 	
-	private static final long serialVersionUID = 1L;
+	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank
-	private String word;
+	protected String word;
+	
+	protected Double threshold;
+	
+	
+	
 
 	@Override
 	public int hashCode() {

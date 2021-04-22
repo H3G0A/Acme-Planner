@@ -11,7 +11,8 @@
 administrator.spam-word.list.label.word = Spam Word
 
 administrator.spam-word.form.label.word = Word
-administrator.spam-word.form.button.create = Save!
+administrator.spam-word.form.button.create = Create!
+administrator.spam-word.form.button.update = Save changes!
 administrator.spam-word.form.button.return = Return
 
 

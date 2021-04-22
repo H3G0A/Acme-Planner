@@ -35,8 +35,8 @@ master.menu.anonymous.favourite-link = Enlace favorito
 
 master.menu.administrator = Administrador
 master.menu.administrator.dashboard = Panel de indicadores
-master.menu.administrator.spamWord.list = Lista de Palabras Spam
-master.menu.administrator.spamWord.create = Añadir una Palabra Spam
+master.menu.administrator.spam-word.list = Lista de Palabras Spam
+master.menu.administrator.spam-word.create = Añadir una Palabra Spam
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)

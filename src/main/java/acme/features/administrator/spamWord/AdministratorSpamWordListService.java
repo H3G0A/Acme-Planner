@@ -5,19 +5,19 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.spamWord.SpamWord;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
-import acme.framework.entities.SpamWord;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousSpamWordListService implements AbstractListService<Anonymous, SpamWord> {
+public class AdministratorSpamWordListService implements AbstractListService<Administrator, SpamWord> {
 
 		// Internal state ---------------------------------------------------------
 
 		@Autowired
-		protected AnonymousSpamWordRepository repository;
+		protected AdministratorSpamWordRepository repository;
 
 		// AbstractListService<Administrator, SpamWord> interface -----
 

@@ -1,4 +1,4 @@
-package acme.framework.entities;
+package acme.entities.shout;
 
 import java.util.Date;
 
@@ -14,6 +14,7 @@ import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
