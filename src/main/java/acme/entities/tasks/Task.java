@@ -1,4 +1,4 @@
-package acme.entities.task;
+package acme.entities.tasks;
 
 import java.util.Date;
 
