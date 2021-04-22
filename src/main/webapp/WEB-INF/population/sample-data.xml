@@ -15,8 +15,8 @@
 <beans 
 	xmlns="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
 	
 	<bean id="spamWord01" class="acme.entities.spamWord.SpamWord">
@@ -98,7 +98,87 @@
 		<property name="word" value="millon de dolares"/>
 	</bean>
 
-	<bean id="task01" class="acme.entities.task.Task">
+
+	<!-- Shouts -->
+	<bean id="shout01" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/02/13 19:39"/>
+		<property name="author" value="John Doe"/>
+		<property name="text" value="I'm happy!"/>
+		<property name="info"><null/></property>	
+	</bean>
+	
+	<bean id="shout02" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2019/08/09 15:55"/>
+		<property name="author" value="Jane Doe"/>
+		<property name="text" value="I'm the master of my room!"/>
+		<property name="info" value="http://www.example.org"/>		
+	</bean>
+	
+	<bean id="shout03" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2020/09/07 00:00"/>
+		<property name="author" value="Foo Bar"/>
+		<property name="text" value="Just turning 50!"/>
+		<property name="info" value="http://happybirthday.com"/>		
+	</bean>
+	
+	<bean id="shout04" class="acme.entities.shouts.Shout">
+		<property name="author" value="Leslie Design-Testing"/>
+		<property name="text" value="Woa! This app's so cool!"/>
+		<property name="moment" value="2021/02/13 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2020/06/14 12:34"/>
+		<property name="author" value="Misco Smith"/>
+		<property name="text" value="I love you tuvi!"/>
+		<property name="info" value="https://www.youtube.com/watch?v=Vw_JaNPbfMM"/>		
+	</bean>
+	
+	<bean id="shout06" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2020/12/03 03:00"/>
+		<property name="author" value="Tuvi Fernandez"/>
+		<property name="text" value="It's so late!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout07" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2020/10/04 14:05"/>
+		<property name="author" value="Debora Trebor"/>
+		<property name="text" value="I love my life!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/01/16 16:22"/>
+		<property name="author" value="Marco Antonio"/>
+		<property name="text" value="I want to go skiing!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/07 08:10"/>
+		<property name="author" value="Luis Enrique"/>
+		<property name="text" value="I'm happy!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout10" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/23 17:32"/>
+		<property name="author" value="Maria Grande"/>
+		<property name="text" value="I want to try mexican food!"/>
+		<property name="info" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>		
+	</bean>
+	
+	<bean id="shout11" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="author" value="Paquito Ramirez"/>
+		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<!-- Tasks -->
+	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero uno" />
 		<property name="start" value="2021/04/19 16:05" />
 		<property name="end" value= "2021/05/19 19:05"/>
@@ -108,7 +188,7 @@
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
-	<bean id="task02" class="acme.entities.task.Task">
+	<bean id="task02" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero dos" />
 		<property name="start" value="2021/02/26 11:55" />
 		<property name="end" value= "2022/04/17 09:05"/>
@@ -118,23 +198,23 @@
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
-	<bean id="task03" class="acme.entities.task.Task">
+	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero tres" />
 		<property name="start" value="2021/04/20 13:12" />
 		<property name="end" value= "2021/05/29 08:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
-		<property name="isPublic" value="True" />
+		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 	
-	<bean id="task04" class="acme.entities.task.Task">
+	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cuatro" />
 		<property name="start" value="2021/04/20 13:12" />
 		<property name="end" value= "2021/01/29 08:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
-		<property name="isPublic" value="False" />
+		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 </beans>
