@@ -37,6 +37,8 @@ master.menu.anonymous.shouts = Shouts
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.spam-word.list = Spam Word List
+master.menu.administrator.spam-word.create = Create a Spam Word
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)

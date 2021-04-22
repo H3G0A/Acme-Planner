@@ -19,67 +19,82 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
 	
-	<bean id="spamWord01" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord01" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="sex"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord02" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord02" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="sexo"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord03" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord03" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="hard core"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord04" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord04" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="fuerza bruta"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord05" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord05" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="viagra"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord06" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord06" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="viagra"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord07" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord07" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="cialis"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord08" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord08" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="cialis"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord09" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord09" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="nigeria"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord10" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord10" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="nigeria"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord11" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord11" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="you've won"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord12" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord12" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="you have won"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord13" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord13" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="acabas de ganar"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord14" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord14" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="has ganado"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord15" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord15" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="million dollar"/>
+		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord16" class="acme.framework.entities.SpamWord">
+	<bean id="spamWord16" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="millon de dolares"/>
 	</bean>
 
