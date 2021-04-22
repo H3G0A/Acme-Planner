@@ -1,4 +1,4 @@
-package acme.features.administrator.spamWord;
+package acme.features.spamFilter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

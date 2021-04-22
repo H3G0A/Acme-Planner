@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.spamWord.SpamWord;
+import acme.features.spamFilter.AdministratorSpamWordRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -15,8 +16,6 @@ public class AdministratorSpamWordCreateService implements AbstractCreateService
 	@Autowired
 	protected AdministratorSpamWordRepository repository;
 	
-	@Autowired
-	protected AnonymousSpamDetectorService detector;
 	@Override
 	public boolean authorise(final Request<SpamWord> request) {
 		// TODO Auto-generated method stub
@@ -66,14 +65,6 @@ public class AdministratorSpamWordCreateService implements AbstractCreateService
 		assert entity != null;
 		assert errors != null;
 		
-//		String text=request.getModel().getAttribute("word").toString();
-//		
-//		boolean textSpam = this.detector.detectSpam(text);
-//		
-//		if(textSpam==true) {
-//			errors.add("text", "Your text is considered spam");
-//		}
-//		
 	}
 
 	@Override
