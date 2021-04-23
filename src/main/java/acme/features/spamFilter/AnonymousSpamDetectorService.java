@@ -62,20 +62,31 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 		 
 		 final List<String> textList = new ArrayList<>(Arrays.asList(text.split(" ")));
 		 Double threshold=0.;
-		 
-		 for(final String w: textList) {
-			 final String low = w.toLowerCase();
-			 for(final String sp: spamWordsListWithoutSpaces) {
-				 final String spLow= sp.toLowerCase();
+		 int i =0;
+		 while(i<textList.size()) {
+			 final String low = textList.get(i).toLowerCase();
+			 int z=0;
+			 while(z<spamWordsListWithoutSpaces.size()) {
+				 final String spLow= spamWordsListWithoutSpaces.get(z).toLowerCase();
 				 if(low.equals(spLow)) {
 					 
 					 threshold += ((1./textList.size())*100);
 					 
+					 break;
+					 
 				 }else {
-					 threshold += 0.;
+					 if((!(i==textList.size()-1)) && (low+textList.get(i+1)).equals(spLow)) {
+						 threshold += ((1./textList.size())*100);
+						 break;
+					 }else {
+						 	threshold += 0.;
+					 }
 				 }
-			 }
+				 z++;
 				 
+			 }
+			 i++;
+			 
 		 }
 		 
 		 if(threshold<=10.) {
@@ -89,5 +100,6 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 		
 	
 	}
+
 
 }
