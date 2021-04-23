@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
+import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -32,6 +33,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	@Autowired
 	protected AnonymousShoutRepository repository;
 
+	@Autowired
+	protected AnonymousSpamDetectorService spamDetector;
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
 	@Override
@@ -82,6 +85,16 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final String text = request.getModel().getAttribute("text").toString();
+		final String author = request.getModel().getAttribute("author").toString();
+		
+		if(this.spamDetector.detectSpam(text)) {
+			errors.add("text", "This text is considered spam/Este texto es considerado spam");
+		}
+		if(this.spamDetector.detectSpam(author)) {
+			errors.add("author", "This author is considered spam/Este texto es considerado spam");
+		}
 
 	}
 
