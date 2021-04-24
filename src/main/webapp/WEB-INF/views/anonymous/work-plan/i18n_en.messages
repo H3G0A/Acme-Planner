@@ -1,0 +1,26 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+# anonymous.work-plan.list ################################################################# 
+
+anonymous.work-plan.list.label.isPublic = Public/Private WorkPlan
+anonymous.work-plan.list.label.start = Start Date
+anonymous.work-plan.list.label.end = Finish Date
+
+# anonymous.work-plan.details #################################################################
+
+anonymous.work-plan.form.label.id = ID
+anonymous.work-plan.form.label.start = Start Date
+anonymous.work-plan.form.label.end = End Date
+anonymous.work-plan.form.label.workload = Workload
+anonymous.work-plan.form.label.isPublic = Public
+
+anonymous.work-plan.form.button.return = Return
