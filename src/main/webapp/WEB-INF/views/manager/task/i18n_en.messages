@@ -9,20 +9,29 @@
 # they accept any liabilities with respect to them.
 
 
-# authenticated.task.list #################################################################
+# manager.task.list #################################################################
 
-authenticated.task.list.label.title = Title
-authenticated.task.list.label.start = Start
-authenticated.task.list.label.end = End
+manager.task.list.label.title = Title
+manager.task.list.label.start = Start
+manager.task.list.label.end = End
 
-# authenticated.task.details #################################################################
+# manager.task.form #################################################################
 
-authenticated.task.details.label.title = Title
-authenticated.task.details.label.start = Start
-authenticated.task.details.label.end = End
-authenticated.task.details.label.workload = Workload
-authenticated.task.details.label.description = Description
-authenticated.task.details.label.isPublic = Public
-authenticated.task.details.label.link = Link
+manager.task.form.label.title = Title
+manager.task.form.label.start = Start
+manager.task.form.label.end = End
+manager.task.form.label.workload = Workload
+manager.task.form.label.description = Description
+manager.task.form.label.isPublic = Public
+manager.task.form.label.link = Link
+manager.task.form.button.update = Update
+manager.task.form.button.delete = Delete
+manager.task.form.button.create = New
+manager.task.form.button.return = Return
 
-authenticated.task.details.label.title.general-indicators = task's detailed description
+manager.task.form.label.title.general-indicators = task's detailed description
+
+# manager.task.form.error ###########################################################
+
+manager.task.form.error.spam = Este texto es considerado spam
+manager.task.form.error.endBeforeStart = End date must be after the start date

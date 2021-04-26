@@ -8,12 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.consumer.manager.form.title.create = Become a worker
-authenticated.consumer.manager.form.title.update = Update your worker data
+authenticated.manager.form.title.create = Become a manager
+authenticated.manager.form.title.update = Update your manager data
 
-authenticated.consumer.manager.form.label.company = Company
-authenticated.consumer.manager.form.label.sector = Sector
-
-authenticated.consumer.manager.form.button.create = Register
-authenticated.consumer.manager.form.button.update = Update
-authenticated.consumer.manager.form.button.return = Return
+authenticated.manager.form.button.create = Register
+authenticated.manager.form.button.update = Update
+authenticated.manager.form.button.return = Return

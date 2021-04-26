@@ -9,20 +9,29 @@
 # they accept any liabilities with respect to them.
 
 
-# authenticated.task.list #################################################################
+# manager.task.list #################################################################
 
-authenticated.task.list.label.title = Titulo
-authenticated.task.list.label.start = Inicio
-authenticated.task.list.label.end = Fin
+manager.task.list.label.title = Titulo
+manager.task.list.label.start = Inicio
+manager.task.list.label.end = Fin
 
-# authenticated.task.details #################################################################
+# manager.task.form #################################################################
 
-authenticated.task.details.label.title = Titulo
-authenticated.task.details.label.start = Inicio
-authenticated.task.details.label.end = Fin
-authenticated.task.details.label.workload = Carga de trabajo
-authenticated.task.details.label.description = Descripcion
-authenticated.task.details.label.isPublic = Publico
-authenticated.task.details.label.link = Link
+manager.task.form.label.title = Titulo
+manager.task.form.label.start = Inicio
+manager.task.form.label.end = Fin
+manager.task.form.label.workload = Carga de trabajo
+manager.task.form.label.description = Descripcion
+manager.task.form.label.isPublic = Publico
+manager.task.form.label.link = Link
+manager.task.form.button.update = Actualizar
+manager.task.form.button.delete = Eliminar
+manager.task.form.button.create = Nuevo
+manager.task.form.button.return = Volver
 
-authenticated.task.details.label.title.general-indicators = Descripcion detallada de la tarea
+manager.task.form.label.title.general-indicators = Descripcion detallada de la tarea
+
+# manager.task.form.error ###########################################################
+
+manager.task.form.error.spam = Este texto es considerado spam
+manager.task.form.error.endBeforeStart = La fecha de fin debe ser posterior a la fecha de inicio

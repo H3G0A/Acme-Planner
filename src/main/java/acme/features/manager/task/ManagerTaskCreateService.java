@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
+import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -18,8 +19,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		@Autowired
 		protected ManagerTaskRepository repository;
 		
+		@Autowired
+		protected AnonymousSpamDetectorService spamDetector;
+		
 
-		// AbstractCreateService<Employer, Job> interface -------------------------
+		// AbstractCreateService<manager, task> interface -------------------------
 
 
 		@Override
@@ -35,8 +39,24 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			assert entity != null;
 			assert errors != null;
 			
-			//validar fechas no en el pasado, start antes que end, workloud no puede ser mayo que execution period
+			if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
+				
+				errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.form.error.endBeforeStart");
+			}
 			
+			final String title = entity.getTitle();
+			final String description = entity.getDescription();
+			final String link = entity.getLink();
+			
+			if(this.spamDetector.detectSpam(title)) {
+				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.task.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(description)) {
+				errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.task.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(link)) {
+				errors.state(request, !this.spamDetector.detectSpam(link), "link", "manager.task.form.error.spam");
+			}
 
 		}
 

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
+import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -18,8 +19,11 @@ public class ManagerTaskUpdateService  implements AbstractUpdateService<Manager,
 
 		@Autowired
 		protected ManagerTaskRepository repository;
+		
+		@Autowired
+		protected AnonymousSpamDetectorService spamDetector;
 
-		// AbstractListService<Employer, Job> -------------------------------------
+		// AbstractListService<manager, task> -------------------------------------
 
 
 		@Override
@@ -46,8 +50,25 @@ public class ManagerTaskUpdateService  implements AbstractUpdateService<Manager,
 			assert request != null;
 			assert entity != null;
 			assert errors != null;
-
-			//lo mismo que en el create
+			
+			if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
+				
+				errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.form.error.endBeforeStart");
+			}
+			
+			final String title = entity.getTitle();
+			final String description = entity.getDescription();
+			final String link = entity.getLink();
+			
+			if(this.spamDetector.detectSpam(title)) {
+				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.task.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(description)) {
+				errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.task.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(link)) {
+				errors.state(request, !this.spamDetector.detectSpam(link), "link", "manager.task.form.error.spam");
+			}
 		}
 
 		@Override
