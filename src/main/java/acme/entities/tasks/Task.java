@@ -43,6 +43,15 @@ public class Task extends DomainEntity{
 	
 	@URL
 	private String link;
+	
+	protected double executionPeriod;
+	
+	
+	//	Derived attributes
+
+	public void setExecutionPeriod() {
+		this.executionPeriod = (double) (this.end.getTime() - this.start.getTime()) / (1000 * 3600);
+	}
 
 	@Override
 	public int hashCode() {

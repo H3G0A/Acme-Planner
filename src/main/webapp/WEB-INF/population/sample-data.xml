@@ -185,6 +185,7 @@
 		<property name="workload" value= "25.3" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="110.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
@@ -195,6 +196,7 @@
 		<property name="workload" value= "30.1" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="10.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
@@ -205,6 +207,7 @@
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
+		<property name="executionPeriod" value="50.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 	
@@ -215,6 +218,7 @@
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="60.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 	

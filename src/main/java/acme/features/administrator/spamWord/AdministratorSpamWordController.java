@@ -18,13 +18,20 @@ public class AdministratorSpamWordController extends AbstractController<Administ
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorSpamWordListService listService;
+	protected AdministratorSpamWordListService listService;
 	
 	@Autowired
-	private AdministratorSpamWordCreateService createService;
+	protected AdministratorSpamWordShowService showService;
 	
 	@Autowired
-	private AdministratorSpamWordUpdateService updateService;
+	protected AdministratorSpamWordCreateService createService;
+	
+	@Autowired
+	protected AdministratorSpamWordUpdateService updateService;
+	
+	@Autowired
+	protected AdministratorSpamWordDeleteService deleteService;
+	
 
 	// Constructors -----------------------------------------------------------
 
@@ -32,8 +39,11 @@ public class AdministratorSpamWordController extends AbstractController<Administ
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+
 	}
 
 }
