@@ -33,6 +33,7 @@ public class Shout extends DomainEntity {
 	protected String author;
 	
 	@NotEmpty
+	@NotBlank
 	@Size(max = 100)
 	protected String text;
 	

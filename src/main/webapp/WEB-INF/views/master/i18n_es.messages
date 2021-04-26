@@ -33,6 +33,7 @@ master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.tasks = Tareas
 master.menu.anonymous.listShouts = Gritos
 master.menu.anonymous.createShouts = Nuevo Grito
+master.menu.anonymous.listWorkPlans = Planes de trabajo
 
 # master.menu.administrator ###################################################
 
