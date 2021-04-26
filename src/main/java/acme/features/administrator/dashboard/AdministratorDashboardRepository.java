@@ -8,10 +8,10 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
 
-	@Query("select count(t) from Task t where t.isPublic=True")
+	@Query("select count(t) from Task t where t.isPublic=true")
 	Integer numberOfPublicTask();
 	
-	@Query("select count(t) from Task t where t.isPublic=False")
+	@Query("select count(t) from Task t where t.isPublic=false")
 	Integer numberOfPrivateTask();
 //	CURRENT_TIMESTAMP
 	@Query("select count(t) from Task t where t.end < CURRENT_TIMESTAMP")
@@ -23,7 +23,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select avg(t.workload) from Task t")
 	Double averageNumberOfWorkload();
 
-	@Query("select avg((t.end)-(t.start)) from Task t")
+	@Query("select avg((t.executionPeriod)) from Task t")
 	Double averageNumberOfExecutionPeriods();
 	
 	@Query("select min(t.workload) from Task t")
@@ -32,16 +32,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select max(t.workload) from Task t")
 	Integer maxWorkload();
 	
-	@Query("select min((t.end)-(t.start)) from Task t")
+	@Query("select min((t.executionPeriod)) from Task t")
 	Double minExecutionPeriod();
 
-	@Query("select max((t.end)-(t.start)) from Task t")
+	@Query("select max((t.executionPeriod)) from Task t")
 	Double maxExecutionPeriod();
 	
-	@Query("select sqrt(sum((t.workload - (select avg(t.workload) from Task t))*(t.workload - (select avg(t.workload) from Task t)))) from Task t")
+	@Query("select stddev(t.workload) from Task t")
 	Double deviationWorkload();
 	
-	@Query("select sqrt(sum(((t.end)-(t.start) - (select avg((t.end)-(t.start)) from Task t))*((t.end)-(t.start) - (select avg((t.end)-(t.start)) from Task t)))) from Task t")
+	@Query("select stddev(t.executionPeriod) from Task t")
 	Double deviationExecutionPeriod();
 	
 }

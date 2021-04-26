@@ -9,13 +9,13 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractUpdateService;
+import acme.framework.services.AbstractDeleteService;
 @Service
-public class AdministratorSpamWordUpdateService implements AbstractUpdateService<Administrator, SpamWord> {
+public class AdministratorSpamWordDeleteService implements AbstractDeleteService<Administrator, SpamWord> {
 
 	@Autowired
 	protected AdministratorSpamWordRepository repository;
-	
+
 	@Override
 	public boolean authorise(final Request<SpamWord> request) {
 		assert request != null;
@@ -27,7 +27,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		spam_word=this.repository.findOneSpamWordById(spam_word_Id);
 		result = spam_word !=null;
 		return result;
-		
 	}
 
 	@Override
@@ -67,14 +66,15 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
 	}
 
 	@Override
-	public void update(final Request<SpamWord> request, final SpamWord entity) {
+	public void delete(final Request<SpamWord> request, final SpamWord entity) {
 		assert request != null;
 		assert entity != null;
-
-		this.repository.save(entity);
+						
+		this.repository.deleteById(entity.getId());
 		
 	}
 

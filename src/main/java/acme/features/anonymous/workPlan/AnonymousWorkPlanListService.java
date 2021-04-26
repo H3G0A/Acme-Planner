@@ -32,6 +32,14 @@ public class AnonymousWorkPlanListService implements AbstractListService<Anonymo
 		assert entity != null;
 		assert model != null;
 		
+		
+		if(entity.getIsPublic().equals(true)) {
+			model.setAttribute("public", "Public");
+			
+		}else {
+			model.setAttribute("public", "Private");
+		}
+		
 		request.unbind(entity, model, "start","end","isPublic","tasks");
 		
 	}
