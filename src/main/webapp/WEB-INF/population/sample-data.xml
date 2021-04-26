@@ -221,6 +221,44 @@
 		<property name="executionPeriod" value="60.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
+
+	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
+        <property name="username" value="manager1"/>
+        <property name="password" value="manager1"/>
+        <property name="enabled" value="true"/>
+        <property name="identity">
+            <bean class="acme.datatypes.UserIdentity">        
+                <property name="name" value="Carlos"/>
+                <property name="surname" value="Donde Estas"/>
+                <property name="email" value="badBnny@mail.com"/>
+            </bean>
+        </property>        
+        <property name="roles">
+            <list>
+                <ref bean="manager1Manager"/>
+                <ref bean="manager1Authenticated"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean name="manager1Manager" class="acme.entities.roles.Manager">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
+
+    <bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
+    
+    <bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero cinco" />
+		<property name="start" value="2021/04/20 13:12" />
+		<property name="end" value= "2021/01/29 08:11"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager1Manager"/>
+	</bean> 
 	
 	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
 		<property name="start" value="2020/04/20 13:12" />
