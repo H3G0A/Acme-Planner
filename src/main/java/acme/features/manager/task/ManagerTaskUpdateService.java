@@ -106,7 +106,8 @@ public class ManagerTaskUpdateService  implements AbstractUpdateService<Manager,
 		public void update(final Request<Task> request, final Task entity) {
 			assert request != null;
 			assert entity != null;
-
+			
+			entity.setExecutionPeriod();
 			this.repository.save(entity);
 		}
 }

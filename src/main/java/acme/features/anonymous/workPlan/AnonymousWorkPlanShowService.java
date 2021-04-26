@@ -22,12 +22,11 @@ public class AnonymousWorkPlanShowService implements AbstractShowService<Anonymo
 
 	@Override
 	public void unbind(final Request<WorkPlan> request, final WorkPlan entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		model.setAttribute("id", entity.getWorkload());
+		model.setAttribute("workload", entity.getWorkload());
 		model.setAttribute("id", entity.getId());
 		request.unbind(entity, model, "id","start","end","workload","isPublic");
 	}

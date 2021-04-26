@@ -26,7 +26,7 @@ public class AdministratorSpamWordDeleteService implements AbstractDeleteService
 		spam_word_Id=request.getModel().getInteger("id");
 		spam_word=this.repository.findOneSpamWordById(spam_word_Id);
 		result = spam_word !=null;
-		return true;
+		return result;
 	}
 
 	@Override
