@@ -27,7 +27,6 @@ master.menu.sign-out = Salir
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.tasks = Tareas
 master.menu.anonymous.listShouts = Gritos
 master.menu.anonymous.createShouts = Nuevo Grito
@@ -45,9 +44,9 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 # master.menu.manager ##########################################################
 
 master.menu.manager = Gerente
-master.menu.manager.favourite-link = Enlace favorito
 master.menu.manager.task = Tareas
 master.menu.manager.createTask= Crear Tarea
+master.menu.manager.create.workPlan = Crear Plan de Trabajo
 
 # master.menu.user-account ####################################################
 
