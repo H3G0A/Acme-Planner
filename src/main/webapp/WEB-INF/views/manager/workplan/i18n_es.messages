@@ -11,6 +11,15 @@
 # manager.workPlan.list #################################################################
 
 # manager.workPlan.form #################################################################
+manager.workPlan.form.label.title= Título
+manager.workPlan.form.label.Description= Descripción
+manager.workPlan.form.label.start = Fecha inicio
+manager.workPlan.form.label.end = Fecha fin
+manager.workPlan.form.label.isPublic = Es público?
+manager.workPlan.form.button.update= Actualizar
+manager.workPlan.form.button.create= Crear
+manager.workPlan.form.button.delete= Borrar
+manager.workPlan.form.button.return = Volver
 
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
