@@ -58,7 +58,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 			 int z=0;
 			 while(z<spamWordList.size()) {
 				 final String spLow= spamWordList.get(z).toLowerCase();
-				 if(low.equals(spLow)) {
+				 if(low.equals(spLow) || low.contains(spLow)) {
 					 threshold += ((1./textList.size())*100);					 
 					 break;					 
 				 }else {					 

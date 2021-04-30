@@ -92,7 +92,7 @@
 
 	<!-- Shouts -->
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/02/13 19:39"/>
+		<property name="moment" value="2021/04/13 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
@@ -115,12 +115,12 @@
 	<bean id="shout04" class="acme.entities.shouts.Shout">
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
-		<property name="moment" value="2021/02/13 12:30"/>
+		<property name="moment" value="2021/04/23 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
 	<bean id="shout05" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/06/14 12:34"/>
+		<property name="moment" value="2021/04/24 12:34"/>
 		<property name="author" value="Misco Smith"/>
 		<property name="text" value="I love you tuvi!"/>
 		<property name="info" value="https://www.youtube.com/watch?v=Vw_JaNPbfMM"/>		
@@ -204,8 +204,8 @@
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cuatro" />
-		<property name="start" value="2020/04/20 13:12" />
-		<property name="end" value= "2020/01/29 08:11"/>
+		<property name="start" value="2020/04/20 11:00" />
+		<property name="end" value= "2020/06/29 10:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
@@ -242,8 +242,8 @@
     
     <bean id="task05" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cinco" />
-		<property name="start" value="2021/04/20 13:12" />
-		<property name="end" value= "2021/01/29 08:11"/>
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
@@ -252,8 +252,8 @@
 	</bean> 
 	
 	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
-		<property name="start" value="2020/04/20 13:12" />
-		<property name="end" value= "2020/01/29 08:11"/>
+		<property name="start" value="2020/01/20 15:12" />
+		<property name="end" value= "2020/04/29 09:23"/>
 		<property name="isPublic" value="False" />
 		<property name="tasks">
 			<list>
@@ -264,8 +264,8 @@
 		</property>
 	</bean>
 	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
-		<property name="start" value="2021/04/26 13:12" />
-		<property name="end" value= "2021/01/29 08:11"/>
+		<property name="start" value="2021/04/26 10:00" />
+		<property name="end" value= "2021/08/16 02:52"/>
 		<property name="isPublic" value="False" />
 		<property name="tasks">
 			<list>
@@ -276,8 +276,8 @@
 		</property>
 	</bean>
 	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
-		<property name="start" value="2020/01/26 13:12" />
-		<property name="end" value= "2020/04/29 08:11"/>
+		<property name="start" value="2020/01/26 14:20" />
+		<property name="end" value= "2020/04/29 23:11"/>
 		<property name="isPublic" value="True" />
 		<property name="tasks">
 			<list>
@@ -287,8 +287,8 @@
 		</property>
 	</bean>
 	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
-		<property name="start" value="2021/01/26 13:12" />
-		<property name="end" value= "2021/04/29 08:11"/>
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="isPublic" value="True" />
 		<property name="tasks">
 			<list>

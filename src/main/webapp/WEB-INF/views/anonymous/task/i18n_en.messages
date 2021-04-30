@@ -22,7 +22,9 @@ anonymous.task.form.label.start = Start Date
 anonymous.task.form.label.end = End Date
 anonymous.task.form.label.workload = Workload
 anonymous.task.form.label.description = Description
-anonymous.task.form.label.isPublic = Public
+anonymous.task.form.label.isPublic = Status
 anonymous.task.form.label.link = Link
+anonymous.task.form.label.yes = Public
+anonymous.task.form.label.no = Private
 
 anonymous.task.form.button.return = Return
