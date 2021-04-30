@@ -14,4 +14,5 @@ public interface ManagerWorkPlanRepository extends AbstractRepository{
 	@Query("select w from WorkPlan w where w.manager.id = ?1")
 	Collection<WorkPlan> findManyByManagerId(int managerId);
 
+	WorkPlan findOneWorkPlanById(int workPlanId);
 }
