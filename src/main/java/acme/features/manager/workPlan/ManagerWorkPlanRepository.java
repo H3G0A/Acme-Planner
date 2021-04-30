@@ -12,7 +12,8 @@ import acme.framework.repositories.AbstractRepository;
 public interface ManagerWorkPlanRepository extends AbstractRepository{
 
 	@Query("select w from WorkPlan w where w.manager.id = ?1")
-	Collection<WorkPlan> findManyByManagerId(int managerId);
+	Collection<WorkPlan> findManyByManagerId(int activeRoleId);
 
-	WorkPlan findOneWorkPlanById(int workPlanId);
+	@Query("select w from WorkPlan w where w.id = ?1")
+	WorkPlan findOneWorkPlanById(int id);
 }
