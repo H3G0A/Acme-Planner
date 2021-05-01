@@ -47,6 +47,7 @@ master.menu.manager = Gerente
 master.menu.manager.task = Tareas
 master.menu.manager.createTask= Crear Tarea
 master.menu.manager.create.workPlan = Crear Plan de Trabajo
+master.menu.manager.workplan= Planes de Trabajo
 
 # master.menu.user-account ####################################################
 
