@@ -33,5 +33,5 @@ manager.task.form.label.title.general-indicators = task's detailed description
 
 # manager.task.form.error ###########################################################
 
-manager.task.form.error.spam = Este texto es considerado spam
+manager.task.form.error.spam = This text is considered spam
 manager.task.form.error.endBeforeStart = End date must be after the start date

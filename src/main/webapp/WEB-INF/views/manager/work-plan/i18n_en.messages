@@ -24,5 +24,7 @@ manager.workPlan.form.button.update= Update
 manager.workPlan.form.button.create= Create
 manager.workPlan.form.button.delete= Delete
 manager.workPlan.form.button.return = Return
+
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
+manager.workPlan.form.error.spam= This text is considered spam

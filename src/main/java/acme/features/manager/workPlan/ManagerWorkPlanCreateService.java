@@ -9,6 +9,7 @@ import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -23,8 +24,19 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 	
 	@Override
 	public boolean authorise(final Request<WorkPlan> request) {
-		assert request != null;
-		return true;
+		boolean result;
+		int workPlanId;
+		WorkPlan workPlan;
+		Manager manager;
+		Principal principal;
+
+		workPlanId = request.getModel().getInteger("id");
+		workPlan = this.managerWorkPlanRepository.findOneWorkPlanById(workPlanId);
+		manager = workPlan.getManager();
+		principal = request.getPrincipal();
+		result = manager.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override
@@ -69,6 +81,15 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.workPlan.form.error.endBeforeStart");
 		}
 		
+		final String title = entity.getTitle();
+		final String description = entity.getDescription();
+		
+		if(this.spamDetector.detectSpam(title)) {
+			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
+		}
+		if(this.spamDetector.detectSpam(description)) {
+			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+		}
 	}
 
 	@Override

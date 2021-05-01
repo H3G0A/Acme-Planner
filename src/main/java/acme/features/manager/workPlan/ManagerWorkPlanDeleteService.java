@@ -8,6 +8,7 @@ import acme.entities.workPlan.WorkPlan;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
@@ -22,9 +23,19 @@ public class ManagerWorkPlanDeleteService implements AbstractDeleteService<Manag
 
 			@Override
 			public boolean authorise(final Request<WorkPlan> request) {
-				assert request != null;
+				boolean result;
+				int workPlanId;
+				WorkPlan workPlan;
+				Manager manager;
+				Principal principal;
 
-				return false;
+				workPlanId = request.getModel().getInteger("id");
+				workPlan = this.repository.findOneWorkPlanById(workPlanId);
+				manager = workPlan.getManager();
+				principal = request.getPrincipal();
+				result = manager.getUserAccount().getId() == principal.getAccountId();
+
+				return result;
 			}
 
 			@Override

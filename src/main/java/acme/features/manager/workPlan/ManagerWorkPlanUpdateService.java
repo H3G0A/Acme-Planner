@@ -85,10 +85,10 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		final String description = entity.getDescription();
 		
 		if(this.spamDetector.detectSpam(title)) {
-			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.task.form.error.spam");
+			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
 		}
 		if(this.spamDetector.detectSpam(description)) {
-			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.task.form.error.spam");
+			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
 		}
 		
 	}

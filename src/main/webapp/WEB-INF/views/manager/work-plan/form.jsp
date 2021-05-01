@@ -12,11 +12,11 @@
     <acme:form-moment code="manager.workPlan.form.label.end" path="end"/>
     <acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     
-    <acme:form-submit test="${command == 'show'}" code="manager.workPlan.form.button.update" action="/manager/workPlan/update"/>
-    <acme:form-submit test="${command == 'show'}" code="manager.workPlan.form.button.delete" action="/manager/workPlan/delete"/>
-    <acme:form-submit test="${command == 'create'}" code="manager.workPlan.form.button.create" action="/manager/workPlan/create"/>
-	<acme:form-submit test="${command == 'update'}" code="manager.workPlan.form.button.update" action="/manager/workPlan/update"/>
-    <acme:form-submit test="${command == 'delete'}" code="manager.workPlan.form.button.delete" action="/manager/workPlan/delete"/>   
+    <acme:form-submit test="${command == 'show'}" code="manager.workPlan.form.button.update" action="/manager/work-plan/update"/>
+    <acme:form-submit test="${command == 'show'}" code="manager.workPlan.form.button.delete" action="/manager/work-plan/delete"/>
+    <acme:form-submit test="${command == 'create'}" code="manager.workPlan.form.button.create" action="/manager/work-plan/create"/>
+	<acme:form-submit test="${command == 'update'}" code="manager.workPlan.form.button.update" action="/manager/work-plan/update"/>
+    <acme:form-submit test="${command == 'delete'}" code="manager.workPlan.form.button.delete" action="/manager/work-plan/delete"/>   
     <acme:form-return code="manager.task.form.button.return"/>
 
 </acme:form>
