@@ -12,5 +12,9 @@
 	<definition name="manager/work-plan/list" extends="master">		
 		<put-attribute name="body" type="template" value="../manager/work-plan/list.jsp" />
 	</definition>
+	
+	<definition name="manager/work-plan/show" extends="master">		
+		<put-attribute name="body" type="template" value="../manager/work-plan/show.jsp" />
+	</definition>
 
 </tiles-definitions>

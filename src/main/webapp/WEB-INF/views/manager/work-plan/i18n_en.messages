@@ -24,6 +24,9 @@ manager.workPlan.form.button.update= Update
 manager.workPlan.form.button.create= Create
 manager.workPlan.form.button.delete= Delete
 manager.workPlan.form.button.return = Return
+manager.workPlan.form.label.tasks = Tasks
+manager.workPlan.form.label.executionPeriod = Execution Period
+manager.workPlan.form.label.workload = Workload
 
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
