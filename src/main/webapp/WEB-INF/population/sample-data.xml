@@ -252,9 +252,12 @@
 	</bean> 
 	
 	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 1" />
 		<property name="start" value="2020/01/20 15:12" />
 		<property name="end" value= "2020/04/29 09:23"/>
+		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task03"/>
@@ -264,9 +267,12 @@
 		</property>
 	</bean>
 	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 2" />
 		<property name="start" value="2021/04/26 10:00" />
 		<property name="end" value= "2021/08/16 02:52"/>
+		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
@@ -276,9 +282,12 @@
 		</property>
 	</bean>
 	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 3" />
 		<property name="start" value="2020/01/26 14:20" />
 		<property name="end" value= "2020/04/29 23:11"/>
+		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task03"/>
@@ -287,9 +296,12 @@
 		</property>
 	</bean>
 	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 4" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
