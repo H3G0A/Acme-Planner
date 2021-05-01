@@ -257,6 +257,7 @@
 		<property name="end" value= "2020/04/29 09:23"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task03"/>
@@ -271,6 +272,7 @@
 		<property name="end" value= "2021/08/16 02:52"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
@@ -285,6 +287,7 @@
 		<property name="end" value= "2020/04/29 23:11"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task03"/>
@@ -298,6 +301,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
