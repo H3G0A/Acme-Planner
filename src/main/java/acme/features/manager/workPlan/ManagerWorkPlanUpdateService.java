@@ -1,9 +1,13 @@
 package acme.features.manager.workPlan;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
+import acme.entities.tasks.Task;
 import acme.entities.workPlan.WorkPlan;
 import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
@@ -23,19 +27,19 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 
 	@Override
 	public boolean authorise(final Request<WorkPlan> request) {
-		boolean result;
-		int workPlanId;
-		WorkPlan workPlan;
-		Manager manager;
-		Principal principal;
+		final boolean result;
+		final int workPlanId;
+		final WorkPlan workPlan;
+		final Manager manager;
+		final Principal principal;
 
-		workPlanId = request.getModel().getInteger("id");
-		workPlan = this.repository.findOneWorkPlanById(workPlanId);
-		manager = workPlan.getManager();
-		principal = request.getPrincipal();
-		result = manager.getUserAccount().getId() == principal.getAccountId();
+//		workPlanId = request.getModel().getInteger("id");
+//		workPlan = this.repository.findOneWorkPlanById(workPlanId);
+//		manager = workPlan.getManager();
+//		principal = request.getPrincipal();
+//		result = manager.getUserAccount().getId();
 
-		return result;
+		return true;
 	}
 
 	@Override
@@ -53,9 +57,17 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-
-		request.unbind(entity, model, "title","start","end","description","isPublic");
+		final int workplanId = request.getModel().getInteger("id");
+		final WorkPlan workplan = this.repository.findOneWorkPlanById(workplanId);
+		final Manager manager = workplan.getManager();
 		
+		List<Task>taskList = this.repository.findTasksAvailable(manager.getId(), workplanId).stream().filter(x->!workplan.getTasks().contains(x)).collect(Collectors.toList());//cambiar publicas por todas
+		if(workplan.getIsPublic())//If workplan is public, only public tasks can be added
+			taskList= taskList.stream().filter(x->x.getIsPublic()).collect(Collectors.toList());
+		
+        model.setAttribute("tasks", workplan.getTasks());
+        model.setAttribute("tasksEneabled", taskList);
+		request.unbind(entity, model,  "isPublic", "start", "end", "tasks","title","executionPeriod","workload");		
 	}
 
 	@Override
@@ -98,8 +110,12 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		assert request != null;
 		assert entity != null;
 		
-		entity.setExecutionPeriod();
-		this.repository.save(entity);
+		final WorkPlan wp = this.repository.findOneWorkPlanById(entity.getId());
+		wp.setEnd(entity.getEnd());
+		wp.setStart(entity.getStart());
+		wp.setTitle(entity.getTitle());
+		wp.setExecutionPeriod();
+		this.repository.save(wp);
 		
 	}
 

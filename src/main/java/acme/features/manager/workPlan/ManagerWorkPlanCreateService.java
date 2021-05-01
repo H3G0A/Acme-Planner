@@ -44,8 +44,11 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 		assert model != null;
 
 		request.unbind(entity, model, "title","start","end","description","isPublic");
+		model.setAttribute("ItsMine", true);
+
 	}
 
+	
 	@Override
 	public WorkPlan instantiate(final Request<WorkPlan> request) {
 		assert request != null;
@@ -71,14 +74,15 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 		}
 		
 		final String title = entity.getTitle();
-		final String description = entity.getDescription();
+//		final String description = entity.getDescription();
 		
 		if(this.spamDetector.detectSpam(title)) {
 			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
 		}
-		if(this.spamDetector.detectSpam(description)) {
-			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
-		}
+//		if(this.spamDetector.detectSpam(description)) {
+//			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+//		}
+		request.getModel().setAttribute("ItsMine", true);
 	}
 
 	@Override
@@ -86,8 +90,9 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 		assert request != null;
 		assert entity != null;
 		
+		entity.setExecutionPeriod();
 		this.managerWorkPlanRepository.save(entity);
-		
+				
 	}
 
 }
