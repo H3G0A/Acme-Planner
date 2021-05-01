@@ -28,6 +28,15 @@ manager.workPlan.form.label.tasks = Tasks
 manager.workPlan.form.label.executionPeriod = Execution Period
 manager.workPlan.form.label.workload = Workload
 
+manager.workPlan.form.label.tasks.id= Task Id
+manager.workPlan.form.label.tasks.title= Task Title
+manager.workPlan.form.label.tasks.public= Task Public
+manager.workPlan.form.button.removeTask= Delete Task
+manager.workPlan.form.select.addTask= Select Task
+manager.workPlan.form.button.addTask= Add Task
+manager.workPlan.form.label.tasks.public.true= Public
+manager.workPlan.form.label.tasks.public.false= Private
+manager.workPlan.form.button.update= Update
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
 manager.workPlan.form.error.spam= This text is considered spam

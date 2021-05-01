@@ -28,6 +28,15 @@ manager.workPlan.form.label.tasks = Tareas
 manager.workPlan.form.label.executionPeriod = Tiempo de ejecucion
 manager.workPlan.form.label.workload = Carga de Trabajo
 
+manager.workPlan.form.label.tasks.id= Id Tarea
+manager.workPlan.form.label.tasks.title= Titulo Tarea
+manager.workPlan.form.label.tasks.public= Publico Tarea
+manager.workPlan.form.button.removeTask= Borrar Tarea
+manager.workPlan.form.select.addTask= Seleccionar Tarea
+manager.workPlan.form.button.addTask= Añadir Tarea
+manager.workPlan.form.label.tasks.public.true= Publica
+manager.workPlan.form.label.tasks.public.false= Privada
+manager.workPlan.form.button.update= Actualizar
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
 manager.workPlan.form.error.spam= Este texto está considerado como spam
