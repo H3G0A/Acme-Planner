@@ -9,13 +9,17 @@
 # they accept any liabilities with respect to them.
 
 # manager.workPlan.list #################################################################
+manager.workPlan.list.label.title=Title
+manager.workPlan.list.label.start=Start Date
+manager.workPlan.list.label.end= End Date
+manager.workPlan.list.label.workload= Workload
 
 # manager.workPlan.form #################################################################
 manager.workPlan.form.label.title= Title
 manager.workPlan.form.label.description= Description
 manager.workPlan.form.label.start = Start Date
 manager.workPlan.form.label.end = End Date
-manager.workPlan.form.label.isPublic = Is Public?
+manager.workPlan.form.label.isPublic = Public
 manager.workPlan.form.button.update= Update
 manager.workPlan.form.button.create= Create
 manager.workPlan.form.button.delete= Delete
