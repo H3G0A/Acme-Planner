@@ -9,7 +9,6 @@ import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -24,19 +23,9 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 	
 	@Override
 	public boolean authorise(final Request<WorkPlan> request) {
-		boolean result;
-		int workPlanId;
-		WorkPlan workPlan;
-		Manager manager;
-		Principal principal;
+		assert request != null;
 
-		workPlanId = request.getModel().getInteger("id");
-		workPlan = this.managerWorkPlanRepository.findOneWorkPlanById(workPlanId);
-		manager = workPlan.getManager();
-		principal = request.getPrincipal();
-		result = manager.getUserAccount().getId() == principal.getAccountId();
-
-		return result;
+		return true;
 	}
 
 	@Override
