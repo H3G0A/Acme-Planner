@@ -1,34 +1,34 @@
-package acme.features.administrator.dashboard.tasks;
+package acme.features.administrator.taskDashboard;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.forms.Dashboard;
+import acme.forms.TaskDashboard;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorDashboardTaskShowService implements AbstractShowService<Administrator, Dashboard> {
+public class AdministratorTaskDashboardShowService implements AbstractShowService<Administrator, TaskDashboard> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorDashboardTaskRepository repository;
+	protected AdministratorTaskDashboardRepository repository;
 
 	// AbstractShowService<Administrator, Dashboard> interface ----------------
 
 
 	@Override
-	public boolean authorise(final Request<Dashboard> request) {
+	public boolean authorise(final Request<TaskDashboard> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Dashboard> request, final Dashboard entity, final Model model) {
+	public void unbind(final Request<TaskDashboard> request, final TaskDashboard entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -43,10 +43,10 @@ public class AdministratorDashboardTaskShowService implements AbstractShowServic
 	}
 
 	@Override
-	public Dashboard findOne(final Request<Dashboard> request) {
+	public TaskDashboard findOne(final Request<TaskDashboard> request) {
 		assert request != null;
 
-		Dashboard result;
+		TaskDashboard result;
 		final Integer						numberOfPublicTask;
 		final Integer						numberOfPrivateTask;
 		final Integer						numberOfFinishedTask;
@@ -76,7 +76,7 @@ public class AdministratorDashboardTaskShowService implements AbstractShowServic
 			
 		
 
-		result = new Dashboard();
+		result = new TaskDashboard();
 		result.setNumberOfPublicTask(numberOfPublicTask);
 		result.setNumberOfPrivateTask(numberOfPrivateTask);
 		result.setNumberOfFinishedTask(numberOfFinishedTask);
