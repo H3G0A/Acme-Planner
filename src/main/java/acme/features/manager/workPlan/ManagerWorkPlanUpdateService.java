@@ -33,13 +33,13 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		final Manager manager;
 		final Principal principal;
 
-//		workPlanId = request.getModel().getInteger("id");
-//		workPlan = this.repository.findOneWorkPlanById(workPlanId);
-//		manager = workPlan.getManager();
-//		principal = request.getPrincipal();
-//		result = manager.getUserAccount().getId();
-
-		return true;
+		workPlanId=request.getModel().getInteger("id");
+		workPlan=this.repository.findOneWorkPlanById(workPlanId);
+		manager = workPlan.getManager();
+		principal = request.getPrincipal();
+		
+		result = (manager.getUserAccount().getId() == principal.getAccountId());
+		return result;
 	}
 
 	@Override
@@ -60,11 +60,12 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		final int workplanId = request.getModel().getInteger("id");
 		final WorkPlan workplan = this.repository.findOneWorkPlanById(workplanId);
 		final Manager manager = workplan.getManager();
+		final Boolean canPublish= workplan.getTasks().stream().filter(x-> x.getIsPublic().equals(false)).count() == 0 && !workplan.getIsPublic();
 		
 		List<Task>taskList = this.repository.findTasksAvailable(manager.getId(), workplanId).stream().filter(x->!workplan.getTasks().contains(x)).collect(Collectors.toList());//cambiar publicas por todas
 		if(workplan.getIsPublic())//If workplan is public, only public tasks can be added
 			taskList= taskList.stream().filter(x->x.getIsPublic()).collect(Collectors.toList());
-		
+		model.setAttribute("canPublish", canPublish);
         model.setAttribute("tasks", workplan.getTasks());
         model.setAttribute("tasksEneabled", taskList);
 		request.unbind(entity, model,  "isPublic", "start", "end", "tasks","title","executionPeriod","workload");		
@@ -96,12 +97,22 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		final String title = entity.getTitle();
 		final String description = entity.getDescription();
 		
-		if(this.spamDetector.detectSpam(title)) {
-			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
+		if(entity.getIsPublic()) {
+			if(this.spamDetector.detectSpam(title)) {
+				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(description)) {
+				errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+			}
+			
 		}
-		if(this.spamDetector.detectSpam(description)) {
-			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+		for(final Task t: entity.getTasks()) {
+			if(errors.hasErrors("tasks")) {
+				errors.state(request, t.getIsPublic() == false && request.getModel().getBoolean("isPublic")== true, 
+					"isPublic", "manager.workPlan.form.error.taskPublication");
+			}
 		}
+		
 		
 	}
 
@@ -114,6 +125,8 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		wp.setEnd(entity.getEnd());
 		wp.setStart(entity.getStart());
 		wp.setTitle(entity.getTitle());
+		wp.setIsPublic(entity.getIsPublic());
+		wp.setDescription(entity.getDescription());
 		wp.setExecutionPeriod();
 		this.repository.save(wp);
 		

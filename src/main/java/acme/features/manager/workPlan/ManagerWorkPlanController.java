@@ -35,6 +35,9 @@ public class ManagerWorkPlanController extends AbstractController<Manager, WorkP
 	
 	@Autowired
 	protected ManagerWorkPlanRemoveTaskService		removeTaskService;
+	
+	@Autowired
+	protected ManagerWorkPlanPublishService		publishService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -49,6 +52,7 @@ public class ManagerWorkPlanController extends AbstractController<Manager, WorkP
 		super.addBasicCommand(BasicCommand.LIST, this.listAllService);
 		super.addCustomCommand(CustomCommand.ADD_TASK, BasicCommand.UPDATE, this.addTaskService);
 		super.addCustomCommand(CustomCommand.REMOVE_TASK, BasicCommand.UPDATE, this.removeTaskService);
+		super.addCustomCommand(CustomCommand.PUBLISH, BasicCommand.UPDATE, this.publishService);
 
 	}
 

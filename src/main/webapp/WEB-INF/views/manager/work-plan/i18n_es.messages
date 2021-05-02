@@ -22,6 +22,7 @@ manager.workPlan.form.label.end = Fecha fin
 manager.workPlan.form.label.isPublic = Público
 manager.workPlan.form.button.update= Actualizar
 manager.workPlan.form.button.create= Crear
+manager.workPlan.form.button.publish= Publicar
 manager.workPlan.form.button.delete= Borrar
 manager.workPlan.form.button.return = Volver
 manager.workPlan.form.label.tasks = Tareas
@@ -37,6 +38,13 @@ manager.workPlan.form.button.addTask= Añadir Tarea
 manager.workPlan.form.label.tasks.public.true= Publica
 manager.workPlan.form.label.tasks.public.false= Privada
 manager.workPlan.form.button.update= Actualizar
+manager.workplan.form.button.publish= Publicar
+
+manager.workPlan.form.label.suggestion.start= Fecha de comienzo recomendada: 
+manager.workPlan.form.label.suggestion.end= Fecha de fin recomendada: 
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
 manager.workPlan.form.error.spam= Este texto está considerado como spam
+manager.workPlan.form.error.taskPublic= La tarea no es valida para este plan de trabajo
+manager.workPlan.form.error.taskPublication =El plan de trabajo no está preparado para la publicación
+manager.workplan.form.error.all-tasks-must-be-public = El plan de trabajo no está preparado para la publicación
