@@ -1,15 +1,3 @@
-<%--
-- menu.jsp
--
-- Copyright (C) 2012-2021 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
-
 <%@page language="java" import="acme.framework.helpers.PrincipalHelper"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -19,7 +7,6 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.tasks" action="/anonymous/task/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.listShouts" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.createShouts" action="/anonymous/shout/create"/>
@@ -45,10 +32,10 @@
 
 		
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.manager.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.manager.task" action="/manager/task/list"/>
+			<acme:menu-suboption code="master.menu.manager.workplan" action="/manager/work-plan/list"/>
 			<acme:menu-suboption code="master.menu.manager.createTask" action="/manager/task/create"/>
+			<acme:menu-suboption code="master.menu.manager.create.workPlan" action="/manager/work-plan/create"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

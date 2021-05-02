@@ -9,11 +9,15 @@
 # they accept any liabilities with respect to them.
 
 administrator.spam-word.list.label.word = Spam Word
+administrator.spam-word.list.label.threshold = Threshold
 
 administrator.spam-word.form.label.word = Word
+administrator.spam-word.form.label.threshold = Threshold
 administrator.spam-word.form.button.create = Create!
 administrator.spam-word.form.button.update = Save changes!
 administrator.spam-word.form.button.delete = Delete!
 administrator.spam-word.form.button.return = Return
+
+administrator.spamWord.form.error.duplicatedName= This spam word already exists!
 
 
