@@ -43,3 +43,4 @@ manager.workPlan.form.label.suggestion.end= Recommended finish date:
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
 manager.workPlan.form.error.spam= This text is considered spam
+manager.workPlan.form.error.taskPublic= The task is not valid for this workplan

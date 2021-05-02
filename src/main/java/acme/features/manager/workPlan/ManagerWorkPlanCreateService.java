@@ -74,14 +74,14 @@ public class ManagerWorkPlanCreateService implements AbstractCreateService<Manag
 		}
 		
 		final String title = entity.getTitle();
-//		final String description = entity.getDescription();
+		final String description = entity.getDescription();
 		
 		if(this.spamDetector.detectSpam(title)) {
 			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
 		}
-//		if(this.spamDetector.detectSpam(description)) {
-//			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
-//		}
+		if(this.spamDetector.detectSpam(description)) {
+			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+		}
 		request.getModel().setAttribute("ItsMine", true);
 	}
 

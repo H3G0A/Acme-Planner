@@ -19,7 +19,7 @@
     	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     </jstl:if>
     <jstl:if test="${command!='create'}">    
-    	<acme:form-checkbox readonly ="true" code="manager.workPlan.form.label.isPublic" path="isPublic"/>
+    	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     </jstl:if>
 
     <jstl:if test="${command=='create'}">  		   		   	   		    		

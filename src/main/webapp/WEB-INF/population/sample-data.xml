@@ -276,7 +276,7 @@
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
-				<ref bean="task02"/>
+				<ref bean="task03"/>
 					
 			</list>
 		</property>
@@ -290,7 +290,7 @@
 		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task03"/>
+				<ref bean="task01"/>
 					
 			</list>
 		</property>
