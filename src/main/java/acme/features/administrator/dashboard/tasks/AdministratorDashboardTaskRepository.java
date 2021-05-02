@@ -1,4 +1,4 @@
-package acme.features.administrator.dashboard;
+package acme.features.administrator.dashboard.tasks;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AdministratorDashboardRepository extends AbstractRepository {
+public interface AdministratorDashboardTaskRepository extends AbstractRepository {
 
 	@Query("select count(t) from Task t where t.isPublic=true")
 	Integer numberOfPublicTask();

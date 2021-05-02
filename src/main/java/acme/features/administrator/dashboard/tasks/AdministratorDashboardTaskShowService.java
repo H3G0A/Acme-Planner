@@ -1,4 +1,4 @@
-package acme.features.administrator.dashboard;
+package acme.features.administrator.dashboard.tasks;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,12 +10,12 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorDashboardShowService implements AbstractShowService<Administrator, Dashboard> {
+public class AdministratorDashboardTaskShowService implements AbstractShowService<Administrator, Dashboard> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorDashboardRepository repository;
+	protected AdministratorDashboardTaskRepository repository;
 
 	// AbstractShowService<Administrator, Dashboard> interface ----------------
 

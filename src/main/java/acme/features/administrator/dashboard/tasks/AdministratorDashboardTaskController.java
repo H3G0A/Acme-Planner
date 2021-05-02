@@ -1,4 +1,4 @@
-package acme.features.administrator.dashboard;
+package acme.features.administrator.dashboard.tasks;
 
 import javax.annotation.PostConstruct;
 
@@ -13,12 +13,12 @@ import acme.framework.entities.Administrator;
 
 @Controller
 @RequestMapping("/administrator/dashboard/")
-public class AdministratorDashboardController extends AbstractController<Administrator, Dashboard> {
+public class AdministratorDashboardTaskController extends AbstractController<Administrator, Dashboard> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorDashboardShowService showService;
+	protected AdministratorDashboardTaskShowService showService;
 
 	// Constructors -----------------------------------------------------------
 
