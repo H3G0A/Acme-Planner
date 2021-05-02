@@ -96,12 +96,22 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		final String title = entity.getTitle();
 		final String description = entity.getDescription();
 		
-		if(this.spamDetector.detectSpam(title)) {
-			errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
+		if(entity.getIsPublic()) {
+			if(this.spamDetector.detectSpam(title)) {
+				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
+			}
+			if(this.spamDetector.detectSpam(description)) {
+				errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+			}
+			
 		}
-		if(this.spamDetector.detectSpam(description)) {
-			errors.state(request, !this.spamDetector.detectSpam(description), "description", "manager.workPlan.form.error.spam");
+		for(final Task t: entity.getTasks()) {
+			if(errors.hasErrors("tasks")) {
+				errors.state(request, t.getIsPublic() == false && request.getModel().getBoolean("isPublic")== true, 
+					"isPublic", "manager.workPlan.form.error.taskPublication");
+			}
 		}
+		
 		
 	}
 
@@ -115,6 +125,7 @@ public class ManagerWorkPlanUpdateService implements AbstractUpdateService<Manag
 		wp.setStart(entity.getStart());
 		wp.setTitle(entity.getTitle());
 		wp.setIsPublic(entity.getIsPublic());
+		wp.setDescription(entity.getDescription());
 		wp.setExecutionPeriod();
 		this.repository.save(wp);
 		

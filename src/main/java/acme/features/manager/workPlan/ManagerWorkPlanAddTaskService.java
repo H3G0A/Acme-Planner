@@ -74,9 +74,8 @@ public class ManagerWorkPlanAddTaskService implements AbstractUpdateService<Mana
 			if(errors.hasErrors("taskSelected")) {
 				errors.state(request, t.getIsPublic() == false && request.getModel().getBoolean("isPublic")== true, 
 					"isPublic", "manager.workPlan.form.error.taskPublic");
-				
-				
 			}
+			
 			
 		}
 	

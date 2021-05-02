@@ -44,3 +44,4 @@ manager.workPlan.form.label.suggestion.end= Fecha de fin recomendada:
 manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
 manager.workPlan.form.error.spam= Este texto está considerado como spam
 manager.workPlan.form.error.taskPublic= La tarea no es valida para este plan de trabajo
+manager.workPlan.form.error.taskPublication =El plan de trabajo no está preparado para la publicación
