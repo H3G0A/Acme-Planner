@@ -18,13 +18,11 @@
     <jstl:if test="${command=='create'}">    
     	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     </jstl:if>
-    <jstl:if test="${command!='create'}">    
-    	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
-    </jstl:if>
-
     <jstl:if test="${command=='create'}">  		   		   	   		    		
 	    <acme:form-submit code="manager.workPlan.form.button.create" action="/manager/work-plan/create"/>    
     </jstl:if>  
+    
+    <acme:form-submit test="${canPublish && (command=='show'|| command =='update')}" code="manager.workplan.form.button.publish" action="/manager/work-plan/publish"/>
     <acme:form-submit test="${(command =='show')}" code="manager.workPlan.form.button.update" action="/manager/work-plan/update"/>
     <acme:form-submit test="${(command=='show')}" code="manager.workPlan.form.button.delete" action="/manager/work-plan/delete"/>
     <acme:form-return code="manager.workPlan.form.button.return"/>

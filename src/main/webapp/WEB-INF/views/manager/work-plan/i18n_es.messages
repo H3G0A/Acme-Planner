@@ -22,6 +22,7 @@ manager.workPlan.form.label.end = Fecha fin
 manager.workPlan.form.label.isPublic = Público
 manager.workPlan.form.button.update= Actualizar
 manager.workPlan.form.button.create= Crear
+manager.workPlan.form.button.publish= Publicar
 manager.workPlan.form.button.delete= Borrar
 manager.workPlan.form.button.return = Volver
 manager.workPlan.form.label.tasks = Tareas
