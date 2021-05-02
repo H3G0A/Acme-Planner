@@ -1,0 +1,42 @@
+# i18n_en.messages
+#
+# Copyright (C) 2012-2021 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# manager.workPlan.list #################################################################
+manager.workPlan.list.label.title=Titulo
+manager.workPlan.list.label.start=Fecha Inicio
+manager.workPlan.list.label.end= Fecha Fin
+manager.workPlan.list.label.workload= Carga de Trabajo
+
+# manager.workPlan.form #################################################################
+manager.workPlan.form.label.title= Título
+manager.workPlan.form.label.Description= Descripción
+manager.workPlan.form.label.start = Fecha inicio
+manager.workPlan.form.label.end = Fecha fin
+manager.workPlan.form.label.isPublic = Público
+manager.workPlan.form.button.update= Actualizar
+manager.workPlan.form.button.create= Crear
+manager.workPlan.form.button.delete= Borrar
+manager.workPlan.form.button.return = Volver
+manager.workPlan.form.label.tasks = Tareas
+manager.workPlan.form.label.executionPeriod = Tiempo de ejecucion
+manager.workPlan.form.label.workload = Carga de Trabajo
+
+manager.workPlan.form.label.tasks.id= Id Tarea
+manager.workPlan.form.label.tasks.title= Titulo Tarea
+manager.workPlan.form.label.tasks.public= Publico Tarea
+manager.workPlan.form.button.removeTask= Borrar Tarea
+manager.workPlan.form.select.addTask= Seleccionar Tarea
+manager.workPlan.form.button.addTask= Añadir Tarea
+manager.workPlan.form.label.tasks.public.true= Publica
+manager.workPlan.form.label.tasks.public.false= Privada
+manager.workPlan.form.button.update= Actualizar
+# manager.workPlan.error #################################################################
+manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
+manager.workPlan.form.error.spam= Este texto está considerado como spam

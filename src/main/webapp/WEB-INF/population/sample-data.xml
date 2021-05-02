@@ -45,63 +45,54 @@
 	</bean>
 	
 	<bean id="spamWord06" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="viagra"/>
+		<property name="word" value="cialis"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
 	<bean id="spamWord07" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="cialis"/>
+		<property name="word" value="nigeria"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
 	<bean id="spamWord08" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="cialis"/>
-		<property name="threshold" value="10."/>
-	</bean>
-	
-	<bean id="spamWord09" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="nigeria"/>
-		<property name="threshold" value="10."/>
-	</bean>
-	
-	<bean id="spamWord10" class="acme.entities.spamWord.SpamWord">
-		<property name="word" value="nigeria"/>
-		<property name="threshold" value="10."/>
-	</bean>
-	
-	<bean id="spamWord11" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="you've won"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord12" class="acme.entities.spamWord.SpamWord">
+	<bean id="spamWord09" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="you have won"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord13" class="acme.entities.spamWord.SpamWord">
+	<bean id="spamWord10" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="acabas de ganar"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord14" class="acme.entities.spamWord.SpamWord">
+	<bean id="spamWord11" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="has ganado"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord15" class="acme.entities.spamWord.SpamWord">
+	<bean id="spamWord12" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="million dollar"/>
 		<property name="threshold" value="10."/>
 	</bean>
 	
-	<bean id="spamWord16" class="acme.entities.spamWord.SpamWord">
+	<bean id="spamWord13" class="acme.entities.spamWord.SpamWord">
 		<property name="word" value="millon de dolares"/>
+		<property name="threshold" value="10."/>		
+	</bean>
+	
+	<bean id="spamWord14" class="acme.entities.spamWord.SpamWord">
+		<property name="word" value="millón de dolares"/>
+		<property name="threshold" value="10."/>		
 	</bean>
 
 
 	<!-- Shouts -->
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/02/13 19:39"/>
+		<property name="moment" value="2021/04/13 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
@@ -124,12 +115,12 @@
 	<bean id="shout04" class="acme.entities.shouts.Shout">
 		<property name="author" value="Leslie Design-Testing"/>
 		<property name="text" value="Woa! This app's so cool!"/>
-		<property name="moment" value="2021/02/13 12:30"/>
+		<property name="moment" value="2021/04/23 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
 	<bean id="shout05" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/06/14 12:34"/>
+		<property name="moment" value="2021/04/24 12:34"/>
 		<property name="author" value="Misco Smith"/>
 		<property name="text" value="I love you tuvi!"/>
 		<property name="info" value="https://www.youtube.com/watch?v=Vw_JaNPbfMM"/>		
@@ -185,6 +176,7 @@
 		<property name="workload" value= "25.3" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="110.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
@@ -195,27 +187,126 @@
 		<property name="workload" value= "30.1" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="10.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean>
 	
 	<bean id="task03" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero tres" />
-		<property name="start" value="2021/04/20 13:12" />
-		<property name="end" value= "2021/05/29 08:11"/>
+		<property name="start" value="2020/04/20 13:12" />
+		<property name="end" value= "2020/05/29 08:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
+		<property name="executionPeriod" value="50.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 	</bean> 
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cuatro" />
-		<property name="start" value="2021/04/20 13:12" />
-		<property name="end" value= "2021/01/29 08:11"/>
+		<property name="start" value="2020/04/20 11:00" />
+		<property name="end" value= "2020/06/29 10:11"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="executionPeriod" value="60.0" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+	</bean> 
+
+	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
+        <property name="username" value="manager1"/>
+        <property name="password" value="manager1"/>
+        <property name="enabled" value="true"/>
+        <property name="identity">
+            <bean class="acme.datatypes.UserIdentity">        
+                <property name="name" value="Carlos"/>
+                <property name="surname" value="Donde Estas"/>
+                <property name="email" value="badBnny@mail.com"/>
+            </bean>
+        </property>        
+        <property name="roles">
+            <list>
+                <ref bean="manager1Manager"/>
+                <ref bean="manager1Authenticated"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean name="manager1Manager" class="acme.entities.roles.Manager">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
+
+    <bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
+        <property name="userAccount" ref="manager1UserAccount"/>
+    </bean>
+    
+    <bean id="task05" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero cinco" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager1Manager"/>
 	</bean> 
+	
+	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 1" />
+		<property name="start" value="2020/01/20 15:12" />
+		<property name="end" value= "2020/04/29 09:23"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task03"/>
+				<ref bean="task04"/>
+					
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 2" />
+		<property name="start" value="2021/04/26 10:00" />
+		<property name="end" value= "2021/08/16 02:52"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task01"/>
+				<ref bean="task02"/>
+					
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 3" />
+		<property name="start" value="2020/01/26 14:20" />
+		<property name="end" value= "2020/04/29 23:11"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task03"/>
+					
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 4" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task01"/>
+			</list>
+		</property>
+	</bean>
 </beans>
 

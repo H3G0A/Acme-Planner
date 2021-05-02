@@ -90,10 +90,10 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		final String author = request.getModel().getAttribute("author").toString();
 		
 		if(this.spamDetector.detectSpam(text)) {
-			errors.add("text", "This text is considered spam/Este texto es considerado spam");
+			errors.state(request, !this.spamDetector.detectSpam(text), "text", "anonymous.shout.form.error.spam");
 		}
 		if(this.spamDetector.detectSpam(author)) {
-			errors.add("author", "This author is considered spam/Este texto es considerado spam");
+			errors.state(request, !this.spamDetector.detectSpam(author), "author", "anonymous.shout.form.error.spam");
 		}
 
 	}

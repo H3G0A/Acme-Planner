@@ -20,7 +20,7 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 	
 	@Override
 	public boolean authorise(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
+		assert request != null;
 		final boolean result;
 		SpamWord spam_word;
 		final int spam_word_Id;
@@ -34,7 +34,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 
 	@Override
 	public void bind(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -44,7 +43,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 
 	@Override
 	public void unbind(final Request<SpamWord> request, final SpamWord entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -57,7 +55,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 
 	@Override
 	public SpamWord findOne(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
 		final SpamWord spam_word;
 		int spamWordId;
 		
@@ -69,7 +66,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 
 	@Override
 	public void validate(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -82,7 +78,6 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 
 	@Override
 	public void update(final Request<SpamWord> request, final SpamWord entity) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		

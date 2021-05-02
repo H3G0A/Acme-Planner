@@ -29,6 +29,7 @@ public class AdministratorSpamWordShowService implements AbstractShowService<Adm
 		
 		model.setAttribute("id", entity.getId());
 		request.unbind(entity, model, "id","word","threshold");
+
 		
 	}
 
