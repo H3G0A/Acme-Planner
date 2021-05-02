@@ -43,10 +43,14 @@ public class WorkPlan extends DomainEntity {
 	
 	protected Boolean isPublic;
 
+	protected Double workPlanWorkload;
 	
+	protected Double workPlanPeriod;
+	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	protected Collection<@Valid Task> tasks;
-	
+
 	@ManyToOne
 	protected Manager manager;
 	
@@ -73,4 +77,18 @@ public class WorkPlan extends DomainEntity {
 		this.workload = this.tasks.stream().mapToDouble(Task::getWorkload).sum();
 	}
 
+//  Derived attributes
+    
+  public void setWorkPlanPeriod() {
+      this.workPlanPeriod = (double) (this.end.getTime() - this.start.getTime()) / (1000 * 3600);
+  }
+
+  public void setWorkPlanWorkload() {
+      this.workPlanWorkload = this.tasks.stream().mapToDouble(Task::getWorkload).sum();
+  }
+
+  public Double getWorkPlanWorkload() {
+		return this.tasks.stream().mapToDouble(x->x.getWorkload()).sum();
+	}
+  
 }
