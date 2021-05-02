@@ -34,6 +34,7 @@ public class Task extends DomainEntity{
 	
 	
 	@Digits(integer = 10,fraction = 2)
+	@NotNull
 	private Double workload;
 	
 	@NotBlank
