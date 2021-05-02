@@ -5,6 +5,7 @@
 
 <acme:form readonly="false">
 	<acme:form-textbox code="administrator.spam-word.form.label.word" path="word"/>
+	<acme:form-textbox code="administrator.spam-word.form.label.threshold" path="threshold"/>
 		
 	<jstl:if test="${command=='create'}">
     	<acme:form-submit code="administrator.spam-word.form.button.create" action="/administrator/spam-word/create"/>

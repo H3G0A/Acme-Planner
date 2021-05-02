@@ -44,7 +44,7 @@ public class AdministratorSpamWordDeleteService implements AbstractDeleteService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "word","threshold");
 		model.setAttribute("readonly", false);
 		model.setAttribute("id", entity.getId());
 		

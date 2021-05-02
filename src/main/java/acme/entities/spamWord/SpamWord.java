@@ -1,7 +1,10 @@
 package acme.entities.spamWord;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -17,6 +20,8 @@ public class SpamWord extends DomainEntity {
 	@NotBlank
 	protected String word;
 	
+	@NotNull
+	@DecimalMax("100.0") @DecimalMin("0.0")
 	protected Double threshold;
 	
 	
