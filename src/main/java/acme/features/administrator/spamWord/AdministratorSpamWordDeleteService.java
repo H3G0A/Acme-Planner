@@ -1,7 +1,5 @@
 package acme.features.administrator.spamWord;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,75 +9,72 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractDeleteService;
 @Service
-public class AdministratorSpamWordCreateService implements AbstractCreateService<Administrator, SpamWord> {
+public class AdministratorSpamWordDeleteService implements AbstractDeleteService<Administrator, SpamWord> {
 
 	@Autowired
 	protected AdministratorSpamWordRepository repository;
-	
+
 	@Override
 	public boolean authorise(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
 		assert request != null;
-		
-		return true;
+		final boolean result;
+		SpamWord spam_word;
+		final int spam_word_Id;
+
+		spam_word_Id=request.getModel().getInteger("id");
+		spam_word=this.repository.findOneSpamWordById(spam_word_Id);
+		result = spam_word !=null;
+		return result;
 	}
 
 	@Override
 	public void bind(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 		
 		request.bind(entity, errors);
-		
 	}
 
 	@Override
 	public void unbind(final Request<SpamWord> request, final SpamWord entity, final Model model) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
+
 		request.unbind(entity, model, "word","threshold");
 		model.setAttribute("readonly", false);
+		model.setAttribute("id", entity.getId());
+		
 	}
 
 	@Override
-	public SpamWord instantiate(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
-		assert request != null;
-		SpamWord result;
+	public SpamWord findOne(final Request<SpamWord> request) {
+		final SpamWord spam_word;
+		int spamWordId;
 		
-		result= new SpamWord();
+		spamWordId=request.getModel().getInteger("id");
+		spam_word=this.repository.findOneSpamWordById(spamWordId);
 		
-		return result;
+		return spam_word;
 	}
 
 	@Override
 	public void validate(final Request<SpamWord> request, final SpamWord entity, final Errors errors) {
-		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		final Collection<SpamWord> listAll= this.repository.findMany();
-		errors.state(request, listAll.contains(entity.getWord()), "word", "administrator.spamWord.form.error.duplicatedName");
 
-		
-		
 	}
 
 	@Override
-	public void create(final Request<SpamWord> request, final SpamWord entity) {
-		// TODO Auto-generated method stub
+	public void delete(final Request<SpamWord> request, final SpamWord entity) {
 		assert request != null;
 		assert entity != null;
-		
-		this.repository.save(entity);
+						
+		this.repository.deleteById(entity.getId());
 		
 	}
 

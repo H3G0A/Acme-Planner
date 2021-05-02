@@ -1,5 +1,7 @@
 package acme.features.administrator.spamWord;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,7 +49,7 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "word","threshold");
 		model.setAttribute("readonly", false);
 		model.setAttribute("id", entity.getId());
 		
@@ -71,6 +73,11 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final Collection<SpamWord> listAll= this.repository.findMany();
+		errors.state(request, listAll.contains(entity.getWord()), "word", "administrator.spamWord.form.error.duplicatedName");
+
+		
 	}
 
 	@Override
@@ -78,7 +85,7 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
-
+		
 		this.repository.save(entity);
 		
 	}

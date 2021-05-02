@@ -9,9 +9,17 @@
 # they accept any liabilities with respect to them.
 
 administrator.spam-word.list.label.word = Palabra Spam
-
+administrator.spam-word.list.label.threshold = Umbral
 
 administrator.spam-word.form.label.word = Palabra
+administrator.spam-word.form.label.threshold = Umbral
 administrator.spam-word.form.button.create = Crear!
 administrator.spam-word.form.button.update = Guardar cambios!
+<<<<<<< Updated upstream
 administrator.spam-word.form.button.return = Volver
+=======
+administrator.spam-word.form.button.delete = Borrar!
+administrator.spam-word.form.button.return = Volver
+
+administrator.spamWord.form.error.duplicatedName= Esta Palabra de Spam ya existe!
+>>>>>>> Stashed changes
