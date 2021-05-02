@@ -265,6 +265,9 @@
 					
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="36.1"></property>
+        <property name="workPlanPeriod" value="67.2"></property>
+		
 	</bean>
 	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 2" />
@@ -280,6 +283,8 @@
 					
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="25.1"></property>
+        <property name="workPlanPeriod" value="98.2"></property>
 	</bean>
 	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 3" />
@@ -294,6 +299,8 @@
 					
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="54.2"></property>
+        <property name="workPlanPeriod" value="72.4"></property>
 	</bean>
 	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 4" />
@@ -307,6 +314,8 @@
 				<ref bean="task01"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 </beans>
 
