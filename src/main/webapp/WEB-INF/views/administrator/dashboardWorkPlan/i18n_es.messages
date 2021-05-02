@@ -1,0 +1,18 @@
+# i18n_es.messages
+
+administrator.workplan.dashboard.form.title.show = Panel de indicadores
+administrator.workplan.dashboard.form.title = Indicadores generales
+administrator.workplan.dashboard.form.label.numberOfPublicWorkPlan =  Total de planes de trabajo públicos
+administrator.workplan.dashboard.form.label.numberOfPrivateWorkPlan = Total de planes de trabajo privados
+administrator.workplan.dashboard.form.label.numberOfFinishedWorkPlan = Total de planes de trabajo terminados
+administrator.workplan.dashboard.form.label.numberOfNonFinishedWorkPlan = Total de planes de trabajo no terminados
+administrator.workplan.dashboard.form.label.averageNumberOfWorkPlanPeriod = Media de los periodos de los planes de trabajo
+administrator.workplan.dashboard.form.label.deviationOfWorkPlanPeriod = Desviación de los periodos de los planes de trabajo
+administrator.workplan.dashboard.form.label.minWorkPlanPeriod = Mínimo número de periodo de los planes de trabajo
+administrator.workplan.dashboard.form.label.maxWorkPlanPeriod = Máximo número de periodo de los planes de trabajo
+administrator.workplan.dashboard.form.label.averageNumberOfWorkPlanWorkload = Media de las cargas de trabajo
+administrator.workplan.dashboard.form.label.deviationOfWorkPlanWorkload = Desviación de las cargas de trabajo
+administrator.workplan.dashboard.form.label.minWorkPlanWorkload = Mínima carga de trabajo
+administrator.workplan.dashboard.form.label.maxWorkPlanWorkload = Máxima carga de trabajo
+administrator.workplan.dashboard.form.label.hours = horas
+administrator.workplan.dashboard.form.title.application-statuses = Gráfico de estadísticas
