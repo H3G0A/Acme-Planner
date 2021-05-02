@@ -37,13 +37,14 @@ master.menu.anonymous.listWorkPlans = WorkPlans
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
-master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.dashboard = Task Dashboard
 master.menu.administrator.spam-word.list = Spam Word List
 master.menu.administrator.spam-word.create = Create a Spam Word
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate initial
 master.menu.administrator.populate-sample = Populate sample
 master.menu.administrator.shutdown = Shutdown
+master.menu.administrator.dashboard-workplans = Workplan Dashboard
 
 # master.menu.manager ##########################################################
 

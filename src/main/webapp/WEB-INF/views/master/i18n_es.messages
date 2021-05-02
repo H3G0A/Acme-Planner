@@ -36,13 +36,14 @@ master.menu.anonymous.listWorkPlans = Planes de trabajo
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
-master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.dashboard = Panel de tareas
 master.menu.administrator.spam-word.list = Lista de Palabras Spam
 master.menu.administrator.spam-word.create = Añadir una Palabra Spam
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Populación inicial
 master.menu.administrator.populate-sample = Populación de ejemplo
 master.menu.administrator.shutdown = Apagar la aplicación
+master.menu.administrator.dashboard-workplans = Panel de planes de trabajo
 
 
 # master.menu.manager ##########################################################
