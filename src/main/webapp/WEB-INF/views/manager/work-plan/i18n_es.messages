@@ -37,6 +37,9 @@ manager.workPlan.form.button.addTask= Añadir Tarea
 manager.workPlan.form.label.tasks.public.true= Publica
 manager.workPlan.form.label.tasks.public.false= Privada
 manager.workPlan.form.button.update= Actualizar
+
+manager.workPlan.form.label.suggestion.start= Fecha de comienzo recomendada: 
+manager.workPlan.form.label.suggestion.end= Fecha de fin recomendada: 
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = La fecha de fin debe ser posterior a la inicial
 manager.workPlan.form.error.spam= Este texto está considerado como spam

@@ -18,6 +18,9 @@
     <jstl:if test="${command=='create'}">    
     	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     </jstl:if>
+    <jstl:if test="${command!='create'}">    
+    	<acme:form-checkbox readonly ="true" code="manager.workPlan.form.label.isPublic" path="isPublic"/>
+    </jstl:if>
 
     <jstl:if test="${command=='create'}">  		   		   	   		    		
 	    <acme:form-submit code="manager.workPlan.form.button.create" action="/manager/work-plan/create"/>    
@@ -73,4 +76,11 @@
 	<acme:form-submit code="manager.workPlan.form.button.addTask" action="/manager/work-plan/add_task"/>    
 	</acme:form>
 	</center>
+</jstl:if>
+
+<!-- SUGGESTION -->
+<jstl:if test="${(command=='show' && not empty tasks)}">
+	<br>   
+	<acme:message code="manager.workPlan.form.label.suggestion.start"/><jstl:out value="${suggestedStart}"></jstl:out><br>
+	<acme:message code="manager.workPlan.form.label.suggestion.end"/><jstl:out value="${suggestedEnd}"></jstl:out><br>
 </jstl:if>

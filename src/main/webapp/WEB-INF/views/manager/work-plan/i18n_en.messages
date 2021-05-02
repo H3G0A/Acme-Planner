@@ -37,6 +37,9 @@ manager.workPlan.form.button.addTask= Add Task
 manager.workPlan.form.label.tasks.public.true= Public
 manager.workPlan.form.label.tasks.public.false= Private
 manager.workPlan.form.button.update= Update
+
+manager.workPlan.form.label.suggestion.start= Recommended start date: 
+manager.workPlan.form.label.suggestion.end= Recommended finish date: 
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
 manager.workPlan.form.error.spam= This text is considered spam

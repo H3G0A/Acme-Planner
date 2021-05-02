@@ -204,8 +204,8 @@
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cuatro" />
-		<property name="start" value="2020/04/20 11:00" />
-		<property name="end" value= "2020/06/29 10:11"/>
+		<property name="start" value="2020/04/21 11:00" />
+		<property name="end" value= "2020/06/28 10:11"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />

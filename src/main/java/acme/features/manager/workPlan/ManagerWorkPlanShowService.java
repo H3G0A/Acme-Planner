@@ -1,5 +1,10 @@
 package acme.features.manager.workPlan;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,6 +47,12 @@ public class ManagerWorkPlanShowService implements AbstractShowService<Manager, 
 		
 		if(workplan.getIsPublic())//If workplan is public, only public tasks can be added
 			taskList= taskList.stream().filter(x->x.getIsPublic()).collect(Collectors.toList());
+		
+		if(!workplan.getTasks().isEmpty()) {
+			List<Date> period = suggestedPeriod(workplan.getTasks());
+			model.setAttribute("suggestedStart", period.get(0));
+			model.setAttribute("suggestedEnd", period.get(1));
+		}
 			
 		model.setAttribute("tasksEneabled", taskList);
 		request.unbind(entity, model, "title","start","end","description","isPublic","tasks","workload","executionPeriod");
@@ -56,6 +67,48 @@ public class ManagerWorkPlanShowService implements AbstractShowService<Manager, 
 		id= request.getModel().getInteger("id");
 		result = this.repository.findOneWorkPlanById(id);
 		return result;
+	}
+	
+	private List<Date> suggestedPeriod(Collection<Task> tasksC){
+		List<Task> tasks = new ArrayList<>(tasksC);
+		List<Date> period = new ArrayList<>();
+		Date first = getFirstTask(tasks);
+		Date last = getLastTask(tasks);
+		Calendar c = Calendar.getInstance();
+		
+		c.setTime(first);
+		c.add(Calendar.DAY_OF_MONTH, -1);
+		c.set(Calendar.HOUR_OF_DAY, 8);
+		c.set(Calendar.MINUTE, 30);
+		period.add(c.getTime());
+		
+		c.setTime(last);
+		c.add(Calendar.DAY_OF_MONTH, 1);
+		c.set(Calendar.HOUR_OF_DAY, 17);
+		c.set(Calendar.MINUTE, 0);
+		period.add(c.getTime());
+		
+		return period;
+	}
+	
+	private Date getFirstTask(List<Task> tasks) {
+		Date res = tasks.get(0).getStart();
+		for(int i = 1; i<tasks.size(); i++) {
+			Date d = tasks.get(i).getStart();
+			if(d.before(res))
+				res = d;
+		}
+		return res;
+	}
+	
+	private Date getLastTask(List<Task> tasks) {
+		Date res = tasks.get(0).getEnd();
+		for(int i = 1; i<tasks.size(); i++) {
+			Date d = tasks.get(i).getEnd();
+			if(d.after(res))
+				res = d;
+		}
+		return res;
 	}
 
 }
