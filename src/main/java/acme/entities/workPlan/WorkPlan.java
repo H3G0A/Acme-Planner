@@ -82,13 +82,6 @@ public class WorkPlan extends DomainEntity {
   public void setWorkPlanPeriod() {
       this.workPlanPeriod = (double) (this.end.getTime() - this.start.getTime()) / (1000 * 3600);
   }
-  
-
-  public Boolean isFinished() {
-      Date now;
-      now = new Date();
-      return now.after(this.end);
-  }
 
   public void setWorkPlanWorkload() {
       this.workPlanWorkload = this.tasks.stream().mapToDouble(Task::getWorkload).sum();
