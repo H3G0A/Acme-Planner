@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spamWord.SpamWord;
+import acme.entities.spam.SpamWord;
+import acme.entities.spam.Word;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Anonymous;
@@ -43,11 +44,9 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 	public Collection<SpamWord> findMany(final Request<SpamWord> request) {
 		// TODO Auto-generated method stub
 		assert request != null;
-		
-		Collection<SpamWord> result;
-		
-		result = this.repository.findMany();
-		return result;
+        final Collection<SpamWord> result=null;
+        
+        return result;
 	}
 	public Double simpleThreshold(final String sentence, final List<String> spamWordList) {
 		Double threshold = 0.;
@@ -93,7 +92,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 	
 	public boolean detectSpam(final String text) {
 		 boolean esSpam;
-		 final List<String> spamWordsList= this.repository.findMany().stream().map(x->x.getWord()).collect(Collectors.toList());
+		 final List<String> spamWordsList= this.repository.findOne().getSpamWords().stream().map(Word::getWord).collect(Collectors.toList());
 		 final List<String> spamWordsListWord = new ArrayList<>();
 		 final List<String> spamWordsListSentence = new ArrayList<>();
 
