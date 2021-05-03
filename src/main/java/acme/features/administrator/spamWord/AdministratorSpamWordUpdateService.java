@@ -1,6 +1,8 @@
 package acme.features.administrator.spamWord;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -71,7 +73,12 @@ public class AdministratorSpamWordUpdateService implements AbstractUpdateService
 		assert errors != null;
 		
 		final Collection<SpamWord> listAll= this.repository.findMany();
-		errors.state(request, listAll.contains(entity.getWord()), "word", "administrator.spamWord.form.error.duplicatedName");
+		final List<String> list = new ArrayList<>();
+		for(final SpamWord s: listAll) {
+			list.add(s.getWord());
+		}
+		final Boolean repeatedSpamWord =list.contains(entity.getWord());
+		errors.state(request,!repeatedSpamWord , "word", "administrator.spamWord.form.error.duplicatedName");
 
 		
 	}
