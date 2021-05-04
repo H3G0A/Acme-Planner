@@ -24,5 +24,6 @@ anonymous.work-plan.form.label.workload = Workload
 anonymous.work-plan.form.label.isPublic = Status
 anonymous.work-plan.form.label.yes = Public
 anonymous.work-plan.form.label.no = Private
+anonymous.work-plan.list.label.title = Title
 
 anonymous.work-plan.form.button.return = Return

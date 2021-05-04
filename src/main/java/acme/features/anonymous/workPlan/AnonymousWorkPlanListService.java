@@ -40,7 +40,7 @@ public class AnonymousWorkPlanListService implements AbstractListService<Anonymo
 			model.setAttribute("public", "Private");
 		}
 		
-		request.unbind(entity, model, "start","end","isPublic","tasks");
+		request.unbind(entity, model, "title","start","end","isPublic","tasks");
 		
 	}
 
