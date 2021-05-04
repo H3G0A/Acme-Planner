@@ -97,7 +97,7 @@
 
 	<!-- Shouts -->
 	<bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/04/13 19:39"/>
+		<property name="moment" value="2021/04/23 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
 		<property name="info"><null/></property>	
@@ -111,7 +111,7 @@
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/09/07 00:00"/>
+		<property name="moment" value="2021/04/07 00:00"/>
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
 		<property name="info" value="http://happybirthday.com"/>		
@@ -132,14 +132,14 @@
 	</bean>
 	
 	<bean id="shout06" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/12/03 03:00"/>
+		<property name="moment" value="2021/05/03 03:00"/>
 		<property name="author" value="Tuvi Fernandez"/>
 		<property name="text" value="It's so late!"/>
 		<property name="info"><null/></property>		
 	</bean>
 	
 	<bean id="shout07" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/10/04 14:05"/>
+		<property name="moment" value="2021/04/11 14:05"/>
 		<property name="author" value="Debora Trebor"/>
 		<property name="text" value="I love my life!"/>
 		<property name="info"><null/></property>		
@@ -160,16 +160,79 @@
 	</bean>
 	
 	<bean id="shout10" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/03/23 17:32"/>
+		<property name="moment" value="2021/04/23 17:32"/>
 		<property name="author" value="Maria Grande"/>
 		<property name="text" value="I want to try mexican food!"/>
 		<property name="info" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>		
 	</bean>
 	
 	<bean id="shout11" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="moment" value="2021/04/17 12:46"/>
 		<property name="author" value="Paquito Ramirez"/>
 		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout12" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/17 12:46"/>
+		<property name="author" value="Badayco Ramirez"/>
+		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout13" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/17 12:46"/>
+		<property name="author" value="Hegoa Ramirez"/>
+		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout14" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/17 12:46"/>
+		<property name="author" value="Jaime Ramirez"/>
+		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout15" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/17 12:46"/>
+		<property name="author" value="Candela Ramirez"/>
+		<property name="text" value="I don't want to be sad anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout16" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/17 12:46"/>
+		<property name="author" value="Fernando Ramirez"/>
+		<property name="text" value="I don't want to be joyful anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout17" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="author" value="Jacobo Ramirez"/>
+		<property name="text" value="I don't want to be angry anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout18" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="author" value="Sol Ramirez"/>
+		<property name="text" value="I don't want to be tired anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout19" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="author" value="Luna Ramirez"/>
+		<property name="text" value="I don't want to be bored anymore!"/>
+		<property name="info"><null/></property>		
+	</bean>
+	
+	<bean id="shout20" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/03/17 12:46"/>
+		<property name="author" value="Javier Ramirez"/>
+		<property name="text" value="I don't want to be happy anymore!"/>
 		<property name="info"><null/></property>		
 	</bean>
 	
@@ -335,7 +398,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="manager" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task08" class="acme.entities.tasks.Task">
@@ -366,6 +429,160 @@
 		<property name="end" value= "2021/06/03 09:00"/>
 		<property name="workload" value= "27.7" />
 		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean id="task11" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero once" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean id="task12" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero doce" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero trece" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+	<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero catorce" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+	<bean id="task15" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero quince" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+	<bean id="task16" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero diceiseis" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+	<bean id="task17" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero diecisiete" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+		<bean id="task18" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero dieciocho" />
+		<property name="start" value="2020/04/20 10:11" />
+		<property name="end" value= "2020/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="True" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+		<bean id="task19" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero diecinueve" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+		<bean id="task20" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero veinte" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+		<bean id="task21" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero veintiuno" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager3Manager"/>
+	</bean>
+	
+		<bean id="task22" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero veintidos" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task23" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero veintitres" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
+		<property name="isPublic" value="False" />
+		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
+		<property name="manager" ref="manager1Manager"/>
+	</bean>
+	
+	<bean id="task24" class="acme.entities.tasks.Task">
+		<property name="title" value= "Tarea numero veinticuatro" />
+		<property name="start" value="2021/04/20 10:11" />
+		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="workload" value= "27.7" />
+		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
 		<property name="manager" ref="manager1Manager"/>
@@ -376,71 +593,58 @@
 	<bean id="workPlan01" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 1" />
 		<property name="start" value="2020/01/20 15:12" />
-		<property name="end" value= "2022/04/29 09:23"/>
+		<property name="end" value= "2022/06/29 09:23"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
 		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task01"/>
-				<ref bean="task02"/>
+				<ref bean="task24"/>
 					
 			</list>
-		</property>
-		<property name="workPlanWorkload" value="36.1"></property>
-        <property name="workPlanPeriod" value="67.2"></property>
-		
+		</property>		
 	</bean>
 	
 	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 2" />
-		<property name="start" value="2021/04/26 10:00" />
-		<property name="end" value= "2022/08/16 02:52"/>
+		<property name="start" value="2019/04/26 10:00" />
+		<property name="end" value= "2020/08/16 02:52"/>
 		<property name="description" value="Esto es un Work Plan" />
-		<property name="isPublic" value="False" />
+		<property name="isPublic" value="True" />
 		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task03"/>
-				<ref bean="task05"/>
-					
+				<ref bean="task23"/>					
 			</list>
 		</property>
-		<property name="workPlanWorkload" value="25.1"></property>
-        <property name="workPlanPeriod" value="98.2"></property>
 	</bean>
 	
 	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 3" />
 		<property name="start" value="2020/01/26 14:20" />
-		<property name="end" value= "2022/04/29 23:11"/>
+		<property name="end" value= "2022/05/29 23:11"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task04"/>
-				<ref bean="task05"/>
+				<ref bean="task22"/>
 			</list>
 		</property>
-		<property name="workPlanWorkload" value="54.2"></property>
-        <property name="workPlanPeriod" value="72.4"></property>
 	</bean>
 	
 	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
 		<property name="title" value= "Work Plan 4" />
-		<property name="start" value="2021/01/26 8:15" />
-		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="start" value="2020/01/26 08:15" />
+		<property name="end" value= "2020/07/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
-		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task08"/>
+				<ref bean="task06"/>
 			</list>
 		</property>
-		<property name="workPlanWorkload" value="19.3"></property>
-        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	
 	<bean id="workPlan05" class="acme.entities.workPlan.WorkPlan">
@@ -448,15 +652,13 @@
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
-		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="isPublic" value="False" />
+		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
-				<ref bean="task09"/>
+				<ref bean="task03"/>
 			</list>
 		</property>
-		<property name="workPlanWorkload" value="19.3"></property>
-        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	
 	<bean id="workPlan06" class="acme.entities.workPlan.WorkPlan">
@@ -468,11 +670,205 @@
 		<property name="manager" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
+				<ref bean="task02"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="workPlan07" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager1Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task01"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan08" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task05"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan09" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 08:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task07"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan10" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 08:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task08"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan11" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task09"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan12" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
 				<ref bean="task10"/>
 			</list>
 		</property>
-		<property name="workPlanWorkload" value="19.3"></property>
-        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
+	<bean id="workPlan13" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task11"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan14" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager2Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task12"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan15" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task15"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan16" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2022/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task16"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan17" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task17"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan18" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task18"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan19" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task19"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan20" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task20"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="workPlan21" class="acme.entities.workPlan.WorkPlan">
+		<property name="title" value= "Work Plan 5" />
+		<property name="start" value="2021/01/26 8:15" />
+		<property name="end" value= "2021/04/29 08:00"/>
+		<property name="description" value="Esto es un Work Plan" />
+		<property name="isPublic" value="True" />
+		<property name="manager" ref="manager3Manager"/>
+		<property name="tasks">
+			<list>
+				<ref bean="task21"/>
+			</list>
+		</property>
+	</bean>	
 	
 </beans>
