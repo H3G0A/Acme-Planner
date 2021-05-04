@@ -16,8 +16,15 @@ public class AnonymousWorkPlanShowService implements AbstractShowService<Anonymo
 	
 	@Override
 	public boolean authorise(final Request<WorkPlan> request) {
-		assert request != null;
-		return true;
+		final boolean result;
+		final int workPlanId;
+		final WorkPlan workPlan;
+
+		workPlanId=request.getModel().getInteger("id");
+		workPlan=this.repository.findOneWorkPlanById(workPlanId);
+		
+		result = workPlan.getIsPublic();
+		return result;
 	}
 
 	@Override
@@ -28,7 +35,7 @@ public class AnonymousWorkPlanShowService implements AbstractShowService<Anonymo
 		
 		model.setAttribute("workload", entity.getWorkPlanWorkload());
 		model.setAttribute("id", entity.getId());
-		request.unbind(entity, model, "id","start","end","workload","isPublic");
+		request.unbind(entity, model, "title","start","end","workload","isPublic");
 	}
 
 	@Override

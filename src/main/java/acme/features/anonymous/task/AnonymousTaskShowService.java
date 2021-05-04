@@ -17,8 +17,15 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
-		assert request != null;
-		return true;
+		final boolean result;
+		final int taskId;
+		final Task task;
+
+		taskId=request.getModel().getInteger("id");
+		task=this.repository.findOneTaskById(taskId);
+		
+		result = task.getIsPublic();
+		return result;
 	}
 
 	@Override

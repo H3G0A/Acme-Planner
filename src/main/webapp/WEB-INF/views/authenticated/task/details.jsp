@@ -59,15 +59,7 @@
 		<td>
 			<acme:print value="${description}"/>
 		</td>
-	</tr>	
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.isPublic"/>
-		</th>
-		<td>
-			<acme:print value="${isPublic}"/>
-		</td>
-	</tr>	
+	</tr>		
 	<tr>
 		<th scope="row">
 			<acme:message code="authenticated.task.details.label.link"/>

@@ -16,6 +16,7 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
+	<acme:list-column code="anonymous.work-plan.list.label.title" path="title"/>
 	<acme:list-column code="anonymous.work-plan.list.label.start" path="start"/>
 	<acme:list-column code="anonymous.work-plan.list.label.end" path="end"/>
 </acme:list>
