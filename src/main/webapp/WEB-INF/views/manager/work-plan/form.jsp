@@ -79,6 +79,7 @@
 <!-- SUGGESTION -->
 <jstl:if test="${(command=='show' && not empty tasks)}">
 	<br>   
-	<acme:message code="manager.workPlan.form.label.suggestion.start"/><jstl:out value="${suggestedStart}"></jstl:out><br>
-	<acme:message code="manager.workPlan.form.label.suggestion.end"/><jstl:out value="${suggestedEnd}"></jstl:out><br>
+	<b><acme:message code="manager.workPlan.form.label.suggestion.start"/><jstl:out value="${suggestedStart}"></jstl:out><br></b>
+	<b><acme:message code="manager.workPlan.form.label.suggestion.end"/><jstl:out value="${suggestedEnd}"></jstl:out><br></b>
+	<acme:message code="manager.workPlan.form.label.suggestion.format"/><br>
 </jstl:if>

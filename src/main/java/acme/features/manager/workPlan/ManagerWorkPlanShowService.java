@@ -1,5 +1,7 @@
 package acme.features.manager.workPlan;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -50,8 +52,9 @@ public class ManagerWorkPlanShowService implements AbstractShowService<Manager, 
 		
 		if(!workplan.getTasks().isEmpty()) {
 			final List<Date> period = this.suggestedPeriod(workplan.getTasks());
-			model.setAttribute("suggestedStart", period.get(0));
-			model.setAttribute("suggestedEnd", period.get(1));
+			final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+			model.setAttribute("suggestedStart", dateFormat.format(period.get(0)));
+			model.setAttribute("suggestedEnd", dateFormat.format(period.get(1)));
 		}
 		model.setAttribute("canPublish", canPublish);	
 		model.setAttribute("tasksEneabled", taskList);
@@ -79,7 +82,7 @@ public class ManagerWorkPlanShowService implements AbstractShowService<Manager, 
 		c.setTime(first);
 		c.add(Calendar.DAY_OF_MONTH, -1);
 		c.set(Calendar.HOUR_OF_DAY, 8);
-		c.set(Calendar.MINUTE, 30);
+		c.set(Calendar.MINUTE, 0);
 		period.add(c.getTime());
 		
 		c.setTime(last);
