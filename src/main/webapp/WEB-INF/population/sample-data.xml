@@ -360,7 +360,7 @@
 		<property name="title" value= "Tarea numero cuatro" />
 		<property name="start" value="2020/04/21 11:00" />
 		<property name="end" value= "2020/06/28 10:11"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "26.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="executionPeriod" value="60.0" />
@@ -372,7 +372,7 @@
 		<property name="title" value= "Tarea numero cinco" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2021/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "25.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -383,7 +383,7 @@
 		<property name="title" value= "Tarea numero seis" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2022/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "24.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -394,7 +394,7 @@
 		<property name="title" value= "Tarea numero siete" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2022/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "23.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -405,7 +405,7 @@
 		<property name="title" value= "Tarea numero ocho" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2022/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "22.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -416,7 +416,7 @@
 		<property name="title" value= "Tarea numero nueve" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2021/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "21.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -427,7 +427,7 @@
 		<property name="title" value= "Tarea numero diez" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2021/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "20.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -438,7 +438,7 @@
 		<property name="title" value= "Tarea numero once" />
 		<property name="start" value="2021/04/20 10:11" />
 		<property name="end" value= "2021/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "27.1" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -449,7 +449,7 @@
 		<property name="title" value= "Tarea numero doce" />
 		<property name="start" value="2020/04/20 10:11" />
 		<property name="end" value= "2020/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "27.2" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -460,7 +460,7 @@
 		<property name="title" value= "Tarea numero trece" />
 		<property name="start" value="2020/04/20 10:11" />
 		<property name="end" value= "2020/06/03 09:00"/>
-		<property name="workload" value= "27.7" />
+		<property name="workload" value= "27.3" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
@@ -602,7 +602,9 @@
 				<ref bean="task24"/>
 					
 			</list>
-		</property>		
+		</property>	
+		<property name="workPlanWorkload" value="39.3"></property>
+        <property name="workPlanPeriod" value="75.2"></property>	
 	</bean>
 	
 	<bean id="workPlan02" class="acme.entities.workPlan.WorkPlan">
@@ -617,6 +619,8 @@
 				<ref bean="task23"/>					
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="14.3"></property>
+        <property name="workPlanPeriod" value="15.2"></property>
 	</bean>
 	
 	<bean id="workPlan03" class="acme.entities.workPlan.WorkPlan">
@@ -631,6 +635,8 @@
 				<ref bean="task22"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.4"></property>
+        <property name="workPlanPeriod" value="45.1"></property>
 	</bean>
 	
 	<bean id="workPlan04" class="acme.entities.workPlan.WorkPlan">
@@ -645,6 +651,8 @@
 				<ref bean="task06"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	
 	<bean id="workPlan05" class="acme.entities.workPlan.WorkPlan">
@@ -659,10 +667,12 @@
 				<ref bean="task03"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="29.3"></property>
+        <property name="workPlanPeriod" value="55.2"></property>
 	</bean>
 	
 	<bean id="workPlan06" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 6" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -673,10 +683,12 @@
 				<ref bean="task02"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	
 	<bean id="workPlan07" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 7" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -687,9 +699,11 @@
 				<ref bean="task01"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan08" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 8" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -700,9 +714,11 @@
 				<ref bean="task05"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan09" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 9" />
 		<property name="start" value="2021/01/26 08:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -713,9 +729,11 @@
 				<ref bean="task07"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan10" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 10" />
 		<property name="start" value="2021/01/26 08:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -726,9 +744,11 @@
 				<ref bean="task08"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan11" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 11" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -739,9 +759,11 @@
 				<ref bean="task09"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan12" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 12" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -752,9 +774,11 @@
 				<ref bean="task10"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan13" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 13" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -765,9 +789,11 @@
 				<ref bean="task11"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan14" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 14" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -778,9 +804,11 @@
 				<ref bean="task12"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan15" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 15" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -791,9 +819,11 @@
 				<ref bean="task15"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan16" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 16" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -804,9 +834,11 @@
 				<ref bean="task16"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan17" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 17" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -817,9 +849,11 @@
 				<ref bean="task17"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>
 	<bean id="workPlan18" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 18" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -830,9 +864,11 @@
 				<ref bean="task18"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="11.3"></property>
+        <property name="workPlanPeriod" value="40.2"></property>
 	</bean>
 	<bean id="workPlan19" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 19" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -843,9 +879,11 @@
 				<ref bean="task19"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="15.3"></property>
+        <property name="workPlanPeriod" value="41.2"></property>
 	</bean>
 	<bean id="workPlan20" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 20" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -856,9 +894,11 @@
 				<ref bean="task20"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="18.3"></property>
+        <property name="workPlanPeriod" value="48.2"></property>
 	</bean>
 	<bean id="workPlan21" class="acme.entities.workPlan.WorkPlan">
-		<property name="title" value= "Work Plan 5" />
+		<property name="title" value= "Work Plan 21" />
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
@@ -869,6 +909,8 @@
 				<ref bean="task21"/>
 			</list>
 		</property>
+		<property name="workPlanWorkload" value="19.3"></property>
+        <property name="workPlanPeriod" value="45.2"></property>
 	</bean>	
 	
 </beans>
