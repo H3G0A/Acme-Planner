@@ -42,6 +42,7 @@ manager.workplan.form.button.publish= Publish
 
 manager.workPlan.form.label.suggestion.start= Recommended start date: 
 manager.workPlan.form.label.suggestion.end= Recommended finish date: 
+manager.workPlan.form.label.suggestion.format= Date format: (YYYY-MM-DD hh:mm)
 # manager.workPlan.error #################################################################
 manager.workPlan.form.error.endBeforeStart = End date must be after the start date
 manager.workPlan.form.error.spam= This text is considered spam
