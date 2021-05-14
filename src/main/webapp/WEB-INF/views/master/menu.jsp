@@ -20,6 +20,8 @@
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.spam-word.list" action="/administrator/word/list"/>
 			<acme:menu-suboption code="master.menu.administrator.spam-word.create" action="/administrator/word/create"/>
+			<acme:menu-suboption code="master.menu.administrator.word.show.threshold" action="/administrator/threshold/show"/>
+			<acme:menu-suboption code="master.menu.administrator.word.update-show.threshold" action="/administrator/threshold/update-show"/>
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.task-dashboard" action="/administrator/task-dashboard/show"/>

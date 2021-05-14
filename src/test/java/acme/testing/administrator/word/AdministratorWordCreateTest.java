@@ -26,7 +26,7 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(2)
 	public void createPositive(final int recordIndex, final String word) {
 		super.signIn("administrator", "administrator");
 
@@ -47,23 +47,23 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/administrator/word/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(20)
-//	public void createNegative(final int recordIndex, final String word) {
-//		
-//		super.signIn("administrator", "administrator");
-//
-//		super.clickOnMenu("Administrator", "Create a Spam Word");
-//
-//		super.fillInputBoxIn("word", word);
-//
-//		super.clickOnSubmitButton("Add word");
-//
-//		super.checkErrorsExist();
-//
-//		super.signOut();
-//	}
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/word/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(2)
+	public void createNegative(final int recordIndex, final String word) {
+		
+		super.signIn("administrator", "administrator");
+
+		super.clickOnMenu("Administrator", "Create a Spam Word");
+
+		super.fillInputBoxIn("word", word);
+
+		super.clickOnSubmitButton("Add word");
+
+		super.checkErrorsExist();
+
+		super.signOut();
+	}
 
 	// Ancillary methods ------------------------------------------------------
 

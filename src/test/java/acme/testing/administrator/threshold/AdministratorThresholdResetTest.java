@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.testing.administrator.word;
+package acme.testing.administrator.threshold;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,43 +18,43 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AdministratorWordShowTest extends AcmePlannerTest {
+public class AdministratorThresholdResetTest extends AcmePlannerTest {
 
 	// Lifecycle management ---------------------------------------------------
 	
 	// Test cases -------------------------------------------------------------
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/word/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/threshold/reset-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
-	public void showPositive(final int recordIndex, final String word) {		
+	public void resetPositive(final int recordIndex, final String thresholdNumber) {		
 		super.signIn("administrator", "administrator");
 		
-		super.clickOnMenu("Administrator", "Spam Word List");
+		super.clickOnMenu("Administrator", "Manage threshold");
+			
+		super.clickOnSubmitButton("Reset");
+				
+		super.clickOnMenu("Administrator", "Threshold");
 		
-		super.checkColumnHasValue(recordIndex, 0, word);
-		
-		super.clickOnListingRecord(recordIndex);
-		
-		super.checkInputBoxHasValue("word", word);
-		
+		super.checkInputBoxHasValue("thresholdNumber", thresholdNumber);
+//		
 		super.signOut();
 	}
-//	
+	
 //	@ParameterizedTest
-//	@CsvFileSource(resources = "/administrator/word/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+//	@CsvFileSource(resources = "/administrator/threshold/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 //	@Order(2)	
-//	public void showNegative(final int recordIndex, final String word) {		
+//	public void updateNegative(final int recordIndex, final String thresholdNumber) {		
 //		super.signIn("administrator", "administrator");
 //		
-//		super.clickOnMenu("Administrator", "Spam Word List");
-//		
-//		super.checkColumnHasValue(recordIndex, 0, word);
-//		
-//		super.clickOnListingRecord(recordIndex);
-//		
-//		super.checkInputBoxHasValue("word", word);
-//		
+//		super.clickOnMenu("Administrator", "Manage threshold");
+//			
+//		super.fillInputBoxIn("thresholdNumber", thresholdNumber);	
+//
+//		super.clickOnSubmitButton("Save changes");
+//				
+//		super.checkErrorsExist();
+////		
 //		super.signOut();
 //	}
 	

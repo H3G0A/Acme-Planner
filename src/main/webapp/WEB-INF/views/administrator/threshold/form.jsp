@@ -7,7 +7,6 @@
     <acme:form-double path="thresholdNumber" code="administrator.threshold.form.label.threshold" />
 
     <jstl:if test="${readonly}">
-	    <acme:form-submit method="get" action="/administrator/threshold/update-show" code="administrator.threshold.form.button.update.show" />
 	    <acme:form-return action="/administrator/word/list" code="administrator.threshold.form.button.return" />
     </jstl:if>
     <jstl:if test="${!readonly}">
