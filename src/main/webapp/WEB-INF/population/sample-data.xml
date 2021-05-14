@@ -257,7 +257,7 @@
         </property>
     </bean>
 
-    <bean name="manager1Manager" class="acme.entities.roles.Manager">
+    <bean name="manager1Manager" class="acme.entities.roles.Management">
         <property name="userAccount" ref="manager1UserAccount"/>
     </bean>
 
@@ -284,7 +284,7 @@
         </property>
     </bean>
 
-    <bean name="manager2Manager" class="acme.entities.roles.Manager">
+    <bean name="manager2Manager" class="acme.entities.roles.Management">
         <property name="userAccount" ref="manager2UserAccount"/>
     </bean>
 
@@ -311,7 +311,7 @@
         </property>
     </bean>
 
-    <bean name="manager3Manager" class="acme.entities.roles.Manager">
+    <bean name="manager3Manager" class="acme.entities.roles.Management">
         <property name="userAccount" ref="manager3UserAccount"/>
     </bean>
 
@@ -329,7 +329,7 @@
 		<property name="isPublic" value="True" />
 		<property name="executionPeriod" value="110.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -341,7 +341,7 @@
 		<property name="isPublic" value="True" />
 		<property name="executionPeriod" value="10.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -353,7 +353,7 @@
 		<property name="isPublic" value="False" />
 		<property name="executionPeriod" value="50.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean> 
 	
 	<bean id="task04" class="acme.entities.tasks.Task">
@@ -365,7 +365,7 @@
 		<property name="isPublic" value="True" />
 		<property name="executionPeriod" value="60.0" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean> 
     
     <bean id="task05" class="acme.entities.tasks.Task">
@@ -376,7 +376,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean> 
 	
 	<bean id="task06" class="acme.entities.tasks.Task">
@@ -387,7 +387,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<bean id="task07" class="acme.entities.tasks.Task">
@@ -398,7 +398,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task08" class="acme.entities.tasks.Task">
@@ -409,7 +409,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task09" class="acme.entities.tasks.Task">
@@ -420,7 +420,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task10" class="acme.entities.tasks.Task">
@@ -431,7 +431,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task11" class="acme.entities.tasks.Task">
@@ -442,7 +442,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
@@ -453,7 +453,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 	</bean>
 	
 	<bean id="task13" class="acme.entities.tasks.Task">
@@ -464,7 +464,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 	<bean id="task14" class="acme.entities.tasks.Task">
@@ -475,7 +475,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 	<bean id="task15" class="acme.entities.tasks.Task">
@@ -486,7 +486,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 	<bean id="task16" class="acme.entities.tasks.Task">
@@ -497,7 +497,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 	<bean id="task17" class="acme.entities.tasks.Task">
@@ -508,7 +508,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 		<bean id="task18" class="acme.entities.tasks.Task">
@@ -519,7 +519,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 		<bean id="task19" class="acme.entities.tasks.Task">
@@ -530,7 +530,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 		<bean id="task20" class="acme.entities.tasks.Task">
@@ -541,7 +541,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 		<bean id="task21" class="acme.entities.tasks.Task">
@@ -552,7 +552,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 	</bean>
 	
 		<bean id="task22" class="acme.entities.tasks.Task">
@@ -563,7 +563,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<bean id="task23" class="acme.entities.tasks.Task">
@@ -574,7 +574,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<bean id="task24" class="acme.entities.tasks.Task">
@@ -585,7 +585,7 @@
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="False" />
 		<property name="link" value="https://www.youtube.com/watch?v=nuCIA31LfIU" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 	</bean>
 	
 	<!-- workplan -->
@@ -596,7 +596,7 @@
 		<property name="end" value= "2022/06/29 09:23"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task24"/>
@@ -613,7 +613,7 @@
 		<property name="end" value= "2020/08/16 02:52"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task23"/>					
@@ -629,7 +629,7 @@
 		<property name="end" value= "2022/05/29 23:11"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task22"/>
@@ -645,7 +645,7 @@
 		<property name="end" value= "2020/07/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task06"/>
@@ -661,7 +661,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task03"/>
@@ -677,7 +677,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task02"/>
@@ -693,7 +693,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager1Manager"/>
+		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task01"/>
@@ -708,7 +708,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task05"/>
@@ -723,7 +723,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task07"/>
@@ -738,7 +738,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task08"/>
@@ -753,7 +753,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task09"/>
@@ -768,7 +768,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task10"/>
@@ -783,7 +783,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task11"/>
@@ -798,7 +798,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager2Manager"/>
+		<property name="management" ref="manager2Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task12"/>
@@ -813,7 +813,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task15"/>
@@ -828,7 +828,7 @@
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task16"/>
@@ -843,7 +843,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task17"/>
@@ -858,7 +858,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="True" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task18"/>
@@ -873,7 +873,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task19"/>
@@ -888,7 +888,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task20"/>
@@ -903,7 +903,7 @@
 		<property name="end" value= "2021/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
 		<property name="isPublic" value="False" />
-		<property name="manager" ref="manager3Manager"/>
+		<property name="management" ref="manager3Manager"/>
 		<property name="tasks">
 			<list>
 				<ref bean="task21"/>
