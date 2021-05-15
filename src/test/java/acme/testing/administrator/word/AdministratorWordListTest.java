@@ -1,5 +1,5 @@
 /*
- * SignUpTest.java
+ * EmployerJobListAllTest.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,27 +10,37 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.testing;
+package acme.testing.administrator.word;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-public class SignUpTest extends AcmePlannerTest {
+import acme.testing.AcmePlannerTest;
+
+public class AdministratorWordListTest extends AcmePlannerTest {
 
 	// Lifecycle management ---------------------------------------------------
 
 	// Test cases -------------------------------------------------------------
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/sign-up/positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
-	public void positiveSignUp(final String username, final String password, final String name, final String surname, final String email) {
-		super.signUp(username, password, name, surname, email);
-		super.signIn(username, password);
+	@CsvFileSource(resources = "/administrator/word/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(2)
+	public void list(final int recordIndex, final String word) {		
+		super.signIn("administrator", "administrator");
+
+		super.clickOnMenu("Administrator", "Spam Word List");
+		
+		super.checkColumnHasValue(recordIndex, 0, word);
+		
+		super.clickOnListingRecord(recordIndex);
+		
+		super.checkInputBoxHasValue("word", word);
+
 		super.signOut();
 	}
 
 	// Ancillary methods ------------------------------------------------------
-	
+
 }

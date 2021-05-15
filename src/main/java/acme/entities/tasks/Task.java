@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.roles.Manager;
+import acme.entities.roles.Management;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -50,7 +50,7 @@ public class Task extends DomainEntity{
 	protected double executionPeriod;
 	
 	@ManyToOne
-	private Manager manager;
+	private Management management;
 
 	//	Derived attributes
 
