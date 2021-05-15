@@ -24,6 +24,8 @@ public class AdministratorThresholdShowTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct show of the value of the threshold. 
+	// It is expected that when it is showed the default value is 10.00
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	

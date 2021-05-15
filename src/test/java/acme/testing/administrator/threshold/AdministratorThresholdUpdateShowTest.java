@@ -24,6 +24,8 @@ public class AdministratorThresholdUpdateShowTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct show of the value of the threshold(we cannot change the value of the threshold in this option, in this detail is different to the show test). 
+	// It is expected that when it is showed the defailt value is 10.00
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/update-show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
