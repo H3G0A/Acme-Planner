@@ -25,4 +25,4 @@ authenticated.task.details.label.description = Descripcion
 authenticated.task.details.label.isPublic = Publico
 authenticated.task.details.label.link = Link
 
-authenticated.task.details.label.title.general-indicators = Descripcion detallada de la tarea
+authenticated.task.details.button.return = Volver

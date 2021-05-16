@@ -1,5 +1,5 @@
 <%--
-- details.jsp
+- form.jsp
 -
 - Copyright (c) 2012-2021 Rafael Corchuelo.
 -
@@ -16,57 +16,17 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 
-<table class="table table-sm">
-	<caption>
-		<acme:message code="authenticated.task.details.label.title.general-indicators"/>
-	</caption>	
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.title"/>
-		</th>
-		<td>
-			<acme:print value="${title}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.start"/>
-		</th>
-		<td>
-			<acme:print value="${start}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.end"/>
-		</th>
-		<td>
-			<acme:print value="${end}"/>
-		</td>
-	</tr>
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.workload"/>
-		</th>
-		<td>
-			<acme:print value="${workload}"/>
-		</td>
-	</tr>	
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.description"/>
-		</th>
-		<td>
-			<acme:print value="${description}"/>
-		</td>
-	</tr>		
-	<tr>
-		<th scope="row">
-			<acme:message code="authenticated.task.details.label.link"/>
-		</th>
-		<td>
-			<acme:print value="${link}"/>
-		</td>
-	</tr>
-	
-</table>
+
+<acme:form>
+
+	<acme:form-hidden path="authenticatedId"/>
+    <acme:form-textbox code="authenticated.task.details.label.title" path="title"/>
+    <acme:form-textbox code="authenticated.task.details.label.description" path="description"/>
+    <acme:form-url code="authenticated.task.details.label.link" path="link"/>
+    <acme:form-moment code="authenticated.task.details.label.start" path="start"/>
+    <acme:form-moment code="authenticated.task.details.label.end" path="end"/>
+    <acme:form-double code="authenticated.task.details.label.workload" path="workload"/>
+    <acme:form-checkbox code="authenticated.task.details.label.isPublic" path="isPublic"/>
+ 
+    <acme:form-return code="authenticated.task.details.button.return"/>
+</acme:form>
