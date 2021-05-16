@@ -24,11 +24,19 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct reset of the spam threshold after changing the initial default value. 
+	// It is expected that after reseting the threshold it will have a value of 10.00
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/reset-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
 	public void resetPositive(final int recordIndex, final String thresholdNumber) {		
 		super.signIn("administrator", "administrator");
+			
+		super.clickOnMenu("Administrator", "Manage threshold");
+		
+		super.fillInputBoxIn("thresholdNumber", thresholdNumber);	
+
+		super.clickOnSubmitButton("Save changes");
 		
 		super.clickOnMenu("Administrator", "Manage threshold");
 			
@@ -36,27 +44,10 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 				
 		super.clickOnMenu("Administrator", "Threshold");
 		
-		super.checkInputBoxHasValue("thresholdNumber", thresholdNumber);
+		super.checkInputBoxHasValue("thresholdNumber", "10.00");
 //		
 		super.signOut();
 	}
-	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/administrator/threshold/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(2)	
-//	public void updateNegative(final int recordIndex, final String thresholdNumber) {		
-//		super.signIn("administrator", "administrator");
-//		
-//		super.clickOnMenu("Administrator", "Manage threshold");
-//			
-//		super.fillInputBoxIn("thresholdNumber", thresholdNumber);	
-//
-//		super.clickOnSubmitButton("Save changes");
-//				
-//		super.checkErrorsExist();
-////		
-//		super.signOut();
-//	}
 	
 	// Ancillary methods ------------------------------------------------------
 

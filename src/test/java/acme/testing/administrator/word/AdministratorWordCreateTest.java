@@ -1,15 +1,3 @@
-/*
- * EmployerJobCreateTest.java
- *
- * Copyright (C) 2012-2021 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.testing.administrator.word;
 
 import org.junit.jupiter.api.Order;
@@ -24,9 +12,11 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 
 	// Test cases -------------------------------------------------------------
 
+	// This test case checks the correct creation of a spam word. After creating the spam word, 
+	// it is expected to return to the initial view of the application
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)
+	@Order(10)
 	public void createPositive(final int recordIndex, final String word) {
 		super.signIn("administrator", "administrator");
 
@@ -35,6 +25,8 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("word", word);
 		
 		super.clickOnSubmitButton("Add word");
+		
+		super.checkSimplePath("/master/welcome");
 
 		super.clickOnMenu("Administrator", "Spam Word List");
 		
@@ -47,9 +39,11 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
+	// This test case checks for errors after inserting wrong data as spam word, such as blank values 
+	// , displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)
+	@Order(10)
 	public void createNegative(final int recordIndex, final String word) {
 		
 		super.signIn("administrator", "administrator");

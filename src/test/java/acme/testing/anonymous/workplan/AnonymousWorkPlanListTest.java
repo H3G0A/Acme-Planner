@@ -12,6 +12,8 @@ public class AnonymousWorkPlanListTest extends AcmePlannerTest {
 
 	// Test cases -------------------------------------------------------------
 
+	// This test case checks the correct listing the workplans. It is checked that the list values, 
+	// are correct
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/workplans/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -37,7 +39,6 @@ public class AnonymousWorkPlanListTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("workload", workload);
 		
 		super.checkInputBoxHasValue("isPublic", status);
-
 	
 	}
 
