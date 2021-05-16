@@ -16,13 +16,13 @@ public class ManagerTaskListTest extends AcmePlannerTest {
 		final String end, final String workload,final String isPublic) {		
 		super.signIn("manager1", "manager1");
 
-		super.clickOnMenu("Manager", "Task List");
+		super.clickOnMenu("Manager", "Tasks");
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		
-		super.checkColumnHasValue(recordIndex, 3, start);
+		super.checkColumnHasValue(recordIndex, 1, start);
 		
-		super.checkColumnHasValue(recordIndex, 4, end);
+		super.checkColumnHasValue(recordIndex, 2, end);
 
 		super.clickOnListingRecord(recordIndex);
 		
