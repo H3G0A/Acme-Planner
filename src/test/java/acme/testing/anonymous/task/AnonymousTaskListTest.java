@@ -27,7 +27,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("end", end);
 		super.checkInputBoxHasValue("workload", workload);
 		super.checkInputBoxHasValue("description", description);
-//		super.checkInputBoxHasValue("isPublic", status);
+		super.checkInputBoxHasValue("isPublic", status);
 		super.checkInputBoxHasValue("link", link);
 	}
 }
