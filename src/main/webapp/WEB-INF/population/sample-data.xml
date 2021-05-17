@@ -323,7 +323,7 @@
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero uno" />
 		<property name="start" value="2021/04/19 16:05" />
-		<property name="end" value= "2021/05/19 19:05"/>
+		<property name="end" value= "2022/05/19 19:05"/>
 		<property name="workload" value= "25.3" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
@@ -371,7 +371,7 @@
     <bean id="task05" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero cinco" />
 		<property name="start" value="2021/04/20 10:11" />
-		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="end" value= "2022/06/03 09:00"/>
 		<property name="workload" value= "25.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
@@ -426,7 +426,7 @@
 	<bean id="task10" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero diez" />
 		<property name="start" value="2021/04/20 10:11" />
-		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="end" value= "2022/06/03 09:00"/>
 		<property name="workload" value= "20.7" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />
@@ -437,7 +437,7 @@
 	<bean id="task11" class="acme.entities.tasks.Task">
 		<property name="title" value= "Tarea numero once" />
 		<property name="start" value="2021/04/20 10:11" />
-		<property name="end" value= "2021/06/03 09:00"/>
+		<property name="end" value= "2022/06/03 09:00"/>
 		<property name="workload" value= "27.1" />
 		<property name="description" value="Esto es una tarea" />
 		<property name="isPublic" value="True" />

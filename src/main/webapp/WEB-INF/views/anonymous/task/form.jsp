@@ -10,8 +10,16 @@
 	<acme:form-textbox code="anonymous.task.form.label.workload" path="workload"/>
 	<acme:form-textarea code="anonymous.task.form.label.description" path="description"/>
 	<acme:form-select code="anonymous.task.form.label.isPublic" path="isPublic">
-		<acme:form-option code="anonymous.task.form.label.yes" value="true"/>
-		<acme:form-option code="anonymous.task.form.label.no" value="false"/>
+	<jstl:choose>
+		<jstl:when test="${isPublic==true}">
+			<acme:form-option code="anonymous.task.form.label.yes" value="true" selected="true"/>
+			<acme:form-option code="anonymous.task.form.label.no" value="false"/>
+		</jstl:when>
+		<jstl:otherwise>
+			<acme:form-option code="anonymous.task.form.label.yes" value="true"/>
+			<acme:form-option code="anonymous.task.form.label.no" value="false" selected="true"/>
+		</jstl:otherwise>
+	</jstl:choose>
 	</acme:form-select>
 	<acme:form-textbox code="anonymous.task.form.label.link" path="link"/>
 	
