@@ -42,7 +42,7 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 			
 		super.clickOnSubmitButton("Reset");
 				
-		super.clickOnMenu("Administrator", "Threshold");
+		super.clickOnMenu("Administrator", "Manage threshold");
 		
 		super.checkInputBoxHasValue("thresholdNumber", "10.00");
 //		

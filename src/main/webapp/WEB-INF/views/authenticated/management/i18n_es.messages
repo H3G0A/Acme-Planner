@@ -13,5 +13,4 @@ authenticated.manager.form.title.update = Actualiza tus datos de gerente
 
 
 authenticated.manager.form.button.create = Registrar
-authenticated.manager.form.button.update = Actualizar
 authenticated.manager.form.button.return = Volver
