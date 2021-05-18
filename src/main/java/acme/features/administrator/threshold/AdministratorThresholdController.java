@@ -19,12 +19,6 @@ public class AdministratorThresholdController extends AbstractController<Adminis
 	// Internal state ---------------------------------------------------------
 		
 	@Autowired
-	protected AdministratorThresholdShowService administratorThresholdShowService;
-	
-	@Autowired
-	protected AdministratorThresholdUpdateShowService administratorThresholdUpdateShowService;
-	
-	@Autowired
 	protected AdministratorThresholdUpdateService administratorThresholdUpdateService;
 	
 	@Autowired
@@ -35,8 +29,6 @@ public class AdministratorThresholdController extends AbstractController<Adminis
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand(BasicCommand.SHOW, this.administratorThresholdShowService);
-		super.addCustomCommand(CustomCommand.UPDATE_SHOW, BasicCommand.SHOW, this.administratorThresholdUpdateShowService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.administratorThresholdUpdateService);
 		super.addCustomCommand(CustomCommand.RESET, BasicCommand.UPDATE, this.administratorThresholdUpdateResetService);
 	}

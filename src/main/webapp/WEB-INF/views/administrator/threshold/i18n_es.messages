@@ -1,6 +1,5 @@
 administrator.threshold.form.label.threshold = Umbral (%)
 administrator.threshold.form.button.reset = Reiniciar
-administrator.threshold.form.button.update.show = Actualizar umbral
 administrator.threshold.form.button.return = Volver
 administrator.threshold.form.button.update = Guardar cambios
 

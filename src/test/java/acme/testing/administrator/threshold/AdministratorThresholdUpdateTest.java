@@ -28,10 +28,10 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 		
 		super.checkSimplePath("/master/welcome");
 				
-		super.clickOnMenu("Administrator", "Threshold");
+		super.clickOnMenu("Administrator", "Manage threshold");
 		
 		super.checkInputBoxHasValue("thresholdNumber", thresholdNumber);
-//		
+		
 		super.signOut();
 	}
 	

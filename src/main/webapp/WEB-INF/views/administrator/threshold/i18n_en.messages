@@ -1,6 +1,5 @@
 administrator.threshold.form.label.threshold = Threshold (%)
 administrator.threshold.form.button.reset = Reset
-administrator.threshold.form.button.update.show = Update threshold
 administrator.threshold.form.button.return = Return
 administrator.threshold.form.button.update = Save changes
 
