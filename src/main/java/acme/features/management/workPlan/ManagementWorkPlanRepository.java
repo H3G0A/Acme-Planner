@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface ManagementWorkPlanRepository extends AbstractRepository{
 
-	@Query("select w from WorkPlan w where w.management.id = ?1")
+	@Query("select w from WorkPlan w where w.management.id = ?1 ORDER BY w DESC")
 	Collection<WorkPlan> findManyByManagementId(int activeRoleId);
 
 	@Query("select w from WorkPlan w where w.id = ?1")
