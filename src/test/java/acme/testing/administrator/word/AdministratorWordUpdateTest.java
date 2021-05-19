@@ -26,16 +26,16 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		
 		super.clickOnListingRecord(recordIndex);
 		
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
 		super.fillInputBoxIn("word", word);	
 		
 		super.clickOnSubmitButton("Update");
-		
+				
 		super.checkSimplePath("/administrator/word/list");
 		
-		super.checkColumnHasValue(recordIndex, 0, word);
-		
-		super.clickOnListingRecord(recordIndex);
-		
+		super.driver.get(super.baseUrl+"/administrator/word/update?id"+"="+url[1]);
+				
 		super.checkInputBoxHasValue("word", word);
 		
 		super.signOut();
@@ -54,7 +54,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, word);
 		
 		super.clickOnListingRecord(recordIndex);
-		
+				
 		super.fillInputBoxIn("word", word);	
 		
 		super.clickOnSubmitButton("Update");
