@@ -19,12 +19,18 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		super.checkColumnHasValue(recordIndex, 0, word1);
 		
 		super.clickOnListingRecord(recordIndex);
+
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
+		super.driver.get(super.baseUrl+"/administrator/word/delete?id"+"="+url[1]);	
 		
 		super.clickOnSubmitButton("Delete");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
 		
-		super.checkColumnHasValue(recordIndex, 0, word2);
+		super.driver.get(super.baseUrl+"/administrator/word/delete?id"+"="+url[1]);
+		
+		super.checkPanicExists();
 		
 		super.signOut();
 	}
