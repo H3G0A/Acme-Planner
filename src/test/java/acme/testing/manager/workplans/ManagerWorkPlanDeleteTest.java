@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerWorkPlanDeleteTest extends AcmePlannerTest{
 	
+	// Este test comprueba el correcto funcionamiento del borrado de los workplans
 	@ParameterizedTest
 	@CsvFileSource(resources="/manager/workplan/delete-workplan-positive.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(10)
