@@ -15,6 +15,6 @@ public class Word extends DomainEntity {
     protected static final long serialVersionUID = 1L;
 
     @NotBlank
-    private String word;
+    private String palabra;
     
 }

@@ -20,59 +20,59 @@
 	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
 	
 	<bean id="word01" class="acme.entities.spam.Word">
-		<property name="word" value="sex"/>
+		<property name="palabra" value="sex"/>
 	</bean>
 	
 	<bean id="word02" class="acme.entities.spam.Word">
-		<property name="word" value="sexo"/>
+		<property name="palabra" value="sexo"/>
 	</bean>
 	
 	<bean id="word03" class="acme.entities.spam.Word">
-		<property name="word" value="hard core"/>
+		<property name="palabra" value="hard core"/>
 	</bean>
 	
 	<bean id="word04" class="acme.entities.spam.Word">
-		<property name="word" value="fuerza bruta"/>
+		<property name="palabra" value="fuerza bruta"/>
 	</bean>
 	
 	<bean id="word05" class="acme.entities.spam.Word">
-		<property name="word" value="viagra"/>
+		<property name="palabra" value="viagra"/>
 	</bean>
 	
 	<bean id="word06" class="acme.entities.spam.Word">
-		<property name="word" value="cialis"/>
+		<property name="palabra" value="cialis"/>
 	</bean>
 	
 	<bean id="word07" class="acme.entities.spam.Word">
-		<property name="word" value="nigeria"/>
+		<property name="palabra" value="nigeria"/>
 	</bean>
 	
 	<bean id="word08" class="acme.entities.spam.Word">
-		<property name="word" value="you've won"/>
+		<property name="palabra" value="you've won"/>
 	</bean>
 	
 	<bean id="word09" class="acme.entities.spam.Word">
-		<property name="word" value="you have won"/>
+		<property name="palabra" value="you have won"/>
 	</bean>
 	
 	<bean id="word10" class="acme.entities.spam.Word">
-		<property name="word" value="acabas de ganar"/>
+		<property name="palabra" value="acabas de ganar"/>
 	</bean>
 	
 	<bean id="word11" class="acme.entities.spam.Word">
-		<property name="word" value="has ganado"/>
+		<property name="palabra" value="has ganado"/>
 	</bean>
 	
 	<bean id="word12" class="acme.entities.spam.Word">
-		<property name="word" value="million dollar"/>
+		<property name="palabra" value="million dollar"/>
 	</bean>
 	
 	<bean id="word13" class="acme.entities.spam.Word">
-		<property name="word" value="millon de dolares"/>
+		<property name="palabra" value="millon de dolares"/>
 	</bean>
 	
 	<bean id="word14" class="acme.entities.spam.Word">
-		<property name="word" value="millón de dolares"/>
+		<property name="palabra" value="millón de dolares"/>
 	</bean>
 	
 	<bean name="spam01" class="acme.entities.spam.SpamWord">

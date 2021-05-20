@@ -27,7 +27,7 @@ public class AdministratorWordShowService implements AbstractShowService<Adminis
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "palabra");
 		
 	}
 
@@ -36,7 +36,7 @@ public class AdministratorWordShowService implements AbstractShowService<Adminis
 		assert request != null;
 		final int id = request.getModel().getInteger("id");
 		Word res;
-		res = this.repository.findOneWordById(id).get();
+		res = this.repository.findOneWordById(id).orElse(null);
 		return res;
 	}
 
