@@ -2,12 +2,14 @@
 package acme.features.administrator.word;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.spam.SpamWord;
 import acme.entities.spam.Word;
+import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -20,6 +22,8 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 	@Autowired
 	protected AdministratorWordRepository repository;
 
+	@Autowired
+	protected AnonymousSpamDetectorService	spamService;
 
 	@Override
 	public boolean authorise(final Request<Word> request) {
@@ -50,7 +54,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 	public Word findOne(final Request<Word> request) {
 		Word word;
 		final int id = request.getModel().getInteger("id");
-		word = this.repository.findOneWordById(id);
+		word = this.repository.findOneWordById(id).orElse(null);
 		return word;
 	}
 
@@ -59,6 +63,9 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		final Optional<Word> spam = this.repository.findOneWordById(entity.getId());
+		errors.state(request, spam.isPresent(), "word", "administrator.word.form.error.notExists");
 
 	}
 
