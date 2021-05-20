@@ -33,7 +33,7 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 			
 		super.clickOnMenu("Administrator", "Manage threshold");
-		
+				
 		super.fillInputBoxIn("thresholdNumber", thresholdNumber);	
 
 		super.clickOnSubmitButton("Save changes");
@@ -42,7 +42,7 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 			
 		super.clickOnSubmitButton("Reset");
 				
-		super.clickOnMenu("Administrator", "Manage threshold");
+		super.driver.get(super.baseUrl+"/administrator/threshold/reset");
 		
 		super.checkInputBoxHasValue("thresholdNumber", "10.00");
 //		

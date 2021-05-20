@@ -21,9 +21,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
-		
-		super.checkColumnHasValue(recordIndex, 0, word);
-		
+				
 		super.clickOnListingRecord(recordIndex);
 		
 		final String[] url = super.driver.getCurrentUrl().split("=");
@@ -50,9 +48,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
-		
-		super.checkColumnHasValue(recordIndex, 0, word);
-		
+				
 		super.clickOnListingRecord(recordIndex);
 				
 		super.fillInputBoxIn("word", word);	

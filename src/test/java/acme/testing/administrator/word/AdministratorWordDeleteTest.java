@@ -15,9 +15,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
-		
-		super.checkColumnHasValue(recordIndex, 0, word1);
-		
+				
 		super.clickOnListingRecord(recordIndex);
 
 		final String[] url = super.driver.getCurrentUrl().split("=");

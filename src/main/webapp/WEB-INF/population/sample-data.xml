@@ -71,10 +71,6 @@
 		<property name="word" value="millon de dolares"/>
 	</bean>
 	
-	<bean id="word14" class="acme.entities.spam.Word">
-		<property name="word" value="millón de dolares"/>
-	</bean>
-	
 	<bean name="spam01" class="acme.entities.spam.SpamWord">
 		<property name="spamWords" >
 				<list>
@@ -89,6 +85,8 @@
 					<ref bean="word09" />
 					<ref bean="word10" />
 					<ref bean="word11" />
+					<ref bean="word12" />
+					<ref bean="word13" />
 				</list>
 			</property>
 		<property name="threshold" value="10." />
