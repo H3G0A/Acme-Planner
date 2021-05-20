@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class AuthenticatedUserAccountUpdate extends AcmePlannerTest{
+public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	
 	// This test case checks the correct update the details of an account. After updating these values, 
 	// it is expected to return to the initial view of the application
