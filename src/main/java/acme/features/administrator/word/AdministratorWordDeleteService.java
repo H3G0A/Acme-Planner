@@ -47,7 +47,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "palabra");
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class AdministratorWordDeleteService implements AbstractDeleteService<Adm
 		assert errors != null;
 		
 		final Optional<Word> spam = this.repository.findOneWordById(entity.getId());
-		errors.state(request, spam.isPresent(), "word", "administrator.word.form.error.notExists");
+		errors.state(request, spam.isPresent(), "palabra", "administrator.word.form.error.notExists");
 
 	}
 

@@ -37,7 +37,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "palabra");
 		
 	}
 

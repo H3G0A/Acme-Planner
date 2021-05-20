@@ -46,7 +46,7 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "palabra");
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 		assert errors != null;
 		
 		final boolean spam = this.spamService.detectSpam(entity.getPalabra());
-		errors.state(request, !spam, "word", "administrator.word.form.error.exists");
+		errors.state(request, !spam, "palabra", "administrator.word.form.error.exists");
 
 	}
 
