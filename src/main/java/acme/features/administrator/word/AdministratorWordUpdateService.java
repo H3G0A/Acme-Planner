@@ -43,7 +43,7 @@ public class AdministratorWordUpdateService implements AbstractUpdateService<Adm
 
 	@Override
 	public Word findOne(final Request<Word> request) {
-		Word word = new Word();
+		Word word;
 		final int id = request.getModel().getInteger("id");
 		word = this.repository.findOneWordById(id);
 		return word;

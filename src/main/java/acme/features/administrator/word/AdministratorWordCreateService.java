@@ -55,7 +55,7 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 		Word result;
 
 		result = new Word();
-		result.setWord("Word");
+		result.setPalabra("Word");
 
 		return result;
 	}
@@ -66,8 +66,8 @@ public class AdministratorWordCreateService implements AbstractCreateService<Adm
 		assert entity != null;
 		assert errors != null;
 		
-		final boolean spam = this.spamService.detectSpam(entity.getWord());
-		errors.state(request, spam == false, "word", "administrator.word.form.error.exists");
+		final boolean spam = this.spamService.detectSpam(entity.getPalabra());
+		errors.state(request, !spam, "word", "administrator.word.form.error.exists");
 
 	}
 
