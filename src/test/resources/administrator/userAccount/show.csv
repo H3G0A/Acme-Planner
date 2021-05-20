@@ -1,0 +1,2 @@
+recordIndex,username,name,surname,email,roleList,status
+0,anonymous,John,Doe,john.doe@acme.com,Anonymous,DISABLED
