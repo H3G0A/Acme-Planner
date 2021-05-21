@@ -17,14 +17,14 @@ public class AdministratorWordShowTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
-	public void showPositive(final int recordIndex, final String word) {		
+	public void showPositive(final int recordIndex, final String palabra) {		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
 				
 		super.clickOnListingRecord(recordIndex);
 		
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("palabra", palabra);
 		
 		super.signOut();
 	}

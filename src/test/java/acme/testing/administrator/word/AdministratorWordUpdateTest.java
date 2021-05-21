@@ -17,7 +17,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
-	public void updatePositive(final int recordIndex, final String word) {		
+	public void updatePositive(final int recordIndex, final String palabra) {		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
@@ -26,7 +26,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		
 		final String[] url = super.driver.getCurrentUrl().split("=");
 		
-		super.fillInputBoxIn("word", word);	
+		super.fillInputBoxIn("palabra", palabra);	
 		
 		super.clickOnSubmitButton("Update");
 				
@@ -34,7 +34,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 		
 		super.driver.get(super.baseUrl+"/administrator/word/update?id"+"="+url[1]);
 				
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("palabra", palabra);
 		
 		super.signOut();
 	}
@@ -44,14 +44,14 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
-	public void updateNegative(final int recordIndex, final String word) {		
+	public void updateNegative(final int recordIndex, final String palabra) {		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");
 				
 		super.clickOnListingRecord(recordIndex);
 				
-		super.fillInputBoxIn("word", word);	
+		super.fillInputBoxIn("palabra", palabra);	
 		
 		super.clickOnSubmitButton("Update");
 		

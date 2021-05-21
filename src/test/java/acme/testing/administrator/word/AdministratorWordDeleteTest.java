@@ -11,7 +11,7 @@ public class AdministratorWordDeleteTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources="/administrator/word/delete-word-positive.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(10)
-	public void deletePositive(final int recordIndex, final String word1, final String word2) {
+	public void deletePositive(final int recordIndex, final String palabra1, final String palabra2) {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");

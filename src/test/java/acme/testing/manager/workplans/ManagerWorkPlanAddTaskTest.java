@@ -11,7 +11,7 @@ public class ManagerWorkPlanAddTaskTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/add-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
-	public void addTaskPositive(final int recordIndex, final String taskSelected, final String task) {
+	public void addTaskPositive(final int recordIndex, final String taskSelected, final String task, final String workload, final String workloadWorkPlan) {
 		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Workplans");
@@ -22,9 +22,15 @@ public class ManagerWorkPlanAddTaskTest extends AcmePlannerTest{
 		
 		super.clickOnSubmitButton("Add Task");
 		
+		super.checkNotPanicExists();
+				
+		final double newWorkload = Double.valueOf(workload)+Double.valueOf(workloadWorkPlan);
+		
 		super.clickOnListingRecord(recordIndex);
 		
-		super.checkColumnHasValue(recordIndex, 0, taskSelected);
+		final String[] newWorkloadSplitted = String.format("%.2f", newWorkload).split(",");
+		
+		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
 	}
 
 }
