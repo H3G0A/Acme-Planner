@@ -9,7 +9,8 @@ import acme.testing.AcmePlannerTest;
 public class ManagerTaskUpdateTest extends AcmePlannerTest {
 
 	// Test cases -------------------------------------------------------------
-	
+	// This test case checks the correct update of a task. It is checked that the updated values 
+	// are correct
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	

@@ -8,7 +8,8 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerTaskListTest extends AcmePlannerTest {
 	// Test cases -------------------------------------------------------------
-
+	// This test case checks the correct listing of a task. It is checked that the list values 
+	// are correct
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)

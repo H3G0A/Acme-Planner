@@ -10,7 +10,8 @@ public class ManagerTaskCreateTest extends AcmePlannerTest{
 
 
 	// Test cases -------------------------------------------------------------
-
+	// This test case checks the correct creation of a task. After creating the task, 
+	// it is expected to return to the initial view of the application
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/task/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
