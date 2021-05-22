@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerWorkPlanPublishTest extends AcmePlannerTest{
 	
+	//Test que comprueba que un workplan, con las caracteristicas adecuadas, puede ser publicado adecuadamente
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/publish-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -27,6 +28,7 @@ public class ManagerWorkPlanPublishTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("isPublic", isPublic);
 	}
 	
+	//Test que comprueba que un workplan no pueda ser publicado, bien porque el workplan ya es publico o porque posee task privadas
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerWorkPlanListTest extends AcmePlannerTest{
 	
+	//Test que comprueba que los workplans se listen adecuadamente
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

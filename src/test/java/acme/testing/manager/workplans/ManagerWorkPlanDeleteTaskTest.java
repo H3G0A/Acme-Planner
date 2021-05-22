@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerWorkPlanDeleteTaskTest extends AcmePlannerTest{
 	
+	//Test que comprueba que la task de un workplan se borre correctamente
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
@@ -29,6 +30,32 @@ public class ManagerWorkPlanDeleteTaskTest extends AcmePlannerTest{
 		final String[] newWorkloadSplitted = String.format("%.2f", newWorkload).split(",");
 		
 		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
+	}
+	
+	//Test que comprueba que otro usuario no pueda eliminar una task de tu workplan
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/workplan/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(2)	
+	public void deleteNegative(final int recordIndex) {		
+		super.signIn("manager1", "manager1");
+		
+		super.clickOnMenu("Manager", "Workplans");
+				
+		super.clickOnListingRecord(recordIndex);
+		
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
+		super.signOut();
+		
+		super.signIn("manager2", "manager2");
+		
+		super.clickOnMenu("Manager", "Workplans");
+		
+		super.driver.get(super.baseUrl+"/management/work-plan/remove_task?id"+"="+url[1]);
+		
+		super.checkPanicExists();
+		
+		super.signOut();
 	}
 
 }

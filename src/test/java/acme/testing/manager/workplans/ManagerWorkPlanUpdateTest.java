@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagerWorkPlanUpdateTest extends AcmePlannerTest{
 	
+	//Esta función comprueba que un workplan se actualice correctamente, simplemente se rellena un workplan con datos comunes
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
@@ -39,6 +40,8 @@ public class ManagerWorkPlanUpdateTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
+	//Este test comprueba que salten las excepciones adecuadas, en este tets se comprueba que salte la excepcion de palabara spam
+	//Que un campo de texte este vacio y que la fecha tenga un formato adecuado
 	@ParameterizedTest
 	@CsvFileSource(resources = "/manager/workplan/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	

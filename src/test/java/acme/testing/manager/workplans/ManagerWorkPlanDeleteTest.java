@@ -40,5 +40,31 @@ public class ManagerWorkPlanDeleteTest extends AcmePlannerTest{
 		
 		super.signOut();
 	}
+	
+	//Test que comprueba que un workplan no pueda ser borrado por otro usuario no autorizado
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/workplan/delete-workplan-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(2)	
+	public void deleteNegative(final int recordIndex) {		
+		super.signIn("manager1", "manager1");
+		
+		super.clickOnMenu("Manager", "Workplans");
+				
+		super.clickOnListingRecord(recordIndex);
+		
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
+		super.signOut();
+		
+		super.signIn("manager2", "manager2");
+		
+		super.clickOnMenu("Manager", "Workplans");
+		
+		super.driver.get(super.baseUrl+"/management/work-plan/delete?id"+"="+url[1]);
+		
+		super.checkPanicExists();
+		
+		super.signOut();
+	}
 
 }
