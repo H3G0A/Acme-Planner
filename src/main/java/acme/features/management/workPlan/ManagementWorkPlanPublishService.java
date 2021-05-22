@@ -68,6 +68,8 @@ public class ManagementWorkPlanPublishService implements AbstractUpdateService<M
 
 		final boolean allTaskArePublic = entity.getTasks().stream().filter(x->x.getIsPublic().equals(false)).count()==0; 
 		errors.state(request, allTaskArePublic, "title", "manager.workplan.form.error.all-tasks-must-be-public");
+		final boolean workPlanPublic = !entity.getIsPublic();
+		errors.state(request, workPlanPublic, "title", "manager.workplan.form.error.workPlanPublic");
 		
 	}
 

@@ -70,11 +70,7 @@
 	<bean id="word13" class="acme.entities.spam.Word">
 		<property name="palabra" value="millon de dolares"/>
 	</bean>
-	
-	<bean id="word14" class="acme.entities.spam.Word">
-		<property name="palabra" value="millón de dolares"/>
-	</bean>
-	
+  
 	<bean name="spam01" class="acme.entities.spam.SpamWord">
 		<property name="spamWords" >
 				<list>
@@ -89,6 +85,8 @@
 					<ref bean="word09" />
 					<ref bean="word10" />
 					<ref bean="word11" />
+					<ref bean="word12" />
+					<ref bean="word13" />
 				</list>
 			</property>
 		<property name="threshold" value="10." />
@@ -676,7 +674,7 @@
 		<property name="start" value="2021/01/26 8:15" />
 		<property name="end" value= "2022/04/29 08:00"/>
 		<property name="description" value="Esto es un Work Plan" />
-		<property name="isPublic" value="True" />
+		<property name="isPublic" value="False" />
 		<property name="management" ref="manager1Manager"/>
 		<property name="tasks">
 			<list>

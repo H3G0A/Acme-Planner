@@ -15,16 +15,16 @@
     <acme:form-textbox code="manager.workPlan.form.label.description" path="description"/>
     <acme:form-moment code="manager.workPlan.form.label.start" path="start"/>
     <acme:form-moment code="manager.workPlan.form.label.end" path="end"/>   
-    <jstl:if test="${command=='create'}">    
+    <jstl:if test="${command=='create'|| command=='publish'}">    
     	<acme:form-checkbox code="manager.workPlan.form.label.isPublic" path="isPublic"/>
     </jstl:if>
     <jstl:if test="${command=='create'}">  		   		   	   		    		
 	    <acme:form-submit code="manager.workPlan.form.button.create" action="/management/work-plan/create"/>    
     </jstl:if>  
-    
-    <acme:form-submit test="${canPublish && (command=='show'|| command =='update')}" code="manager.workplan.form.button.publish" action="/management/work-plan/publish"/>
+    <!-- canPublish &&  -->
+    <acme:form-submit test="${(command=='show'|| command =='update')}" code="manager.workplan.form.button.publish" action="/management/work-plan/publish"/>
     <acme:form-submit test="${(command =='show')}" code="manager.workPlan.form.button.update" action="/management/work-plan/update"/>
-    <acme:form-submit test="${(command=='show')}" code="manager.workPlan.form.button.delete" action="/management/work-plan/delete"/>
+    <acme:form-submit test="${(command=='show'|| command =='delete')}" code="manager.workPlan.form.button.delete" action="/management/work-plan/delete"/>
     <acme:form-return code="manager.workPlan.form.button.return"/>
 </acme:form>
 <br><br>

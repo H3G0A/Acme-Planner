@@ -53,7 +53,7 @@ public class ManagementWorkPlanDeleteService implements AbstractDeleteService<Ma
 				assert entity != null;
 				assert model != null;
 
-				request.unbind(entity, model, "title","start","end","description","isPublic");
+				request.unbind(entity, model, "title","start","end","description","workload","executionPeriod","isPublic");
 			}
 
 			@Override

@@ -17,12 +17,12 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex, final String word) {
+	public void createPositive(final int recordIndex, final String palabra) {
 		super.signIn("administrator", "administrator");
 
 		super.clickOnMenu("Administrator", "Create a Spam Word");
 
-		super.fillInputBoxIn("word", word);
+		super.fillInputBoxIn("palabra", palabra);
 		
 		super.clickOnSubmitButton("Add word");
 		
@@ -30,11 +30,11 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 
 		super.clickOnMenu("Administrator", "Spam Word List");
 		
-		super.checkColumnHasValue(recordIndex, 0, word);
+		super.checkColumnHasValue(recordIndex, 0, palabra);
 
 		super.clickOnListingRecord(recordIndex);
 
-		super.checkInputBoxHasValue("word", word);
+		super.checkInputBoxHasValue("palabra", palabra);
 
 		super.signOut();
 	}
@@ -44,13 +44,13 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createNegative(final int recordIndex, final String word) {
+	public void createNegative(final int recordIndex, final String palabra) {
 		
 		super.signIn("administrator", "administrator");
 
 		super.clickOnMenu("Administrator", "Create a Spam Word");
 
-		super.fillInputBoxIn("word", word);
+		super.fillInputBoxIn("palabra", palabra);
 
 		super.clickOnSubmitButton("Add word");
 
