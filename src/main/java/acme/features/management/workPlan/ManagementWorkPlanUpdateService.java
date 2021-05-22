@@ -63,8 +63,8 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		final Boolean canPublish= workplan.getTasks().stream().filter(x-> x.getIsPublic().equals(false)).count() == 0 && !workplan.getIsPublic();
 		
 		List<Task>taskList = this.repository.findTasksAvailable(management.getId(), workplanId).stream().filter(x->!workplan.getTasks().contains(x)).collect(Collectors.toList());//cambiar publicas por todas
-		if(workplan.getIsPublic())//If workplan is public, only public tasks can be added
-			taskList= taskList.stream().filter(x->x.getIsPublic()).collect(Collectors.toList());
+		if(workplan.getIsPublic().equals(Boolean.TRUE))//If workplan is public, only public tasks can be added
+			taskList= taskList.stream().filter(Task::getIsPublic).collect(Collectors.toList());
 		model.setAttribute("canPublish", canPublish);
         model.setAttribute("tasks", workplan.getTasks());
         model.setAttribute("tasksEneabled", taskList);
@@ -97,7 +97,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		final String title = entity.getTitle();
 		final String description = entity.getDescription();
 		
-		if(entity.getIsPublic()) {
+		if(entity.getIsPublic().equals(Boolean.TRUE)) {
 			if(this.spamDetector.detectSpam(title)) {
 				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.workPlan.form.error.spam");
 			}
@@ -108,7 +108,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		}
 		for(final Task t: entity.getTasks()) {
 			if(errors.hasErrors("tasks")) {
-				errors.state(request, t.getIsPublic() == false && request.getModel().getBoolean("isPublic")== true, 
+				errors.state(request, !t.getIsPublic() && request.getModel().getBoolean("isPublic"), 
 					"isPublic", "manager.workPlan.form.error.taskPublication");
 			}
 		}

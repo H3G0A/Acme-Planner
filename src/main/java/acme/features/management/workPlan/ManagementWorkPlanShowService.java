@@ -59,8 +59,8 @@ public class ManagementWorkPlanShowService implements AbstractShowService<Manage
 				.filter(x->!workplan.getTasks().contains(x))
 				.collect(Collectors.toList());
 		
-		if(workplan.getIsPublic())//If workplan is public, only public tasks can be added
-			taskList= taskList.stream().filter(x->x.getIsPublic()).collect(Collectors.toList());
+		if(workplan.getIsPublic().equals(Boolean.TRUE))//If workplan is public, only public tasks can be added
+			taskList= taskList.stream().filter(Task::getIsPublic).collect(Collectors.toList());
 		
 		if(!workplan.getTasks().isEmpty()) {
 			final List<Date> period = this.suggestedPeriod(workplan.getTasks());

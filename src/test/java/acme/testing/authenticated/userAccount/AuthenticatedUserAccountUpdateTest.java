@@ -32,8 +32,9 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 		
 		super.clickOnMenu("Account", "General data");
 		
-//		super.checkInputBoxHasValue("password", password);
-//		super.checkInputBoxHasValue("confirmation", password);
+
+		super.checkInputBoxHasValue("password", password);
+		super.checkInputBoxHasValue("confirmation", password);
 		super.checkInputBoxHasValue("identity.name", name+"X");
 		super.checkInputBoxHasValue("identity.surname", surname+"X");
 		super.checkInputBoxHasValue("identity.email", email+"X");

@@ -59,7 +59,7 @@ public class WorkPlan extends DomainEntity {
 	protected double executionPeriod;
 	
 	public Double getWorkload() {
-		return this.tasks.stream().mapToDouble(x->x.getWorkload()).sum();
+		return this.tasks.stream().mapToDouble(Task::getWorkload).sum();
 	}
 	
 	public void setExecutionPeriod() {
@@ -88,7 +88,7 @@ public class WorkPlan extends DomainEntity {
   }
 
   public Double getWorkPlanWorkload() {
-		return this.tasks.stream().mapToDouble(x->x.getWorkload()).sum();
+		return this.tasks.stream().mapToDouble(Task::getWorkload).sum();
 	}
   
 }
