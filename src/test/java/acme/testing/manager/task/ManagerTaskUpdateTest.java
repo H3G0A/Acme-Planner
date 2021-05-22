@@ -20,12 +20,6 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		
 		super.clickOnMenu("Manager", "Tasks");
 		
-		super.checkColumnHasValue(recordIndex, 0, title);
-		
-		super.checkColumnHasValue(recordIndex, 1, start);
-		
-		super.checkColumnHasValue(recordIndex, 2, end);
-		
 		super.clickOnListingRecord(recordIndex);
 		
 		super.fillInputBoxIn("title", title);
@@ -77,12 +71,6 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Tasks");
-		
-		super.checkColumnHasValue(recordIndex, 0, title);
-		
-		super.checkColumnHasValue(recordIndex, 1, start);
-		
-		super.checkColumnHasValue(recordIndex, 2, end);
 		
 		super.clickOnListingRecord(recordIndex);
 		

@@ -39,7 +39,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 			
 			super.clickOnMenu("Anonymous", "Tasks");
 			
-			super.driver.get(super.baseUrl + "/anonymous/task/show?id="+52);
+			super.driver.get(super.baseUrl + "/anonymous/task/show?id="+54);
 			
 			super.checkPanicExists();
 		}
