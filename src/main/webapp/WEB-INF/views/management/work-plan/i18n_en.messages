@@ -49,3 +49,4 @@ manager.workPlan.form.error.spam= This text is considered spam
 manager.workPlan.form.error.taskPublic= The task is not valid for this workplan
 manager.workPlan.form.error.taskPublication = The workplan is not ready for publication
 manager.workplan.form.error.all-tasks-must-be-public = The workplan is not ready for publication
+manager.workplan.form.error.workPlanPublic = The workplan is already public
