@@ -1,15 +1,3 @@
-/*
- * EmployerApplicationUpdateTest.java
- *
- * Copyright (C) 2012-2021 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.testing.administrator.threshold;
 
 import org.junit.jupiter.api.Order;
@@ -24,9 +12,11 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct update of the spam threshold. After updating this value, 
+	// it is expected to return to the initial view of the application
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@Order(10)	
 	public void updatePositive(final int recordIndex, final String thresholdNumber) {		
 		super.signIn("administrator", "administrator");
 		
@@ -35,17 +25,21 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 		super.fillInputBoxIn("thresholdNumber", thresholdNumber);	
 
 		super.clickOnSubmitButton("Save changes");
+		
+		super.checkSimplePath("/master/welcome");
 				
-		super.clickOnMenu("Administrator", "Threshold");
+		super.clickOnMenu("Administrator", "Manage threshold");
 		
 		super.checkInputBoxHasValue("thresholdNumber", thresholdNumber);
-//		
+		
 		super.signOut();
 	}
 	
+	// This test case checks for errors after inserting wrong data as spam threshold, such as negative 
+	// and out of range values, displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@Order(10)	
 	public void updateNegative(final int recordIndex, final String thresholdNumber) {		
 		super.signIn("administrator", "administrator");
 		

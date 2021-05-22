@@ -1,15 +1,3 @@
-/*
- * EmployerApplicationUpdateTest.java
- *
- * Copyright (C) 2012-2021 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
-
 package acme.testing.administrator.word;
 
 import org.junit.jupiter.api.Order;
@@ -24,6 +12,8 @@ public class AdministratorWordShowTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct show of the value of the a spam word. 
+	// It is expected that when it is showed the value fits with the csv values 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
@@ -41,22 +31,22 @@ public class AdministratorWordShowTest extends AcmePlannerTest {
 		super.signOut();
 	}
 //	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/administrator/word/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(2)	
-//	public void showNegative(final int recordIndex, final String word) {		
-//		super.signIn("administrator", "administrator");
-//		
-//		super.clickOnMenu("Administrator", "Spam Word List");
-//		
-//		super.checkColumnHasValue(recordIndex, 0, word);
-//		
-//		super.clickOnListingRecord(recordIndex);
-//		
-//		super.checkInputBoxHasValue("word", word);
-//		
-//		super.signOut();
-//	}
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/word/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(2)	
+	public void showNegative(final int recordIndex, final String word) {		
+		super.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "Spam Word List");
+		
+		super.checkColumnHasValue(recordIndex, 0, word);
+				
+		super.clickOnListingRecord(recordIndex);
+		
+		super.checkInputBoxHasValue("word", word);
+		
+		super.signOut();
+	}
 	
 	// Ancillary methods ------------------------------------------------------
 

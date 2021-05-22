@@ -12,6 +12,8 @@ public class AnonymousWorkPlanShowTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
+	// This test case checks the correct show of the values of the a workplan. 
+	// It is expected that when it is showed the value fits with the csv values 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/workplans/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	

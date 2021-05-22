@@ -37,16 +37,14 @@ public class AdministratorWordUpdateService implements AbstractUpdateService<Adm
         assert entity != null;
         assert model != null;
         
-        request.unbind(entity, model, "word");
+        request.unbind(entity, model, "palabra");
 		
 	}
 
 	@Override
 	public Word findOne(final Request<Word> request) {
-		Word word = new Word();
 		final int id = request.getModel().getInteger("id");
-		word = this.repository.findOneWordById(id);
-		return word;
+		return this.repository.findOneWordById(id).orElse(null);
 	}
 
 	@Override

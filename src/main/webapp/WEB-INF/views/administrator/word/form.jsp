@@ -5,10 +5,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 
 <acme:form>
-    <acme:form-textbox path="word" code="administrator.word.form.label.word" />
+    <acme:form-textbox path="palabra" code="administrator.word.form.label.word" />
     <acme:form-submit test="${command=='show'}" action="/administrator/word/update" code="administrator.word.form.button.update" />
 	<acme:form-submit test="${command=='create'}" action="/administrator/word/create" code="administrator.word.form.button.create" />
-	<acme:form-submit test="${command=='show'}" action="/administrator/word/delete" code="administrator.word.form.button.delete" />
+	<acme:form-submit test="${command=='show' || command=='delete'}" action="/administrator/word/delete" code="administrator.word.form.button.delete" />
 
     <acme:form-return action="/administrator/word/list" code="administrator.word.form.button.return" />
 </acme:form>

@@ -3,6 +3,7 @@ package acme.features.spamFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 	AdministratorSpamWordRepository repository;
 	@Override
 	public boolean authorise(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
+
 		assert request != null;
 		
 		return true;
@@ -31,22 +32,21 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 
 	@Override
 	public void unbind(final Request<SpamWord> request, final SpamWord entity, final Model model) {
-		// TODO Auto-generated method stub
+
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "word");
+		request.unbind(entity, model, "palabra");
 		
 	}
 
 	@Override
 	public Collection<SpamWord> findMany(final Request<SpamWord> request) {
-		// TODO Auto-generated method stub
+
 		assert request != null;
-        final Collection<SpamWord> result=null;
         
-        return result;
+        return Collections.emptySet();
 	}
 	public Double simpleThreshold(final String sentence, final List<String> spamWordList) {
 		Double threshold = 0.;
@@ -92,7 +92,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 	
 	public boolean detectSpam(final String text) {
 		 boolean esSpam;
-		 final List<String> spamWordsList= this.repository.findOne().getSpamWords().stream().map(Word::getWord).collect(Collectors.toList());
+		 final List<String> spamWordsList= this.repository.findOne().getSpamWords().stream().map(Word::getPalabra).collect(Collectors.toList());
 		 final List<String> spamWordsListWord = new ArrayList<>();
 		 final List<String> spamWordsListSentence = new ArrayList<>();
 
