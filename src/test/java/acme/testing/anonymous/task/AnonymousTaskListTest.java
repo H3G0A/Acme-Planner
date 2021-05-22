@@ -30,4 +30,17 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("isPublic", status);
 		super.checkInputBoxHasValue("link", link);
 	}
+	
+	//Test Case negativo de SHOW, se intenta acceder a una task privada siendo anonimo
+		@ParameterizedTest
+		@CsvFileSource(resources = "/anonymous/task/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@Order(20)
+			public void showNegative(final int recordIndex) {
+			
+			super.clickOnMenu("Anonymous", "Tasks");
+			
+			super.driver.get(super.baseUrl + "/anonymous/task/show?id="+52);
+			
+			super.checkPanicExists();
+		}
 }
