@@ -69,7 +69,7 @@ public class ManagerTaskUpdateTest extends AcmePlannerTest {
 	}
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/task/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/manager/task/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(2)	
 	public void updateNegative(final int recordIndex, final String title, final String description, final String link, final String start,
 		final String end, final String workload,final String isPublic) {		
