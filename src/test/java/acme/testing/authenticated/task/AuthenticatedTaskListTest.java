@@ -12,7 +12,7 @@ public class AuthenticatedTaskListTest extends AcmePlannerTest {
 	// are correct
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)
+	@Order(20)
 	public void list(final int recordIndex, final String title, final String description, final String link, final String start,
 		final String end, final String workload,final String isPublic) {		
 		super.signIn("manager2", "manager2");

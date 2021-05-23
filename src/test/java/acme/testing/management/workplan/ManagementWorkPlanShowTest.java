@@ -1,4 +1,4 @@
-package acme.testing.manager.workplans;
+package acme.testing.management.workplan;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,12 +6,12 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerWorkPlanShowTest extends AcmePlannerTest{
+public class ManagementWorkPlanShowTest extends AcmePlannerTest{
 	
 	//Este test comprueba el correcto funcionamiento del listado detallado de un workplan
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/workplan/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@CsvFileSource(resources = "/management/workplan/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(20)	
 	public void showPositive(final int recordIndex, final String title, final String workload, final String executionPeriod, final String description, final String start, final String end) {		
 		super.signIn("manager1", "manager1");
 		
@@ -33,8 +33,8 @@ public class ManagerWorkPlanShowTest extends AcmePlannerTest{
 	
 	//Este test comprueba el correcto funcionamiento del listado detallado de un workplan
 		@ParameterizedTest
-		@CsvFileSource(resources = "/manager/workplan/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-		@Order(2)	
+		@CsvFileSource(resources = "/management/workplan/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@Order(20)	
 		public void showNegative(final int recordIndex) {		
 			super.signIn("manager1", "manager1");
 			

@@ -1,4 +1,4 @@
-package acme.testing.anonymous.shouts;
+package acme.testing.anonymous.shout;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

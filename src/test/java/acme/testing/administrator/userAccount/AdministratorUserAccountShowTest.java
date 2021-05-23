@@ -11,7 +11,7 @@ public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/userAccount/show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void show(final int recordIndex, final String username ,final String name,final String surname,
+	public void showPositive(final int recordIndex, final String username ,final String name,final String surname,
 		final String email, final String role, final String status) {
 		super.signIn("administrator", "administrator");
 		
@@ -33,6 +33,25 @@ public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 		
 		super.signOut();		
 		
+	}
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/userAccount/show.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)	
+	public void showNegative(final int recordIndex, final String palabra) {		
+		super.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "User accounts");
+		
+		super.clickOnListingRecord(0);
+				
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
+		super.signOut();
+					
+		super.driver.get(super.baseUrl + "/administrator/user-account/show?id="+url[1]);
+		
+		super.checkPanicExists();
 	}
 
 }

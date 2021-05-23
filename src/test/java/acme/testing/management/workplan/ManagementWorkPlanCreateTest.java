@@ -1,4 +1,4 @@
-package acme.testing.manager.workplans;
+package acme.testing.management.workplan;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,12 +6,12 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerWorkPlanCreateTest extends AcmePlannerTest{
+public class ManagementWorkPlanCreateTest extends AcmePlannerTest{
 	
 	
 	//En este test se comprueba la correcta creación de un workplan
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/workplan/create-positive.csv",encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/management/workplan/create-positive.csv",encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void createPositive(final int recordIndex, final String title, final String description, final String startDate, final String endDate) {
 		super.signIn("manager1", "manager1");
@@ -42,7 +42,7 @@ public class ManagerWorkPlanCreateTest extends AcmePlannerTest{
 	//En este test se comprueba que un workplan no se cree si su titulo es spma, su descripción esta vacia, 
 	//la fecha de inicio es una cadena de texto y la final une fecha mal añadida
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/workplan/create-negative.csv",encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/management/workplan/create-negative.csv",encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void createnegative(final int recordIndex, final String title, final String description, final String startDate, final String endDate) {
 		super.signIn("manager1", "manager1");

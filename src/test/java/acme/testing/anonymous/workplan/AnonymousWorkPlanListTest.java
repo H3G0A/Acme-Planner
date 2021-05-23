@@ -15,7 +15,7 @@ public class AnonymousWorkPlanListTest extends AcmePlannerTest {
 	// This test case checks the correct listing the workplans. It is checked that the list values, 
 	// are correct
 	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/workplans/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/anonymous/workplan/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void list(final int recordIndex, final String title, final String dateInitial, 
 		final String dateFinal, final String workload, final String status) {		

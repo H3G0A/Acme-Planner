@@ -1,4 +1,4 @@
-package acme.testing.manager.workplans;
+package acme.testing.management.workplan;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,11 +6,11 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.AcmePlannerTest;
 
-public class ManagerWorkPlanListTest extends AcmePlannerTest{
+public class ManagementWorkPlanListTest extends AcmePlannerTest{
 	
 	//Test que comprueba que los workplans se listen adecuadamente
 	@ParameterizedTest
-	@CsvFileSource(resources = "/manager/workplan/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/management/workplan/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void list(final int recordIndex, final String title, final String start, final String end, final String workload) {		
 		super.signIn("manager1", "manager1");

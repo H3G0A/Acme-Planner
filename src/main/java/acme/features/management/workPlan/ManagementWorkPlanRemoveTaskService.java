@@ -33,7 +33,7 @@ public class ManagementWorkPlanRemoveTaskService implements AbstractUpdateServic
 		Management management;
 		Principal principal;
 		
-		workplanId=request.getModel().getInteger("workplanId");
+		workplanId=request.getModel().getInteger("id");
 		workplan=this.repository.findOneWorkPlanById(workplanId);
 		management = workplan.getManagement();
 		principal = request.getPrincipal();
@@ -61,7 +61,7 @@ public class ManagementWorkPlanRemoveTaskService implements AbstractUpdateServic
 
 	@Override
 	public WorkPlan findOne(final Request<WorkPlan> request) {
-		final int id = request.getModel().getInteger("workplanId");
+		final int id = request.getModel().getInteger("id");
 		return this.repository.findOneWorkPlanById(id);
 	}
 

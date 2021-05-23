@@ -1,4 +1,4 @@
-package acme.testing.anonymous.shouts;
+package acme.testing.anonymous.shout;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
