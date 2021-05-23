@@ -43,35 +43,28 @@ public class ManagerTaskShowTest extends AcmePlannerTest{
 		}
 	
 	
-//	@ParameterizedTest
-//	@CsvFileSource(resources = "/manager/task/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-//	@Order(10)
-//	public void showNegative(final int recordIndex, final String title, final String description, final String link, final String start,
-//		final String end, final String workload,final String isPublic) {		
-//		super.signIn("manager1", "manager1");
-//
-//		super.clickOnMenu("Manager", "Tasks");
-//		
-//		super.checkColumnHasValue(recordIndex, 0, title);
-//		
-//		super.checkColumnHasValue(recordIndex, 1, start);
-//		
-//		super.checkColumnHasValue(recordIndex, 2, end);
-//
-//		super.clickOnListingRecord(recordIndex);
-//		
-//		super.checkInputBoxHasValue("title", title);
-//		
-//		super.checkInputBoxHasValue("description", description);
-//
-//		super.checkInputBoxHasValue("link", link);
-//		
-//		super.checkInputBoxHasValue("start", start);
-//		
-//		super.checkInputBoxHasValue("end", end);
-//		
-//		super.checkInputBoxHasValue("workload", workload);
-//		
-//		super.checkInputBoxHasValue("isPublic", isPublic);
-//		}
+	@ParameterizedTest
+	@CsvFileSource(resources = "/manager/task/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void showNegative(final int recordIndex) {		
+	super.signIn("manager1", "manager1");
+
+		super.clickOnMenu("Manager", "Tasks");
+	
+		super.clickOnListingRecord(recordIndex);
+		
+		final String[] url = super.driver.getCurrentUrl().split("=");
+		
+		super.signOut();
+		
+		super.signIn("manager2", "manager2");
+		
+		super.clickOnMenu("Manager", "Tasks");
+	
+		super.driver.get(super.baseUrl+"/management/task/show?id"+"="+url[1]);
+		
+		super.checkPanicExists();
+		
+		super.signOut();
+	}
 }
