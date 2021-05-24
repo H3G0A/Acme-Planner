@@ -7,6 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
@@ -35,6 +36,7 @@ public class Task extends DomainEntity{
 	
 	@Digits(integer = 10,fraction = 2)
 	@NotNull
+	@Positive
 	private Double workload;
 	
 	@NotBlank

@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagementWorkPlanAddTaskTest extends AcmePlannerTest{
 	
-	//Test que comprueba que se añade una nueva task a un workplan
+	//Test that checks a task can be added successfully to workplan
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/add-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
@@ -36,7 +36,7 @@ public class ManagementWorkPlanAddTaskTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
 	}
 	
-	//Test que comprueba que otro usuario no pueda añadir una task a tu workplan
+	//Test that checks an other user can't add a task to his workplan changing the url's id
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/add-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

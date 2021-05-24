@@ -12,7 +12,7 @@ public class AdministratorDashboardTaskShowTest extends AcmePlannerTest {
 	
 	// Test cases -------------------------------------------------------------
 	
-	// This test case checks the correct show of the task dashboard. 
+	// This test case checks the correct show of the task dashboard.  
 	// It is expected that when an administrator try to enter the dashobard is showed
 	@Test
 	@Order(10)	

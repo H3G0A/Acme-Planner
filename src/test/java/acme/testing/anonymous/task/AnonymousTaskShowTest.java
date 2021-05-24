@@ -10,7 +10,8 @@ import acme.testing.AcmePlannerTest;
 public class AnonymousTaskShowTest extends AcmePlannerTest{
 
 	
-//	//Test Case positivo, se listan bien las tasks y se muestran los detalles de cada una de manera correcta
+	
+	//Test that checks the task's details show correctly 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/task/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
@@ -32,7 +33,8 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("link", link);
 	}
 	
-	//Test Case negativo de SHOW, se intenta acceder a una task privada siendo anonimo
+	
+	//Test that checks an anonymous user tries to access a private task. It throws the error message.
 	@Test
 	@Order(20)
 	public void showNegative() {

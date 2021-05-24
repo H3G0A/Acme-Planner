@@ -11,7 +11,8 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	
-	// En este test se comprueba la correcta creación de un Shout
+
+	//Test that checks a shout create successfully
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shouts/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -43,8 +44,8 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 		
 	}
 	
-	//En este test se comprueba que salten los errores correspondientes
-	//En este test los autores son palabras spam, el texto esta vacio, y el valor info no es una url
+
+	//Test that checks a shout fail to creation throwing error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shouts/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
