@@ -1,8 +1,8 @@
 package acme.testing.administrator.dashboard.task;
 
 import org.junit.jupiter.api.Order;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
 import acme.testing.AcmePlannerTest;
 
@@ -14,8 +14,7 @@ public class AdministratorDashboardTaskShowTest extends AcmePlannerTest {
 	
 	// This test case checks the correct show of the task dashboard. 
 	// It is expected that when an administrator try to enter the dashobard is showed
-	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/dashboardTask/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(10)	
 	public void showPositive() {
 		
@@ -23,14 +22,18 @@ public class AdministratorDashboardTaskShowTest extends AcmePlannerTest {
 		
 		super.clickOnMenu("Administrator", "Task Dashboard");
 		
+		super.checkExists(By.tagName("table"));
+		
+        super.checkExists(By.tagName("td"));
+       
+		
 		super.signOut();
 	}
 
-	// This test case checks the incoorect show of the task-dashboard. 
+	// This test case checks the incorrect show of the task-dashboard. 
 	// It is expected that when an anonymous user try to enter to the dashboard editing the url
 	//	a panic alert is showed 
-	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/dashboardTask/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(10)	
 	public void showNegative() {
 		
@@ -39,8 +42,6 @@ public class AdministratorDashboardTaskShowTest extends AcmePlannerTest {
 		super.checkPanicExists();
 		
 	}
-
 	// Ancillary methods ------------------------------------------------------
-
 
 }

@@ -1,6 +1,7 @@
 package acme.testing.anonymous.task;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -32,10 +33,9 @@ public class AnonymousTaskShowTest extends AcmePlannerTest{
 	}
 	
 	//Test Case negativo de SHOW, se intenta acceder a una task privada siendo anonimo
-	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/task/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Test
 	@Order(20)
-	public void showNegative(final int recordIndex) {
+	public void showNegative() {
 		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Tasks");

@@ -8,10 +8,13 @@ import acme.testing.AcmePlannerTest;
 
 public class AdministratorWordDeleteTest extends AcmePlannerTest {
 	
+	
+	//This test checks a spam word deletes successfully
+	//It's expected that a administrator try to delete a spam word and the word doesn't appear after this action. 
 	@ParameterizedTest
 	@CsvFileSource(resources="/administrator/word/delete-word-positive.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(10)
-	public void deletePositive(final int recordIndex, final String palabra1, final String palabra2) {
+	public void deletePositive(final int recordIndex) {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam Word List");

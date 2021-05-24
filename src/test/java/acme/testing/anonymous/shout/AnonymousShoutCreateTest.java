@@ -48,7 +48,7 @@ public class AnonymousShoutCreateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shouts/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createNegative(final int recordIndex, final String author,final String text, final String info) {
+	public void createNegative(final String author,final String text, final String info) {
 		super.clickOnMenu("Anonymous", "New Shout");
 		
 		super.fillInputBoxIn("author", author);

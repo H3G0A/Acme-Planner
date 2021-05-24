@@ -39,7 +39,7 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	}
 	
 	// This test case checks for errors after inserting wrong data of account details, such as blank value 
-	// , displaying the corresponding error message
+	//displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	

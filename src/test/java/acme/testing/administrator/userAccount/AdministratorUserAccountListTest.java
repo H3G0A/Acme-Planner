@@ -8,6 +8,8 @@ import acme.testing.AcmePlannerTest;
 
 public class AdministratorUserAccountListTest extends AcmePlannerTest{
 	
+	// This test case checks administrator user account list correctly. 
+	// It is expected that when an administrator try to enter the user accounts is listed
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/userAccount/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

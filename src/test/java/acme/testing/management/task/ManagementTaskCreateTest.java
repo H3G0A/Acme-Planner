@@ -49,10 +49,12 @@ public class ManagementTaskCreateTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
+	// This test case checks the incorrect creation of a task. After creating the task, 
+	// it is expected to return a error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/task/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createNegative(final int recordIndex, final String title, final String description, final String link, final String start,
+	public void createNegative(final String title, final String description, final String link, final String start,
 		final String end, final String workload,final String isPublic) {
 		
 		super.signIn("manager1", "manager1");

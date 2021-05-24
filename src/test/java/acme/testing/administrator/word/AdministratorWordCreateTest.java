@@ -40,11 +40,11 @@ public class AdministratorWordCreateTest extends AcmePlannerTest {
 	}
 	
 	// This test case checks for errors after inserting wrong data as spam word, such as blank values 
-	// , displaying the corresponding error message
+	//displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createNegative(final int recordIndex, final String palabra) {
+	public void createNegative(final String palabra) {
 		
 		super.signIn("administrator", "administrator");
 

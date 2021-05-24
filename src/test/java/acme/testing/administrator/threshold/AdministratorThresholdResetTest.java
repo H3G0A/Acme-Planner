@@ -45,7 +45,7 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 		super.driver.get(super.baseUrl+"/administrator/threshold/reset");
 		
 		super.checkInputBoxHasValue("thresholdNumber", "10.00");
-//		
+		
 		super.signOut();
 	}
 	

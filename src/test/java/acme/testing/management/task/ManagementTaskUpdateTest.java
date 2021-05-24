@@ -63,6 +63,7 @@ public class ManagementTaskUpdateTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
+	// This test case checks the incorrect update of a task. It shows a error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/task/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
