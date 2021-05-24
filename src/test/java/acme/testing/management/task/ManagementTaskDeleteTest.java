@@ -51,7 +51,7 @@ public class ManagementTaskDeleteTest extends AcmePlannerTest{
 	
 	//Test que comprueba que una task no pueda ser borrada por otro usuario no autorizado
 	@ParameterizedTest
-	@CsvFileSource(resources = "/management/task/delete-task-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/management/task/delete-task-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void deleteNegative(final int recordIndex) {		
 		super.signIn("manager1", "manager1");
