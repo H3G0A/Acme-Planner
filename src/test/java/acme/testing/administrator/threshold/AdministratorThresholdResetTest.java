@@ -28,7 +28,7 @@ public class AdministratorThresholdResetTest extends AcmePlannerTest {
 	// It is expected that after reseting the threshold it will have a value of 10.00
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/threshold/reset-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@Order(10)	
 	public void resetPositive(final int recordIndex, final String thresholdNumber) {		
 		super.signIn("administrator", "administrator");
 			

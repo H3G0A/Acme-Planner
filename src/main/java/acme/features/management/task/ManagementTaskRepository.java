@@ -20,7 +20,7 @@ public interface ManagementTaskRepository extends AbstractRepository{
 	@Query("select m from Management m where m.id = ?1")
 	Management findOneManagementById(int id);
 
-	@Query("select t from Task t where t.management.id = ?1")
+	@Query("select t from Task t where t.management.id = ?1 ORDER BY t DESC")
 	Collection<Task> findManyByManagementId(int managerId);
 
 	@Query("select w from WorkPlan w join w.tasks t where t.id = ?1")

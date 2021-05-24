@@ -16,7 +16,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	// it is expected to return to the initial view of the application
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@Order(10)	
 	public void updatePositive(final int recordIndex, final String palabra) {		
 		super.signIn("administrator", "administrator");
 		
@@ -43,7 +43,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	// , displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(2)	
+	@Order(10)	
 	public void updateNegative(final int recordIndex, final String palabra) {		
 		super.signIn("administrator", "administrator");
 		
