@@ -9,7 +9,7 @@ import acme.testing.AcmePlannerTest;
 public class ManagementWorkPlanCreateTest extends AcmePlannerTest{
 	
 	
-	//En este test se comprueba la correcta creación de un workplan
+	//Test that checks a workplan creates correctly
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/create-positive.csv",encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -39,8 +39,8 @@ public class ManagementWorkPlanCreateTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
-	//En este test se comprueba que un workplan no se cree si su titulo es spma, su descripción esta vacia, 
-	//la fecha de inicio es una cadena de texto y la final une fecha mal añadida
+	//Test that checks a error message will be thrown when a user tries to create a workplan 
+	//without fill the information correctly like empty boxes, incorrect information...
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/create-negative.csv",encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

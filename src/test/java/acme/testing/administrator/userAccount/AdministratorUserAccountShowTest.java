@@ -1,6 +1,7 @@
 package acme.testing.administrator.userAccount;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -8,6 +9,9 @@ import acme.testing.AcmePlannerTest;
 
 public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 	
+	
+	// This test case checks administrator user account shows correctly 
+	// It is expected that when an administrator try to enter the user accounts is showed
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/userAccount/show.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
@@ -35,10 +39,13 @@ public class AdministratorUserAccountShowTest extends AcmePlannerTest {
 		
 	}
 	
-	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/userAccount/show.csv", encoding = "utf-8", numLinesToSkip = 1)
+	
+	// This test case checks administrator user account shows incorrectly. 
+	// It is expected that when an anonymous user try to enter to the administrator user account editing the url
+	//	and a panic alert is showed 
+	@Test
 	@Order(10)	
-	public void showNegative(final int recordIndex, final String palabra) {		
+	public void showNegative() {		
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "User accounts");

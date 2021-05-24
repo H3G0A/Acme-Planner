@@ -1,6 +1,7 @@
 package acme.testing.administrator.word;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -29,12 +30,11 @@ public class AdministratorWordShowTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
-	// This test case checks the correct show of the value of the a spam word. 
-		// It is expected that when it is showed the value fits with the csv values 
-		@ParameterizedTest
-		@CsvFileSource(resources = "/administrator/word/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+		// This test case checks for errors after a anonymous user try to access to details of a spam word  
+		//displaying the corresponding error message
+		@Test
 		@Order(10)	
-		public void showNegative(final int recordIndex, final String palabra) {		
+		public void showNegative() {		
 			super.signIn("administrator", "administrator");
 			
 			super.clickOnMenu("Administrator", "Spam Word List");

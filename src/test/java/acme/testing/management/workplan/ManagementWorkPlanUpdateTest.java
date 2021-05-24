@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagementWorkPlanUpdateTest extends AcmePlannerTest{
 	
-	//Esta función comprueba que un workplan se actualice correctamente, simplemente se rellena un workplan con datos comunes
+	//Test that checks a workplan updates correctly. The test just fills the input boxes with common data.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	
@@ -40,8 +40,8 @@ public class ManagementWorkPlanUpdateTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
-	//Este test comprueba que salten las excepciones adecuadas, en este tets se comprueba que salte la excepcion de palabara spam
-	//Que un campo de texte este vacio y que la fecha tenga un formato adecuado
+	//Test that checks the error message throws correctly when it tries to fill the input boxes with 
+	//information that is not allowed or the boxes are empty.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	

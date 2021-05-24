@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagementWorkPlanRemoveTaskTest extends AcmePlannerTest{
 	
-	//Test que comprueba que la task de un workplan se borre correctamente
+	//Test that checks a workplan deletes correctly
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
@@ -36,7 +36,8 @@ public class ManagementWorkPlanRemoveTaskTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
 	}
 	
-	//Test que comprueba que otro usuario no pueda eliminar una task de tu workplan
+	//Test that checks other user can't delete a task of his workplan changing the url. 
+	//Error message will be shown.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

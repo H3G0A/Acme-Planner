@@ -42,7 +42,8 @@ public class ManagementTaskShowTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("isPublic", isPublic);
 		}
 	
-	
+	//This test checks other manager can't show a task that he isn't own
+	// It is expected a error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/task/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

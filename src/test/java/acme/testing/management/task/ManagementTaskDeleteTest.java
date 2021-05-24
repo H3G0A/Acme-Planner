@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 
 public class ManagementTaskDeleteTest extends AcmePlannerTest{
-	// Este test comprueba el correcto funcionamiento del borrado de las tasks
+	//Test that checks a task delete successfully
 	@ParameterizedTest
 	@CsvFileSource(resources="/management/task/delete-task-positive.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(20)
@@ -49,7 +49,7 @@ public class ManagementTaskDeleteTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
-	//Test que comprueba que una task no pueda ser borrada por otro usuario no autorizado
+	//Test that checks a task can´t be deleted by other manager. It throws a error message.
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/task/delete-task-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

@@ -8,6 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class AnonymousShoutListTest extends AcmePlannerTest{
 	
+	//Test that checks shouts list correctly
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shouts/list.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)

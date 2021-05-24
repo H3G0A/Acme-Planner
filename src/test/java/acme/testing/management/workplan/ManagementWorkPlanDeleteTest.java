@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagementWorkPlanDeleteTest extends AcmePlannerTest{
 	
-	// Este test comprueba el correcto funcionamiento del borrado de los workplans
+	// Test that checks a workplan deletes correctly
 	@ParameterizedTest
 	@CsvFileSource(resources="/management/workplan/delete-workplan-positive.csv", encoding = "utf-8", numLinesToSkip=1)
 	@Order(20)
@@ -41,7 +41,8 @@ public class ManagementWorkPlanDeleteTest extends AcmePlannerTest{
 		super.signOut();
 	}
 	
-	//Test que comprueba que un workplan no pueda ser borrado por otro usuario no autorizado
+	//Test that checks a workplan can't be deleted by other user changing the url's id. 
+	//Error message will be shown
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/delete-workplan-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	

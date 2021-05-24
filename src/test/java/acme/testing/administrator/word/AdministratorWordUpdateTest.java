@@ -40,7 +40,7 @@ public class AdministratorWordUpdateTest extends AcmePlannerTest {
 	}
 	
 	// This test case checks for errors after inserting wrong data a spam word, such as blank value 
-	// , displaying the corresponding error message
+	//displaying the corresponding error message
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/word/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)	

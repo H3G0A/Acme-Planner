@@ -1,6 +1,7 @@
 package acme.testing.anonymous.workplan;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -41,10 +42,11 @@ public class AnonymousWorkPlanShowTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("isPublic", status);
 	}
 	
-	@ParameterizedTest
-	@CsvFileSource(resources = "/anonymous/workplan/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	// This test case checks the values of the a workplan when an anonymous user try to access to it through a url. 
+	// It is expected throws a error 
+	@Test
 	@Order(20)
-	public void showNegative(final int recordIndex) {
+	public void showNegative() {
 		super.signIn("manager3", "manager3");
 		
 		super.clickOnMenu("Manager", "Workplans");

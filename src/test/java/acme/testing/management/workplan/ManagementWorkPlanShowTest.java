@@ -8,7 +8,7 @@ import acme.testing.AcmePlannerTest;
 
 public class ManagementWorkPlanShowTest extends AcmePlannerTest{
 	
-	//Este test comprueba el correcto funcionamiento del listado detallado de un workplan
+	//Test that checks a workplan's details show correctly
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
@@ -31,7 +31,8 @@ public class ManagementWorkPlanShowTest extends AcmePlannerTest{
 	
 	
 	
-	//Este test comprueba el correcto funcionamiento del listado detallado de un workplan
+	//Test that checks a workplan's details can't be shown by other manager through url's id changes.
+	//Error message will be thrown
 		@ParameterizedTest
 		@CsvFileSource(resources = "/management/workplan/show-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(20)	
