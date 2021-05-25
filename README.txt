@@ -18,6 +18,4 @@ https://github.com/H3G0A/Acme-Planner
 Credenciales de CleverCloud (vinculado a github, por lo que se usan las credenciales del mismo):
 
 correo CleverCloud: hegriaher@alum.us.es
-usuario github: H3G0A
-correo github: hegoaria@gmail.com
-contraseña github: hegriaher2021
+contraseña CleverCloud: dp2-g1-15
