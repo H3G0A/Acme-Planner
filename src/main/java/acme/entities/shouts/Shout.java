@@ -3,6 +3,7 @@ package acme.entities.shouts;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
@@ -13,6 +14,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.xxx.XXX;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,15 +41,20 @@ public class Shout extends DomainEntity {
 	
 	@URL
 	protected String info;
+	
+	@NotNull
+	@OneToOne
+	private XXX xxx;
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1;
+		int result = super.hashCode();
 		result = prime * result + ((this.author == null) ? 0 : this.author.hashCode());
 		result = prime * result + ((this.info == null) ? 0 : this.info.hashCode());
 		result = prime * result + ((this.moment == null) ? 0 : this.moment.hashCode());
 		result = prime * result + ((this.text == null) ? 0 : this.text.hashCode());
+		result = prime * result + ((this.xxx == null) ? 0 : this.xxx.hashCode());
 		return result;
 	}
 
@@ -55,7 +62,7 @@ public class Shout extends DomainEntity {
 	public boolean equals(final Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
 		if (this.getClass() != obj.getClass())
 			return false;
@@ -80,15 +87,18 @@ public class Shout extends DomainEntity {
 				return false;
 		} else if (!this.text.equals(other.text))
 			return false;
+		if (this.xxx == null) {
+			if (other.xxx != null)
+				return false;
+		} else if (!this.xxx.equals(other.xxx))
+			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Shout [moment=" + this.moment + ", author=" + this.author + ", text=" + this.text + ", link=" + this.info + "]";
+		return "Shout [moment=" + this.moment + ", author=" + this.author + ", text=" + this.text + ", info=" + this.info + ", xxx=" + this.xxx + "]";
 	}
-	
-	
 
 	
 	}

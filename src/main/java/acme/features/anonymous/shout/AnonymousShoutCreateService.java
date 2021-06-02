@@ -18,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.shouts.Shout;
+import acme.entities.xxx.XXX;
+import acme.features.anonymous.xxx.AnonymousXXXRepository;
 import acme.features.spamFilter.AnonymousSpamDetectorService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -32,6 +34,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 	@Autowired
 	protected AnonymousShoutRepository repository;
+	
+	@Autowired
+	protected AnonymousXXXRepository xrepository;
 
 	@Autowired
 	protected AnonymousSpamDetectorService spamDetector;
@@ -59,7 +64,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "info","xxx.amount","xxx.flag","xxx.dating");
 	}
 
 	@Override
@@ -88,14 +93,29 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		
 		final String text = request.getModel().getAttribute("text").toString();
 		final String author = request.getModel().getAttribute("author").toString();
+		final String amount = request.getModel().getAttribute("xxx.amount").toString();
 		
-		if(this.spamDetector.detectSpam(text)) {
-			errors.state(request, !this.spamDetector.detectSpam(text), "text", "anonymous.shout.form.error.spam");
+		if(amount.matches("[€,$][0-9]+[.,]+([0-9]{0,3})?")){
+			errors.state(request, !amount.matches("[€,$][0-9]+[.,]+([0-9]{0,3})?)"), "xxx.amount", "anonymous.shout.form.error.amount");
 		}
-		if(this.spamDetector.detectSpam(author)) {
-			errors.state(request, !this.spamDetector.detectSpam(author), "author", "anonymous.shout.form.error.spam");
-		}
+//		if(this.spamDetector.detectSpam(text)) {
+//			errors.state(request, !this.spamDetector.detectSpam(text), "text", "anonymous.shout.form.error.spam");
+//		}
+//		if(this.spamDetector.detectSpam(author)) {
+//			errors.state(request, !this.spamDetector.detectSpam(author), "author", "anonymous.shout.form.error.spam");
+//		}
 
+	}
+	
+	public String splitAmount(final String amount) {
+		String amount_splitted = null;
+		if(amount.contains("$")) {
+			amount_splitted=amount.split("$")[1];
+		}
+		if(amount.contains("€")) {
+			amount_splitted=amount.split("€")[1];
+		}
+		return amount_splitted;
 	}
 
 	@Override
@@ -104,9 +124,19 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 
 		Date moment;
+		
+		XXX xx;
+		
+		xx= new XXX();
 
 		moment = new Date(System.currentTimeMillis() - 1);
+		xx.setMoment(moment);
+		xx.setAmount(Double.valueOf(this.splitAmount(entity.getXxx().getAmount().toString())));
+		xx.setFlag(entity.getXxx().getFlag());
+		xx.setDating(entity.getXxx().getDating());
+		this.xrepository.save(xx);
 		entity.setMoment(moment);
+		entity.setXxx(xx);
 		this.repository.save(entity);
 	}
 
