@@ -70,7 +70,7 @@ public class ManagementWorkPlanShowService implements AbstractShowService<Manage
 		}
 		model.setAttribute("canPublish", canPublish);	
 		model.setAttribute("tasksEneabled", taskList);
-		request.unbind(entity, model, "title","start","end","description","isPublic","tasks","workload","executionPeriod");
+		request.unbind(entity, model, "title","start","end","description","isPublic","tasks","workPlanWorkload","workPlanPeriod");
 		
 	}
 

@@ -88,7 +88,7 @@ public class ManagementWorkPlanAddTaskService implements AbstractUpdateService<M
 		final Collection<Task> ls = wp.getTasks();
 		ls.add(task);
 		wp.setTasks(ls);
-		wp.setWorkload();
+		wp.setWorkPlanWorkload();
 		
 		this.repository.save(wp);
 		

@@ -46,7 +46,6 @@ public class WorkPlan extends DomainEntity {
 	protected Double workPlanWorkload;
 	
 	protected Double workPlanPeriod;
-	
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	protected Collection<@Valid Task> tasks;
@@ -54,17 +53,6 @@ public class WorkPlan extends DomainEntity {
 	@ManyToOne
 	protected Management management;
 	
-	protected double workload;
-	
-	protected double executionPeriod;
-	
-	public Double getWorkload() {
-		return this.tasks.stream().mapToDouble(Task::getWorkload).sum();
-	}
-	
-	public void setExecutionPeriod() {
-		this.executionPeriod = (double) (this.end.getTime() - this.start.getTime()) / (1000 * 3600);
-	}
 	
 	@Transient
 	public Boolean isFinished() {
@@ -72,12 +60,6 @@ public class WorkPlan extends DomainEntity {
 		now = new Date();
 		return now.after(this.end);
 	}
-
-	public void setWorkload() {
-		this.workload = this.tasks.stream().mapToDouble(Task::getWorkload).sum();
-	}
-
-//  Derived attributes
     
   public void setWorkPlanPeriod() {
       this.workPlanPeriod = (double) (this.end.getTime() - this.start.getTime()) / (1000 * 3600);

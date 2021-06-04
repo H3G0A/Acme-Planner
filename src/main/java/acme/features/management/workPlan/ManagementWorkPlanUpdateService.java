@@ -127,7 +127,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		wp.setTitle(entity.getTitle());
 		wp.setIsPublic(entity.getIsPublic());
 		wp.setDescription(entity.getDescription());
-		wp.setExecutionPeriod();
+		wp.setWorkPlanPeriod();
 		this.repository.save(wp);
 		
 	}

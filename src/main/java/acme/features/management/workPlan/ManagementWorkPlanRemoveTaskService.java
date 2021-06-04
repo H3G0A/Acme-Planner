@@ -79,7 +79,7 @@ public class ManagementWorkPlanRemoveTaskService implements AbstractUpdateServic
 		final Integer idTask = request.getModel().getInteger("taskId");
 		final Collection<Task> ls = wp.getTasks().stream().filter(x->x.getId()!=idTask).collect(Collectors.toList());
 		wp.setTasks(ls);
-		wp.setWorkload();
+		wp.setWorkPlanWorkload();
 		
 		this.repository.save(wp);
 		
