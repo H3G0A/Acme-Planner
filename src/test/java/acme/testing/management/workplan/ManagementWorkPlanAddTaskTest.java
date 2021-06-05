@@ -33,7 +33,7 @@ public class ManagementWorkPlanAddTaskTest extends AcmePlannerTest{
 		
 		final String[] newWorkloadSplitted = String.format("%.2f", newWorkload).split(",");
 		
-		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
+		super.checkInputBoxHasValue("workPlanWorkload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
 	}
 	
 	//Test that checks an other user can't add a task to his workplan changing the url's id

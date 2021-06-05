@@ -56,7 +56,7 @@ public class ManagementWorkPlanAddTaskService implements AbstractUpdateService<M
         assert entity != null;
         assert model != null;
 		
-	    request.unbind(entity, model,  "isPublic", "start","description", "end", "tasks","title","executionPeriod","workload");
+	    request.unbind(entity, model,  "isPublic", "start","description", "end", "tasks","title","workPlanPeriod","workPlanWorkload");
 	}
 
 	@Override

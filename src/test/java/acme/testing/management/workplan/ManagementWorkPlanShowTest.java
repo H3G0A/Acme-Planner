@@ -12,7 +12,7 @@ public class ManagementWorkPlanShowTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
-	public void showPositive(final int recordIndex, final String title, final String workload, final String executionPeriod, final String description, final String start, final String end) {		
+	public void showPositive(final int recordIndex, final String title, final String workPlanWorkload, final String workPlanPeriod, final String description, final String start, final String end) {		
 		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Workplans");
@@ -20,8 +20,8 @@ public class ManagementWorkPlanShowTest extends AcmePlannerTest{
 		super.clickOnListingRecord(recordIndex);
 		
 		super.checkInputBoxHasValue("title", title);
-		super.checkInputBoxHasValue("workload", workload);
-		super.checkInputBoxHasValue("executionPeriod", executionPeriod);
+		super.checkInputBoxHasValue("workPlanWorkload", workPlanWorkload);
+		super.checkInputBoxHasValue("workPlanPeriod", workPlanPeriod);
 		super.checkInputBoxHasValue("description", description);
 		super.checkInputBoxHasValue("start", start);
 		super.checkInputBoxHasValue("end", end);
