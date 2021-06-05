@@ -9,8 +9,8 @@
     <acme:form-hidden path="id"/>
     <acme:form-textbox code="manager.workPlan.form.label.title" path="title"/>
     <jstl:if test="${command!='create'}">    
-   		<acme:form-textbox  readonly="true" code="manager.workPlan.form.label.workload" path="workload"/> 	
-   		<acme:form-textbox  readonly="true" code="manager.workPlan.form.label.executionPeriod" path="executionPeriod"/> 	   		
+   		<acme:form-textbox  readonly="true" code="manager.workPlan.form.label.workload" path="workPlanWorkload"/> 	
+   		<acme:form-textbox  readonly="true" code="manager.workPlan.form.label.executionPeriod" path="workPlanPeriod"/> 	   		
     </jstl:if>
     <acme:form-textbox code="manager.workPlan.form.label.description" path="description"/>
     <acme:form-moment code="manager.workPlan.form.label.start" path="start"/>

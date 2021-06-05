@@ -49,8 +49,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.averageNumberOfWorkPlanPeriod"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${averageNumberOfWorkPlanPeriod}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${averageNumberOfWorkPlanPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -59,8 +58,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.deviationOfWorkPlanPeriod"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${deviationOfWorkPlanPeriod}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${deviationOfWorkPlanPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -68,8 +66,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.minWorkPlanPeriod"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${minWorkPlanPeriod}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${minWorkPlanPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -77,8 +74,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.maxWorkPlanPeriod"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${maxWorkPlanPeriod}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${maxWorkPlanPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -86,8 +82,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.averageNumberOfWorkPlanWorkload"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${averageNumberOfWorkPlanWorkload}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${averageNumberOfWorkPlanWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -96,8 +91,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.deviationOfWorkPlanWorkload"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${deviationOfWorkPlanWorkload}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${deviationOfWorkPlanWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -105,8 +99,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.minWorkPlanWorkload"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${minWorkPlanWorkload}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${minWorkPlanWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -114,8 +107,7 @@
 			<acme:message code="administrator.workplan.dashboard.form.label.maxWorkPlanWorkload"/>
 		</th>
 		<td>
-			<fmt:formatNumber type="number" maxFractionDigits="2" value="${maxWorkPlanWorkload}"/>
-			<acme:message code="administrator.workplan.dashboard.form.label.hours"/>
+			<acme:print value="${maxWorkPlanWorkload}"/>
 		</td>
 	</tr>
 </table>

@@ -19,7 +19,7 @@ public class AnonymousWorkPlanShowTest extends AcmePlannerTest {
 	@CsvFileSource(resources = "/anonymous/workplan/show-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)	
 	public void showPositive(final int recordIndex, final String title, final String dateInitial, 
-		final String dateFinal, final String workload, final String status) {		
+		final String dateFinal, final String workPlanWorkload, final String status) {		
 		
 		super.clickOnMenu("Anonymous", "WorkPlans");
 		
@@ -37,7 +37,7 @@ public class AnonymousWorkPlanShowTest extends AcmePlannerTest {
 		
 		super.checkInputBoxHasValue("end", dateFinal);
 		
-		super.checkInputBoxHasValue("workload", workload);
+		super.checkInputBoxHasValue("workPlanWorkload", workPlanWorkload);
 		
 		super.checkInputBoxHasValue("isPublic", status);
 	}

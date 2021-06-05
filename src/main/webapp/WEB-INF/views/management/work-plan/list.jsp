@@ -20,7 +20,7 @@
 	<acme:list-column code="manager.workPlan.list.label.title" path="title"/>
 	<acme:list-column code="manager.workPlan.list.label.start" path="start"/>
 	<acme:list-column code="manager.workPlan.list.label.end" path="end"/>
-	<acme:list-column code="manager.workPlan.list.label.workload" path="workload"/>
+	<acme:list-column code="manager.workPlan.list.label.workload" path="workPlanWorkload"/>
 			
 </acme:list>
 

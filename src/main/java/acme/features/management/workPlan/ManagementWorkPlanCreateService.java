@@ -90,7 +90,7 @@ public class ManagementWorkPlanCreateService implements AbstractCreateService<Ma
 		assert request != null;
 		assert entity != null;
 		
-		entity.setExecutionPeriod();
+		entity.setWorkPlanPeriod();
 		this.managementWorkPlanRepository.save(entity);
 				
 	}

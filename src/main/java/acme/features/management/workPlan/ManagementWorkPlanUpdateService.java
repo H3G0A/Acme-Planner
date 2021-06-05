@@ -68,7 +68,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		model.setAttribute("canPublish", canPublish);
         model.setAttribute("tasks", workplan.getTasks());
         model.setAttribute("tasksEneabled", taskList);
-		request.unbind(entity, model,  "isPublic", "start", "end", "tasks","title","description","executionPeriod","workload");		
+		request.unbind(entity, model,  "isPublic", "start", "end", "tasks","title","description","workPlanPeriod","workPlanWorkload");		
 	}
 
 	@Override
@@ -127,7 +127,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		wp.setTitle(entity.getTitle());
 		wp.setIsPublic(entity.getIsPublic());
 		wp.setDescription(entity.getDescription());
-		wp.setExecutionPeriod();
+		wp.setWorkPlanPeriod();
 		this.repository.save(wp);
 		
 	}

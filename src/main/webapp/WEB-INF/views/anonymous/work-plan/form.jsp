@@ -7,7 +7,7 @@
     <acme:form-textbox code="anonymous.work-plan.list.label.title" path="title"/>
     <acme:form-textbox code="anonymous.work-plan.form.label.start" path="start"/>
     <acme:form-textbox code="anonymous.work-plan.form.label.end" path="end"/>
-    <acme:form-textbox code="anonymous.work-plan.form.label.workload" path="workload"/>
+    <acme:form-textbox code="anonymous.work-plan.form.label.workload" path="workPlanWorkload"/>
     <acme:form-select code="anonymous.work-plan.form.label.isPublic" path="isPublic">
 		<acme:form-option code="anonymous.work-plan.form.label.yes" value="true" selected="true"/>
 		<acme:form-option code="anonymous.work-plan.form.label.no" value="false"/>

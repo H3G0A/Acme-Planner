@@ -33,7 +33,7 @@ public class ManagementWorkPlanRemoveTaskTest extends AcmePlannerTest{
 		
 		final String[] newWorkloadSplitted = String.format("%.2f", newWorkload).split(",");
 		
-		super.checkInputBoxHasValue("workload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
+		super.checkInputBoxHasValue("workPlanWorkload", newWorkloadSplitted[0]+"."+newWorkloadSplitted[1]);
 	}
 	
 	//Test that checks other user can't delete a task of his workplan changing the url. 
