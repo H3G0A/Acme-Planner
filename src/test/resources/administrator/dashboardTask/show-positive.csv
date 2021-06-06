@@ -1,2 +1,3 @@
-numberOfPublicTask,numberOfPrivateTask,numberOfFinishedTask,numberOfNotFinishedTask,averageNumberOfWorkload,averageNumberOfExecutionPeriods,minWorkload,maxWorkload,minExecutionPeriod,maxExecutionPeriod,deviationWorkload,deviationExecutionPeriod
-13,11,8,16,26.47,9.58,20,30,0.00,110.00,2.20,25.90
+title,description,link,start,end,workload,isPublic,numberOfPublicTask,numberOfPrivateTask,numberOfFinishedTask,numberOfNotFinishedTask,averageNumberOfWorkload,averageNumberOfExecutionPeriods
+Tarea numero uno,Esto es una tarea,https://www.youtube.com/watch?v=nuCIA31LfIU,2021/04/19 16:05,2021/05/19 19:05,25.3,true,14,11,17,8,26.42,38.12
+Tarea numero dos,Esto es una tarea,https://www.youtube.com/watch?v=nuCIA31LfIU,2021/02/26 11:55,2022/04/17 09:05,30.1,true,15,11,17,9,26.57,419.58
