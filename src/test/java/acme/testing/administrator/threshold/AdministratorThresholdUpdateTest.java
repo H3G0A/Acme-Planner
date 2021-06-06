@@ -50,7 +50,7 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 		super.clickOnSubmitButton("Save changes");
 				
 		super.checkErrorsExist();
-//		
+		
 		super.signOut();
 	}
 	
