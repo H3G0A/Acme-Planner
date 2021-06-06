@@ -1,6 +1,7 @@
 package acme.testing.administrator.workplanDashboard;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -67,17 +68,17 @@ public class AdministratorWorkPlanDashboardShowTest extends AcmePlannerTest{
 		super.signOut();
 	}
 		
-//		// This test case checks the incorrect show of the workplan-dashboard. 
-//		// It is expected that when an anonymous user try to enter to the dashboard editing the url
-//		//	a panic alert is showed 
-//		@Test
-//		@Order(10)	
-//		public void showNegative() {
-//			
-//			super.driver.get(super.baseUrl + "/administrator/workplan-dashboard/show");
-//			
-//			super.checkPanicExists();
-//			
-//		}
-//		
+		// This test case checks the incorrect show of the workplan-dashboard. 
+		// It is expected that when an anonymous user try to enter to the dashboard editing the url
+		//	a panic alert is showed 
+		@Test
+		@Order(10)	
+		public void showNegative() {
+			
+			super.driver.get(super.baseUrl + "/administrator/workplan-dashboard/show");
+			
+			super.checkPanicExists();
+			
+		}
+		
 }

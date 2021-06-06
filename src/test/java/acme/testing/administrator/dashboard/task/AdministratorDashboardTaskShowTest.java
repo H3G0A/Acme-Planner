@@ -1,6 +1,7 @@
 package acme.testing.administrator.dashboard.task;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
@@ -67,15 +68,15 @@ public class AdministratorDashboardTaskShowTest extends AcmePlannerTest {
 	// This test case checks the incorrect show of the task-dashboard. 
 	// It is expected that when an anonymous user try to enter to the dashboard editing the url
 	//	a panic alert is showed 
-//	@Test
-//	@Order(10)	
-//	public void showNegative() {
-//		
-//		super.driver.get(super.baseUrl + "/administrator/task-dashboard/show");
-//		
-//		super.checkPanicExists();
-//		
-//	}
+	@Test
+	@Order(10)	
+	public void showNegative() {
+		
+		super.driver.get(super.baseUrl + "/administrator/task-dashboard/show");
+		
+		super.checkPanicExists();
+		
+	}
 	// Ancillary methods ------------------------------------------------------
 
 }
