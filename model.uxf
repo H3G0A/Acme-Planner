@@ -155,11 +155,15 @@ bg=yellow</panel_attributes>
       <x>168</x>
       <y>294</y>
       <w>154</w>
-      <h>49</h>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
 --
+RESET
+ADD_TASK
+REMOVE_TASK
+PUBLISH
 
 
 bg=orange</panel_attributes>
