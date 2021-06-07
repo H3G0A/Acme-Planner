@@ -50,7 +50,7 @@ public class ManagementWorkPlanPublishService implements AbstractUpdateService<M
         assert entity != null;
         assert model != null;
 
-        request.unbind(entity, model,  "isPublic", "start", "end", "tasks","title","workPlanPeriod","workPlanWorkload");	
+        request.unbind(entity, model,  "isPublic", "start","description", "end", "tasks","title","workPlanPeriod","workPlanWorkload");	
 	}
 
 	@Override

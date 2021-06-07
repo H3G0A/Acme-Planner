@@ -13,6 +13,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import acme.entities.roles.Management;
 import acme.entities.tasks.Task;
@@ -28,9 +29,11 @@ public class WorkPlan extends DomainEntity {
 	protected static final long serialVersionUID = 1L;
 	
 	@NotBlank
+	@Size(max=80)
 	protected String title;
 	
 	@NotBlank
+	@Size(max=500)
 	protected String description;
 	
 	@Temporal(TemporalType.TIMESTAMP)
