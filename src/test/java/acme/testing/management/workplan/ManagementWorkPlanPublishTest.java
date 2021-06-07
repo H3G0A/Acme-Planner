@@ -32,16 +32,20 @@ public class ManagementWorkPlanPublishTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/management/workplan/publish-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void publishWorkPlanNegative(final int recordIndex) {
+	public void publishWorkPlanNegative(final int recordIndex, final String isPublic) {
 		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Workplans");
 		
 		super.clickOnListingRecord(recordIndex);
 		
-		super.clickOnSubmitButton("Publish");
+		final String[] url = super.driver.getCurrentUrl().split("=");
 		
-		super.checkErrorsExist();
+		super.driver.get(super.baseUrl+"/management/work-plan/publish?id"+"="+url[1]);
+		
+		super.checkInputBoxHasValue("isPublic", isPublic);
+		
+		
 	}
 	
 
