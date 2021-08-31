@@ -28,6 +28,7 @@ manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Eliminar
 manager.task.form.button.create = Nuevo
 manager.task.form.button.return = Volver
+manager.task.form.error.Future = debe ser una fecha futura
 
 manager.task.form.label.title.general-indicators = Descripcion detallada de la tarea
 
