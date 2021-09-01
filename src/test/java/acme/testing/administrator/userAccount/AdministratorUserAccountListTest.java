@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AdministratorUserAccountListTest extends AcmePlannerTest{
+public class AdministratorUserAccountListTest extends AcmeWorkPlansTest{
 	
 	// This test case checks administrator user account list correctly. 
 	// It is expected that when an administrator try to enter the user accounts is listed

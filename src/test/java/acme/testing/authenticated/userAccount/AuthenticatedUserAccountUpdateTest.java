@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
+public class AuthenticatedUserAccountUpdateTest extends AcmeWorkPlansTest{
 	
 	// This test case checks the correct update the details of an account. After updating these values, 
 	// it is expected to return to the initial view of the application

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagementWorkPlanUpdateTest extends AcmePlannerTest{
+public class ManagementWorkPlanUpdateTest extends AcmeWorkPlansTest{
 	
 	//Test that checks a workplan updates correctly. The test just fills the input boxes with common data.
 	@ParameterizedTest

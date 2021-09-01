@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagementWorkPlanAddTaskTest extends AcmePlannerTest{
+public class ManagementWorkPlanAddTaskTest extends AcmeWorkPlansTest{
 	
 	//Test that checks a task can be added successfully to workplan
 	@ParameterizedTest

@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagementTaskShowTest extends AcmePlannerTest{
+public class ManagementTaskShowTest extends AcmeWorkPlansTest{
 
 	//This test checks the correct show of the value of a task
 	// It is expected that when it is showed the values fit with the csv values 

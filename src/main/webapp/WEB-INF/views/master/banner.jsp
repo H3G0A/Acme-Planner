@@ -16,5 +16,5 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <div class="rounded" style="background:black;">
-	<img src="images/banner.png" alt="Acme Planner, Inc." class="img-fluid rounded"/>
+	<img src="images/banner.png" alt="Acme-Work-Plans, Inc." class="img-fluid rounded"/>
 </div>

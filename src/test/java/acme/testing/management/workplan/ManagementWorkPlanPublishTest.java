@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class ManagementWorkPlanPublishTest extends AcmePlannerTest{
+public class ManagementWorkPlanPublishTest extends AcmeWorkPlansTest{
 	
 	//Test that checks a workplan can be published.
 	@ParameterizedTest

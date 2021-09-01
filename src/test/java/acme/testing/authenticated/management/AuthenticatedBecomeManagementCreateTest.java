@@ -3,9 +3,9 @@ package acme.testing.authenticated.management;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
-public class AuthenticatedBecomeManagementCreateTest extends AcmePlannerTest {
+public class AuthenticatedBecomeManagementCreateTest extends AcmeWorkPlansTest {
 	
 	// This test case checks the correct update in the role of the user, beign after that a manager. After updating this value, 
 	// it is expected to return to the initial view of the application, with the extra option Manager in the menu.
