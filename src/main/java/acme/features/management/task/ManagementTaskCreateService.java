@@ -42,6 +42,7 @@ public class ManagementTaskCreateService implements AbstractCreateService<Manage
 			if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
 				
 				errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.form.error.endBeforeStart");
+				errors.state(request, entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "Start", "manager.task.form.error.Future");
 			}
 			
 			final String title = entity.getTitle();
