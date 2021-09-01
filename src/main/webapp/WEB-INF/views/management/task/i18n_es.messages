@@ -28,7 +28,9 @@ manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Eliminar
 manager.task.form.button.create = Nuevo
 manager.task.form.button.return = Volver
-manager.task.form.error.Future = debe ser una fecha futura
+manager.task.form.error.future = Debe ser una fecha futura
+manager.task.form.error.decimal-must-be-under-60 = El número decimal debe ser menor a 60
+manager.task.form.error.hours = El número de horas debe estar entre 0 y 99
 
 manager.task.form.label.title.general-indicators = Descripcion detallada de la tarea
 
