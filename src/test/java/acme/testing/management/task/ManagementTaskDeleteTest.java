@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import acme.testing.AcmePlannerTest;
+import acme.testing.AcmeWorkPlansTest;
 
 
-public class ManagementTaskDeleteTest extends AcmePlannerTest{
+public class ManagementTaskDeleteTest extends AcmeWorkPlansTest{
 	//Test that checks a task delete successfully
 	@ParameterizedTest
 	@CsvFileSource(resources="/management/task/delete-task-positive.csv", encoding = "utf-8", numLinesToSkip=1)
