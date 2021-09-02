@@ -94,7 +94,7 @@ public class ManagementWorkPlanUpdateService implements AbstractUpdateService<Ma
 		
 		if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
 			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.workPlan.form.error.endBeforeStart");
-			errors.state(request, entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.workPlan.form.error.future");
+			errors.state(request, !entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.workPlan.form.error.future");
 
 		}
 		

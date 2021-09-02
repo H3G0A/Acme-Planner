@@ -46,15 +46,13 @@ public class ManagementTaskCreateService implements AbstractCreateService<Manage
 			if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
 				
 				errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.form.error.endBeforeStart");
-				errors.state(request, entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.task.form.error.future");
+				errors.state(request, !entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.task.form.error.future");
 			}
 			
 			final String title = entity.getTitle();
 			final String description = entity.getDescription();
 			final String link = entity.getLink();
-			final BigDecimal workload_number = BigDecimal.valueOf(entity.getWorkload());
-			final long ent = workload_number.longValue();
-			final BigDecimal decim = workload_number.remainder(BigDecimal.ONE);
+			
 			
 			if(this.spamDetector.detectSpam(title)) {
 				errors.state(request, !this.spamDetector.detectSpam(title), "title", "manager.task.form.error.spam");
@@ -66,8 +64,16 @@ public class ManagementTaskCreateService implements AbstractCreateService<Manage
 				errors.state(request, !this.spamDetector.detectSpam(link), "link", "manager.task.form.error.spam");
 			}
 			
-			errors.state(request, BigDecimal.valueOf(0.59).compareTo(decim)>=0, "workload", "manager.task.form.error.decimal-must-be-under-60");
-			errors.state(request, 99>=ent, "workload", "manager.task.form.error.hours");
+			if (!errors.hasErrors("workload")) {
+				
+				final BigDecimal workload_number = BigDecimal.valueOf(entity.getWorkload());
+				final long ent = workload_number.longValue();
+				final BigDecimal decim = workload_number.remainder(BigDecimal.ONE);
+				
+				errors.state(request, BigDecimal.valueOf(0.59).compareTo(decim)>=0, "workload", "manager.task.form.error.decimal-must-be-under-60");
+				errors.state(request, 99>=ent, "workload", "manager.task.form.error.hours");
+			}
+			
 
 		}
 

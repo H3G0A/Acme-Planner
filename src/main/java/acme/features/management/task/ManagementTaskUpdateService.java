@@ -1,5 +1,6 @@
 package acme.features.management.task;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
@@ -57,7 +58,7 @@ public class ManagementTaskUpdateService  implements AbstractUpdateService<Manag
 			if (!errors.hasErrors("start") && !errors.hasErrors("end")) {
 				
 				errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.task.form.error.endBeforeStart");
-				errors.state(request, entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.task.form.error.future");
+				errors.state(request, !entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.task.form.error.future");
 
 			}
 			
@@ -73,6 +74,16 @@ public class ManagementTaskUpdateService  implements AbstractUpdateService<Manag
 			}
 			if(this.spamDetector.detectSpam(link)) {
 				errors.state(request, !this.spamDetector.detectSpam(link), "link", "manager.task.form.error.spam");
+			}
+			
+			if (!errors.hasErrors("workload")) {
+				
+				final BigDecimal workload_number = BigDecimal.valueOf(entity.getWorkload());
+				final long ent = workload_number.longValue();
+				final BigDecimal decim = workload_number.remainder(BigDecimal.ONE);
+				
+				errors.state(request, BigDecimal.valueOf(0.59).compareTo(decim)>=0, "workload", "manager.task.form.error.decimal-must-be-under-60");
+				errors.state(request, 99>=ent, "workload", "manager.task.form.error.hours");
 			}
 		}
 

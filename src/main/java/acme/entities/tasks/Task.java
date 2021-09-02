@@ -33,9 +33,8 @@ public class Task extends DomainEntity{
 	@NotNull
 	private Date end;
 	
-	
-	@Digits(integer = 2,fraction = 2)
 	@NotNull
+	@Digits(integer = 2,fraction = 2)
 	@Positive
 	private Double workload;
 	
