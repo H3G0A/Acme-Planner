@@ -124,7 +124,7 @@
 			function() {
 				var data = {
 					labels : [
-							"PRIVATE", "PUBLIC"
+							"NOT PUBLIC", "PUBLIC"
 					],
 					datasets : [
 						{
