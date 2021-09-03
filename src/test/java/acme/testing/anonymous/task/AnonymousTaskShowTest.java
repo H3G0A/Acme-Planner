@@ -42,7 +42,7 @@ public class AnonymousTaskShowTest extends AcmeWorkPlansTest{
 		
 		super.clickOnMenu("Manager", "Tasks");
 		
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(4);
 				
 		final String[] url = super.driver.getCurrentUrl().split("=");
 		

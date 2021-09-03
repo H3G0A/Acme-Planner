@@ -1,4 +1,4 @@
 recordIndex,title,description,link,start,end,workload,isPublic
 1,sex, ,No es un link,2020/12/22 22:00,2019/12/22 22:00,Esto no es un workload,false
 2,hard core,sex,Link ,111111111/20202/16666666 64:64,000000000/000000000/0000000 1111:1111,-123456789,false
-3,hard core,viagra,cialis,111111111/20202/16666666 64:64,000000000/000000000/0000000 1111:1111,-123456789,true
+3,,viagra,cialis,,,9999.99,true

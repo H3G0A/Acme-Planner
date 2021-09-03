@@ -1,5 +1,8 @@
 package acme.features.management.workPlan;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +74,8 @@ public class ManagementWorkPlanCreateService implements AbstractCreateService<Ma
 		
 		if(!errors.hasErrors("start") && !errors.hasErrors("end")) {
 			errors.state(request, entity.getStart().before(entity.getEnd()), "end", "manager.workPlan.form.error.endBeforeStart");
+			errors.state(request, !entity.getStart().toInstant().isBefore(LocalDateTime.now().toInstant(ZoneOffset.UTC)), "start", "manager.workPlan.form.error.future");
+
 		}
 		
 		final String title = entity.getTitle();

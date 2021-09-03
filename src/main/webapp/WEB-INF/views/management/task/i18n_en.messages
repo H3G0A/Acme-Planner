@@ -28,7 +28,10 @@ manager.task.form.button.update = Update
 manager.task.form.button.delete = Delete
 manager.task.form.button.create = New
 manager.task.form.button.return = Return
-manager.task.form.error.Future = Must be in the future
+manager.task.form.error.future = Must be in the future
+manager.task.form.error.decimal-must-be-under-60 = Decimal must be under 60
+manager.task.form.error.hours = The number of hours must be between 0 and 99
+
 
 manager.task.form.label.title.general-indicators = task's detailed description
 

@@ -47,11 +47,11 @@ public class AnonymousWorkPlanShowTest extends AcmeWorkPlansTest {
 	@Test
 	@Order(20)
 	public void showNegative() {
-		super.signIn("manager3", "manager3");
+		super.signIn("manager1", "manager1");
 		
 		super.clickOnMenu("Manager", "Workplans");
 		
-		super.clickOnListingRecord(0);
+		super.clickOnListingRecord(4);
 				
 		final String[] url = super.driver.getCurrentUrl().split("=");
 		
