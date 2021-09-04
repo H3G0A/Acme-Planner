@@ -109,7 +109,7 @@ public class AnonymousSpamDetectorService implements AbstractListService<Anonymo
 		 final Double thresholdSimple = this.simpleThreshold(text.toLowerCase().trim(),spamWordsListWord);
 		 final Double threshold = thresholdSentence+thresholdSimple;		 
 		 
-		 if(threshold<=10.) {
+		 if(threshold<=this.repository.findThreshold()) {
 			 esSpam=false; 
 		 }else {
 			 
