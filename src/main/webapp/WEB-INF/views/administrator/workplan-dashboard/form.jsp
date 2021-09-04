@@ -124,22 +124,23 @@
 			function() {
 				var data = {
 					labels : [
-							"NOT PUBLIC", "PUBLIC"
+							"TOTAL", "NOT PUBLISHED", "PUBLISHED"
 					],
 					datasets : [
 						{
 							data : [
+									<jstl:out value="${numberOfWorkPlan}" />,
 									<jstl:out value="${numberOfPrivateWorkPlan}" />,
 									<jstl:out value="${numberOfPublicWorkPlan}" />
 							],
 							backgroundColor : [
-									'rgba(45, 144, 221, 1)', 'rgba(205, 205, 3, 1)'
+									'rgba(124, 252, 0, 1)', 'rgba(45, 144, 221, 1)', 'rgba(205, 205, 3, 1)'
 							]
 						}
 					]
 				};
 				
-				var total = <jstl:out value="${numberOfPublicWorkPlan} + ${numberOfPrivateWorkPlan}" />;
+				var total = <jstl:out value="${numberOfWorkPlan}" />;
 				var options = {
 					legend : {
 						display : true
@@ -153,7 +154,7 @@
 				canvas = document.getElementById("canvas");
 				context = canvas.getContext("2d");
 				new Chart(context, {
-					type : "pie",
+					type : "bar",
 					data : data,
 					options : options
 				});
