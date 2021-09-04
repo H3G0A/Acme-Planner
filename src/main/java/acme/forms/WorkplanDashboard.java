@@ -13,6 +13,7 @@ public class WorkplanDashboard implements Serializable {
 	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+	Integer numberOfWorkPlan;
 	Integer numberOfPublicWorkPlan;
 	Integer numberOfPrivateWorkPlan;
 	Integer numberOfFinishedWorkPlan;

@@ -15,5 +15,8 @@ public interface AdministratorSpamWordRepository extends AbstractRepository {
 	
 	@Query("SELECT s FROM SpamWord s WHERE s.id = ?1")
 	SpamWord findOneSpamWordById(int id);
+	
+	@Query("SELECT s.threshold FROM SpamWord s")
+	Double findThreshold();
 }
 

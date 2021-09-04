@@ -25,7 +25,7 @@
     <acme:form-url code="manager.task.form.label.link" path="link"/>
     <acme:form-moment code="manager.task.form.label.start" path="start"/>
     <acme:form-moment code="manager.task.form.label.end" path="end"/>
-    <acme:form-double code="manager.task.form.label.workload" path="workload"/>
+    <acme:form-double code="manager.task.form.label.workload" path="workload" placeholder="12.34, 78.60, 2.00"/>
     <acme:form-checkbox code="manager.task.form.label.isPublic" path="isPublic"/>
             
     <acme:form-submit test="${command == 'show'}" code="manager.task.form.button.update" action="/management/task/update"/>
