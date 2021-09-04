@@ -27,7 +27,7 @@ public class AdministratorWorkplanDashboardShowService implements AbstractShowSe
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "numberOfPublicWorkPlan", "numberOfPrivateWorkPlan","numberOfFinishedWorkPlan",
+		request.unbind(entity, model, "numberOfWorkPlan", "numberOfPublicWorkPlan", "numberOfPrivateWorkPlan","numberOfFinishedWorkPlan",
 			"numberOfNonFinishedWorkPlan","averageNumberOfWorkPlanPeriod","deviationOfWorkPlanPeriod","minWorkPlanPeriod",
 			"maxWorkPlanPeriod","averageNumberOfWorkPlanWorkload","deviationOfWorkPlanWorkload","minWorkPlanWorkload",
 			"maxWorkPlanWorkload");
@@ -39,6 +39,7 @@ public class AdministratorWorkplanDashboardShowService implements AbstractShowSe
 		assert request != null;
 		
 		WorkplanDashboard result;
+		final Integer numberOfWorkPlan;
 		final Integer numberOfPublicWorkPlan;
 		final Integer numberOfPrivateWorkPlan;
 		final Integer numberOfFinishedWorkPlan;
@@ -52,6 +53,7 @@ public class AdministratorWorkplanDashboardShowService implements AbstractShowSe
 		final Double minWorkPlanWorkload;
 		final Double maxWorkPlanWorkload;
 		
+		numberOfWorkPlan = this.repository.numberOfWorkPlan();
 		numberOfPublicWorkPlan = this.repository.numberOfPublicWorkPlan();
 		numberOfPrivateWorkPlan = this.repository.numberOfPrivateWorkPlan();
 		numberOfFinishedWorkPlan = this.repository.numberOfFinishedWorkPlan();
@@ -66,6 +68,7 @@ public class AdministratorWorkplanDashboardShowService implements AbstractShowSe
 		maxWorkPlanWorkload = this.repository.maxWorkPlanWorkload();
 		
 		result = new WorkplanDashboard();
+		result.setNumberOfWorkPlan(numberOfWorkPlan);
 		result.setNumberOfPublicWorkPlan(numberOfPublicWorkPlan);
 		result.setNumberOfPrivateWorkPlan(numberOfPrivateWorkPlan);
 		result.setNumberOfFinishedWorkPlan(numberOfFinishedWorkPlan);
