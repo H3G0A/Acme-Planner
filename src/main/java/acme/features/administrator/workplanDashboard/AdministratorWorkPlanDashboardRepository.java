@@ -8,6 +8,9 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorWorkPlanDashboardRepository extends AbstractRepository {
 
+	@Query("select count(wp) from WorkPlan wp")
+	Integer numberOfWorkPlan();
+	
 	@Query("select count(wp) from WorkPlan wp where wp.isPublic=true")
 	Integer numberOfPublicWorkPlan();	
 	
